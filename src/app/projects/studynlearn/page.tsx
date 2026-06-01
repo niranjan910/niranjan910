@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { AlertTriangle, BarChart3, Smartphone } from "lucide-react";
 import CaseStudyLayout from "@/components/CaseStudyLayout";
 import { getProjectBySlug } from "@/data/projects";
 import { notFound } from "next/navigation";
@@ -20,9 +21,9 @@ export default function StudyNLearnPage() {
       goals={["Reduce course drop-off rates through better UX","Implement visible progress tracking","Deliver a mobile-optimised learning interface","Build an accessible, inclusive design system"]}
       problem="Students found the existing platform overwhelming — cluttered interfaces, unclear navigation, and no progress visibility led to high abandonment rates mid-course."
       painPoints={[
-        { icon: "😵", title: "Cognitive Overload", text: "Too many options presented simultaneously causing decision paralysis." },
-        { icon: "📊", title: "No Progress Tracking", text: "Students had no visibility into their learning journey, reducing motivation." },
-        { icon: "📱", title: "Poor Mobile UX", text: "80% of users were on mobile but the platform was not optimised." },
+        { icon: <AlertTriangle size={16} strokeWidth={1.5} />, title: "Cognitive Overload", text: "Too many options presented simultaneously causing decision paralysis." },
+        { icon: <BarChart3 size={16} strokeWidth={1.5} />, title: "No Progress Tracking", text: "Students had no visibility into their learning journey, reducing motivation." },
+        { icon: <Smartphone size={16} strokeWidth={1.5} />, title: "Poor Mobile UX", text: "80% of users were on mobile but the platform was not optimised." },
       ]}
       research={[
         { title: "Usability Testing", description: "Conducted sessions with 12 students to identify friction points in the current interface." },

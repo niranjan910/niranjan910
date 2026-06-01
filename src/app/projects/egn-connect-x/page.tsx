@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { Search, Users, Smartphone } from "lucide-react";
 import CaseStudyLayout from "@/components/CaseStudyLayout";
 import { getProjectBySlug } from "@/data/projects";
 import { notFound } from "next/navigation";
@@ -20,9 +21,9 @@ export default function EGNConnectXPage() {
       goals={["Simplify event discovery and registration","Build networking features for post-event engagement","Deliver a mobile-first responsive experience","Improve event visibility for institutions"]}
       problem="The education sector lacked a dedicated platform for managing academic events. Institutions struggled to reach students effectively, and students had no single trusted hub to discover learning opportunities."
       painPoints={[
-        { icon: "🔍", title: "Discovery Gap", text: "Events scattered across emails and social media — impossible to find reliably." },
-        { icon: "👥", title: "Low Engagement", text: "Poor post-event follow-up meant networking opportunities were lost." },
-        { icon: "📱", title: "No Mobile UX", text: "Existing solutions were not optimised for mobile, causing friction." },
+        { icon: <Search size={16} strokeWidth={1.5} />, title: "Discovery Gap", text: "Events scattered across emails and social media — impossible to find reliably." },
+        { icon: <Users size={16} strokeWidth={1.5} />, title: "Low Engagement", text: "Poor post-event follow-up meant networking opportunities were lost." },
+        { icon: <Smartphone size={16} strokeWidth={1.5} />, title: "No Mobile UX", text: "Existing solutions were not optimised for mobile, causing friction." },
       ]}
       research={[
         { title: "User Interviews", description: "Conducted interviews with students and educators to understand pain points in discovering and attending academic events." },
