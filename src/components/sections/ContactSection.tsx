@@ -1,11 +1,11 @@
 "use client";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Link2, Code2, Send } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const CONTACTS: { Icon: LucideIcon; label: string; value: string; href: string }[] = [
-  { Icon: Mail,     label: "Email",    value: "niranjan991100@gmail.com",           href: "mailto:niranjan991100@gmail.com" },
-  { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/niranjan-k",         href: "https://www.linkedin.com/in/niranjan-k-a83517229/" },
-  { Icon: Github,   label: "GitHub",   value: "github.com/niranjan910",             href: "https://github.com/niranjan910" },
+  { Icon: Mail,  label: "Email",    value: "niranjan991100@gmail.com",  href: "mailto:niranjan991100@gmail.com" },
+  { Icon: Link2, label: "LinkedIn", value: "linkedin.com/in/niranjan-k", href: "https://www.linkedin.com/in/niranjan-k-a83517229/" },
+  { Icon: Code2, label: "GitHub",   value: "github.com/niranjan910",    href: "https://github.com/niranjan910" },
 ];
 
 export default function ContactSection() {

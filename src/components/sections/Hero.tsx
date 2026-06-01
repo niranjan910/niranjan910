@@ -1,7 +1,7 @@
 ﻿"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, BarChart3, Layers, Code2, ArrowRight, Github } from "lucide-react";
+import { Sparkles, BarChart3, Layers, Code2, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const up = (d=0) => ({initial:{opacity:0,y:24},animate:{opacity:1,y:0},transition:{duration:0.7,delay:d,ease:[0.22,1,0.36,1] as [number,number,number,number]}});
@@ -90,7 +90,7 @@ export default function Hero() {
           </motion.p>
           <motion.div {...up(0.25)} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap"}}>
             <Link href="/projects" style={btnPrimary}><ArrowRight size={15} strokeWidth={2} /> View My Work</Link>
-            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" style={btnGhost}><Github size={15} strokeWidth={1.5} /> GitHub</a>
+            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" style={btnGhost}><Code2 size={15} strokeWidth={1.5} /> GitHub</a>
           </motion.div>
         </div>
 
