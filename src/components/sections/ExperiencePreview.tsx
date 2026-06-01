@@ -1,5 +1,6 @@
 ﻿"use client";
 import Link from "next/link";
+import { Briefcase, Zap, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { ExperienceItem } from "@/types";
 
@@ -12,7 +13,7 @@ export default function ExperiencePreview({currentRole}:{currentRole:ExperienceI
         <div style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",borderRadius:"20px",padding:"28px",backdropFilter:"blur(14px)"}}>
           <div style={{display:"flex",gap:"20px",alignItems:"flex-start"}}>
             <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"rgba(200,92,255,0.15)",border:"2px solid rgba(200,92,255,0.4)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
-              <span style={{fontSize:"1.1rem"}}>💼</span>
+              <Briefcase size={20} strokeWidth={1.5} color="rgba(200,92,255,0.85)" />
             </div>
             <div style={{flex:1}}>
               <div style={{display:"flex",alignItems:"center",gap:"10px",flexWrap:"wrap",marginBottom:"4px"}}>
