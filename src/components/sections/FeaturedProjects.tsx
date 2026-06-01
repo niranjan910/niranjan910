@@ -1,6 +1,7 @@
 ﻿"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { FolderOpen, ExternalLink, ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { Project } from "@/types";
 
