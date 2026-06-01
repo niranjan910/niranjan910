@@ -1,0 +1,89 @@
+﻿/* ALL @import rules MUST be first */
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg:       #090414;
+  --purple:   #C85CFF;
+  --orange:   #FF8A3D;
+  --pink:     #FF5FD2;
+  --blue:     #4D7CFF;
+  --cyan:     #00E5FF;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(200,92,255,0.35); border-radius: 4px; }
+
+.gradient-text {
+  background: linear-gradient(90deg, #FF8A3D 0%, #C85CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-bg {
+  background: radial-gradient(
+    ellipse 70% 80% at 50% 72%,
+    #D96652 0%, #4A142E 30%, #10051D 62%, #090414 100%
+  );
+}
+
+.btn-primary {
+  background: rgba(8,5,20,0.75);
+  border: 1px solid rgba(255,138,61,0.85);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,138,61,0.4), 0 0 28px rgba(255,138,61,0.16);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(255,138,61,0.6), 0 0 50px rgba(255,138,61,0.25);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: rgba(8,5,20,0.75);
+  border: 1px solid rgba(200,92,255,0.8);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(200,92,255,0.35), 0 0 28px rgba(200,92,255,0.14);
+  transition: all 0.3s ease;
+}
+.btn-ghost:hover {
+  box-shadow: 0 0 20px rgba(200,92,255,0.55), 0 0 50px rgba(200,92,255,0.22);
+  transform: translateY(-2px);
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal   { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+.reveal-1 { animation-delay: 0.1s; }
+.reveal-2 { animation-delay: 0.2s; }
+.reveal-3 { animation-delay: 0.3s; }
