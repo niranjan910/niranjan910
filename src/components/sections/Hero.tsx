@@ -126,7 +126,7 @@ export default function Hero() {
         </div>
 
         {/* ── Subject image ── */}
-        <div className="hero-subject" style={{position:"absolute",bottom:"80px",left:"50%",transform:"translateX(-50%)",width:"clamp(240px,24vw,360px)",zIndex:5,pointerEvents:"none"}}>
+        <div className="hero-subject" style={{position:"absolute",bottom:0,left:"50%",transform:"translateX(-50%)",width:"clamp(240px,24vw,360px)",zIndex:5,pointerEvents:"none"}}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/Home_page_01.png" alt="" role="presentation" style={{width:"100%",height:"auto",display:"block",WebkitMaskImage:"linear-gradient(to top,transparent 0%,rgba(0,0,0,0.6) 5%,black 15%)",maskImage:"linear-gradient(to top,transparent 0%,rgba(0,0,0,0.6) 5%,black 15%)"}}/>
         </div>
