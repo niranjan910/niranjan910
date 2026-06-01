@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { TrendingDown, ShieldOff, Calculator } from "lucide-react";
 import CaseStudyLayout from "@/components/CaseStudyLayout";
 import { getProjectBySlug } from "@/data/projects";
 import { notFound } from "next/navigation";
@@ -20,9 +21,9 @@ export default function LandingBazarPage() {
       goals={["Simplify loan application flow","Build trust through professional design language","Implement an interactive EMI calculator","Deliver a responsive, fast-loading platform"]}
       problem="Financial platforms are often intimidating. Users abandoned loan applications due to complex flows, unclear information architecture, and lack of trust signals — resulting in low conversion rates."
       painPoints={[
-        { icon: "🚪", title: "High Abandonment", text: "Complex application forms caused users to abandon mid-process." },
-        { icon: "🤔", title: "Lack of Trust", text: "No clear trust signals led to hesitation on financial decisions." },
-        { icon: "🧮", title: "No EMI Calculator", text: "Users could not understand repayment commitments before applying." },
+        { icon: <TrendingDown size={16} strokeWidth={1.5} />, title: "High Abandonment", text: "Complex application forms caused users to abandon mid-process." },
+        { icon: <ShieldOff size={16} strokeWidth={1.5} />, title: "Lack of Trust", text: "No clear trust signals led to hesitation on financial decisions." },
+        { icon: <Calculator size={16} strokeWidth={1.5} />, title: "No EMI Calculator", text: "Users could not understand repayment commitments before applying." },
       ]}
       research={[
         { title: "User Research", description: "Interviewed loan applicants to understand barriers, fears, and decision-making processes." },
