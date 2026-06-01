@@ -11,8 +11,8 @@ type CardDef = { pos:React.CSSProperties; n1:string; n2:string; tag:string; num:
 
 const CARDS: CardDef[] = [
   { pos:{left:0},        n1:"#ff8a3d", n2:"#ff5fd2", tag:"CREATIVE",    num:"01", Icon:Sparkles, title:"AI Product Builder", desc:"Building smart, scalable AI products that solve real world problems.", skills:["SaaS Product Development","AI Workflow Architecture","Claude & GPT Integration"], side:"left"  },
-  { pos:{left:"18%"},    n1:"#a855f7", n2:"#00c6ff", tag:"STRATEGY",    num:"02", Icon:BarChart3, title:"Data Analysis",      desc:"Turning raw data into meaningful insights that drive decisions.",        skills:["Data Visualization","Business Intelligence","User Research"],               side:"left"  },
-  { pos:{right:"18%"},   n1:"#ff5fd2", n2:"#a855f7", tag:"DESIGN",      num:"03", Icon:Layers,   title:"UI/UX Design",        desc:"Designing intuitive, modern and user-centric digital experiences.",      skills:["Wireframing","Design Systems","Figma Prototyping"],                          side:"right" },
+  { pos:{left:"22%"},    n1:"#a855f7", n2:"#00c6ff", tag:"STRATEGY",    num:"02", Icon:BarChart3, title:"Data Analysis",      desc:"Turning raw data into meaningful insights that drive decisions.",        skills:["Data Visualization","Business Intelligence","User Research"],               side:"left"  },
+  { pos:{right:"22%"},   n1:"#ff5fd2", n2:"#a855f7", tag:"DESIGN",      num:"03", Icon:Layers,   title:"UI/UX Design",        desc:"Designing intuitive, modern and user-centric digital experiences.",      skills:["Wireframing","Design Systems","Figma Prototyping"],                          side:"right" },
   { pos:{right:0},       n1:"#4d7cff", n2:"#00e5ff", tag:"DEVELOPMENT", num:"04", Icon:Code2,    title:"Full Stack Skills",   desc:"Proficient in modern tools and frameworks to build powerful solutions.", skills:["React & Next.js","Node.js Development","API Architecture"],                  side:"right" },
 ];
 
