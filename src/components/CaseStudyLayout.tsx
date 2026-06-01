@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+﻿import React from "react";
+import Link from "next/link";
 import { ExternalLink, Code2, ArrowRight, ArrowLeft } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import type { Project } from "@/types";
@@ -13,7 +14,7 @@ interface Props {
   overview:   string;
   goals:      string[];
   problem:    string;
-  painPoints: { icon: string; title: string; text: string }[];
+  painPoints: { icon: React.ReactNode; title: string; text: string }[];
   research:   Step[];
   designSteps: Step[];
   devSteps:   Step[];
