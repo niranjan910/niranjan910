@@ -132,7 +132,7 @@ export default function Hero() {
         </div>
 
         {/* ── Scroll indicator ── */}
-        <div style={{position:"absolute",bottom:"2.5rem",left:"50%",transform:"translateX(-50%)",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",zIndex:6}}>
+        <div style={{position:"absolute",bottom:"4.5rem",left:"50%",transform:"translateX(-50%)",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",zIndex:6}}>
           <span style={{fontFamily:"Inter,sans-serif",fontSize:"0.62rem",letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.28)"}}>Scroll</span>
           <div style={{width:"1px",height:"48px",background:"rgba(255,255,255,0.15)",position:"relative",overflow:"hidden"}}>
             <div style={{position:"absolute",top:"-100%",left:0,width:"100%",height:"100%",background:"linear-gradient(to bottom,transparent,#a855f7,transparent)",animation:"scrollRun 2s ease-in-out infinite"}}/>
