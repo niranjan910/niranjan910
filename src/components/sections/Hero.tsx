@@ -101,28 +101,28 @@ export default function Hero() {
           <div style={{position:"absolute",width:"300px",height:"200px",background:"rgba(40,80,220,0.32)",bottom:"-20px",right:"6%",borderRadius:"50%",filter:"blur(55px)",pointerEvents:"none"}}/>
           {CARDS.map(c=>(
             <div key={c.num} style={{
-              position:"absolute",bottom:0,...c.pos as React.CSSProperties,width:"175px",
-              borderRadius:"22px",padding:"1.1rem 1rem",display:"flex",flexDirection:"column",gap:0,
+              position:"absolute",bottom:0,...c.pos as React.CSSProperties,width:"210px",
+              borderRadius:"22px",padding:"1.25rem 1.1rem",display:"flex",flexDirection:"column",gap:0,
               overflow:"hidden",backdropFilter:"blur(32px)",WebkitBackdropFilter:"blur(32px)",
               border:"1.5px solid transparent",
               backgroundImage:`linear-gradient(135deg, rgba(20,10,38,0.72) 0%, rgba(10,5,22,0.55) 100%) padding-box, linear-gradient(145deg,${c.border},rgba(255,100,50,0.6)) border-box`,
               boxShadow:`0 8px 40px rgba(0,0,0,0.45), 0 0 24px ${c.border.replace("0.6","0.15")}, inset 0 1px 0 rgba(255,255,255,0.07)`,
             }}>
-              <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"0.6rem"}}>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"0.7rem"}}>
                 <div>
-                  <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.46rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.38)",fontWeight:700,textTransform:"uppercase",marginBottom:"4px"}}>{c.tag}</p>
-                  <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:800,fontSize:"1.4rem",lineHeight:1,background:"linear-gradient(135deg,#FF5FD2,#FF8A3D)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>{c.num}</p>
+                  <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.45)",fontWeight:700,textTransform:"uppercase",marginBottom:"4px"}}>{c.tag}</p>
+                  <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:800,fontSize:"1.6rem",lineHeight:1,background:"linear-gradient(135deg,#FF5FD2,#FF8A3D)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>{c.num}</p>
                 </div>
                 <div style={{display:"grid",gridTemplateColumns:"repeat(2,4px)",gap:"3px",marginTop:"2px"}}>
                   {[...Array(6)].map((_,j)=><span key={j} style={{width:"4px",height:"4px",borderRadius:"50%",background:"rgba(200,92,255,0.45)",display:"block"}}/>)}
                 </div>
               </div>
-              <div style={{width:"34px",height:"34px",borderRadius:"10px",background:"rgba(0,0,0,0.4)",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"0.5rem",flexShrink:0}}><c.Icon size={16} strokeWidth={1.5} color="rgba(255,255,255,0.65)" /></div>
-              <h3 style={{fontFamily:"Satoshi,sans-serif",fontSize:"0.78rem",fontWeight:800,color:"#fff",marginBottom:"0.25rem"}}>{c.title}</h3>
-              <div style={{height:"1.5px",width:"36px",background:"linear-gradient(90deg,#FF5FD2,#FF8A3D)",borderRadius:"2px",marginBottom:"0.4rem",flexShrink:0}}/>
-              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.6rem",color:"rgba(255,255,255,0.42)",lineHeight:1.55,marginBottom:"0.5rem"}}>{c.desc}</p>
+              <div style={{width:"38px",height:"38px",borderRadius:"10px",background:"rgba(0,0,0,0.4)",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"0.6rem",flexShrink:0}}><c.Icon size={18} strokeWidth={1.5} color="rgba(255,255,255,0.75)" /></div>
+              <h3 style={{fontFamily:"Satoshi,sans-serif",fontSize:"0.95rem",fontWeight:800,color:"#fff",marginBottom:"0.3rem"}}>{c.title}</h3>
+              <div style={{height:"1.5px",width:"36px",background:"linear-gradient(90deg,#FF5FD2,#FF8A3D)",borderRadius:"2px",marginBottom:"0.5rem",flexShrink:0}}/>
+              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.72rem",color:"rgba(255,255,255,0.5)",lineHeight:1.6,marginBottom:"0.6rem"}}>{c.desc}</p>
               <div style={{background:"rgba(0,0,0,0.3)",borderRadius:"8px",overflow:"hidden",flexShrink:0}}>
-                {c.skills.map(s=><p key={s} style={{fontFamily:"Inter,sans-serif",fontSize:"0.56rem",color:"rgba(255,255,255,0.65)",padding:"3px 8px",borderBottom:"1px solid rgba(255,255,255,0.04)",margin:0,lineHeight:1.4}}>{s}</p>)}
+                {c.skills.map(s=><p key={s} style={{fontFamily:"Inter,sans-serif",fontSize:"0.68rem",color:"rgba(255,255,255,0.7)",padding:"4px 10px",borderBottom:"1px solid rgba(255,255,255,0.04)",margin:0,lineHeight:1.5}}>{s}</p>)}
               </div>
             </div>
           ))}
