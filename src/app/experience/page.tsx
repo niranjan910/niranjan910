@@ -63,7 +63,7 @@ export default function ExperiencePage() {
                           {item.location && <> · {item.location}</>}
                         </p>
                         {item.promotion && (
-                          <p className="text-orange/80 text-xs bg-orange/6 border border-orange/20 rounded-lg px-3 py-2 mb-3">⚡ {item.promotion}</p>
+                          <p className="text-orange/80 text-xs bg-orange/6 border border-orange/20 rounded-lg px-3 py-2 mb-3 flex items-center gap-1.5"><Zap size={11} strokeWidth={2} className="flex-shrink-0" />{item.promotion}</p>
                         )}
                         <p className="text-text-secondary text-sm leading-relaxed mb-3">{item.description}</p>
                         <div className="flex flex-wrap gap-1.5">
