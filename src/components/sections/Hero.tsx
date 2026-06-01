@@ -89,8 +89,8 @@ export default function Hero() {
             <span style={{color:"#FF8A3D",fontWeight:600}}>Automation</span>.
           </motion.p>
           <motion.div {...up(0.25)} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap"}}>
-            <Link href="/projects" style={btnPrimary}>🚀 View My Work</Link>
-            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" style={btnGhost}>💻 GitHub</a>
+            <Link href="/projects" style={btnPrimary}><ArrowRight size={15} strokeWidth={2} /> View My Work</Link>
+            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" style={btnGhost}><Github size={15} strokeWidth={1.5} /> GitHub</a>
           </motion.div>
         </div>
 
@@ -116,7 +116,7 @@ export default function Hero() {
                   {[...Array(6)].map((_,j)=><span key={j} style={{width:"4px",height:"4px",borderRadius:"50%",background:"rgba(200,92,255,0.45)",display:"block"}}/>)}
                 </div>
               </div>
-              <div style={{width:"34px",height:"34px",borderRadius:"10px",background:"rgba(0,0,0,0.4)",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"0.9rem",marginBottom:"0.5rem",flexShrink:0}}>{c.icon}</div>
+              <div style={{width:"34px",height:"34px",borderRadius:"10px",background:"rgba(0,0,0,0.4)",border:"1px solid rgba(255,255,255,0.08)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"0.5rem",flexShrink:0}}><c.Icon size={16} strokeWidth={1.5} color="rgba(255,255,255,0.65)" /></div>
               <h3 style={{fontFamily:"Satoshi,sans-serif",fontSize:"0.78rem",fontWeight:800,color:"#fff",marginBottom:"0.25rem"}}>{c.title}</h3>
               <div style={{height:"1.5px",width:"36px",background:"linear-gradient(90deg,#FF5FD2,#FF8A3D)",borderRadius:"2px",marginBottom:"0.4rem",flexShrink:0}}/>
               <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.6rem",color:"rgba(255,255,255,0.42)",lineHeight:1.55,marginBottom:"0.5rem"}}>{c.desc}</p>
