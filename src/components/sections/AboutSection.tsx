@@ -10,7 +10,7 @@ const skills = [
 
 export default function AboutSection() {
   return (
-    <section id="about" style={{background:"#04040a",padding:"100px 8px",position:"relative",zIndex:10}}>
+    <section id="about" style={{background:"#04040a",padding:"100px 40px",position:"relative",zIndex:10}}>
       <div style={{maxWidth:"1200px",margin:"0 auto",display:"grid",gridTemplateColumns:"1fr 1fr",gap:"5rem",alignItems:"start"}}>
 
         {/* ── Left: text ── */}
