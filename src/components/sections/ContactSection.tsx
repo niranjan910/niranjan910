@@ -33,9 +33,7 @@ export default function ContactSection() {
             </a>
           ))}
         </div>
-        <a href="mailto:niranjan991100@gmail.com"
-          className="btn-primary"
-          style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"16px 32px",borderRadius:"99px",fontSize:"0.95rem",fontWeight:700,textDecoration:"none"}}>
+        <a href="mailto:niranjan991100@gmail.com" className="btn-primary">
           <Send size={16} strokeWidth={1.5} /> Send a Message
         </a>
       </div>

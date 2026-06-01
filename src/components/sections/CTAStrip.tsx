@@ -7,12 +7,8 @@ export default function CTAStrip() {
           Currently open to exciting opportunities, collaborations, and innovative product ideas.
         </p>
         <div style={{display:"flex",gap:"12px",flexShrink:0,flexWrap:"wrap"}}>
-          <a href="/resume.pdf" download className="btn-primary" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.9rem 2rem",borderRadius:"99px",fontSize:"0.88rem",fontWeight:700,textDecoration:"none"}}>
-            📄 View Resume
-          </a>
-          <Link href="/projects" className="btn-ghost" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.9rem 2rem",borderRadius:"99px",fontSize:"0.88rem",fontWeight:700,textDecoration:"none"}}>
-            👁️ View Projects
-          </Link>
+          <a href="/resume.pdf" download className="btn-primary">View Resume</a>
+          <Link href="/projects" className="btn-ghost">View Projects</Link>
         </div>
       </div>
     </section>

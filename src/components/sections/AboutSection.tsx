@@ -39,12 +39,8 @@ export default function AboutSection() {
           </motion.p>
 
           <motion.div {...fade(0.3)} style={{display:"flex",gap:"12px",flexWrap:"wrap",marginBottom:"40px"}}>
-            <Link href="/projects" className="btn-primary" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.65rem 1.3rem",borderRadius:"99px",fontSize:"0.82rem",fontWeight:600,textDecoration:"none"}}>
-              View Projects
-            </Link>
-            <a href="/resume.pdf" download className="btn-ghost" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.65rem 1.3rem",borderRadius:"99px",fontSize:"0.82rem",fontWeight:600,textDecoration:"none"}}>
-              Download CV
-            </a>
+            <Link href="/projects" className="btn-primary">View Projects</Link>
+            <a href="/resume.pdf" download className="btn-ghost">Download CV</a>
           </motion.div>
 
           <motion.div {...fade(0.35)} style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"1.5rem 2rem"}}>

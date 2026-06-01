@@ -25,20 +25,6 @@ const PARTICLES = [
   { l:"88%", delay:"1.6s", dur:"2.2s", sz:3 },
 ];
 
-const btnPrimary: React.CSSProperties = {
-  display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.85rem 2rem",borderRadius:"99px",
-  fontFamily:"Inter,sans-serif",fontSize:"0.88rem",fontWeight:600,textDecoration:"none",color:"#fff",cursor:"pointer",
-  background:"rgba(8,5,20,0.75)",border:"1px solid rgba(255,138,61,0.85)",
-  boxShadow:"0 0 10px rgba(255,138,61,0.45),0 0 28px rgba(255,138,61,0.18),inset 0 0 16px rgba(255,138,61,0.04)",
-  transition:"all 0.3s ease",
-};
-const btnGhost: React.CSSProperties = {
-  display:"inline-flex",alignItems:"center",gap:"8px",padding:"0.85rem 2rem",borderRadius:"99px",
-  fontFamily:"Inter,sans-serif",fontSize:"0.88rem",fontWeight:600,textDecoration:"none",color:"#fff",cursor:"pointer",
-  background:"rgba(8,5,20,0.75)",border:"1px solid rgba(200,92,255,0.8)",
-  boxShadow:"0 0 10px rgba(200,92,255,0.4),0 0 28px rgba(200,92,255,0.16),inset 0 0 16px rgba(200,92,255,0.04)",
-  transition:"all 0.3s ease",
-};
 
 function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -301,8 +287,8 @@ export default function Hero() {
             <span style={{color:"#FF8A3D",fontWeight:600}}>Automation</span>.
           </motion.p>
           <motion.div {...up(0.25)} style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"14px",flexWrap:"wrap"}}>
-            <Link href="/projects" style={btnPrimary}><ArrowRight size={15} strokeWidth={2}/> View My Work</Link>
-            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" style={btnGhost}><Code2 size={15} strokeWidth={1.5}/> GitHub</a>
+            <Link href="/projects" className="btn-primary"><ArrowRight size={15} strokeWidth={2}/> View My Work</Link>
+            <a href="https://github.com/niranjan910" target="_blank" rel="noopener noreferrer" className="btn-ghost"><Code2 size={15} strokeWidth={1.5}/> GitHub</a>
           </motion.div>
         </motion.div>
 

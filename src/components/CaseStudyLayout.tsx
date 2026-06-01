@@ -71,20 +71,16 @@ export default function CaseStudyLayout({
           </div>
           <div className="flex gap-3 flex-wrap">
             {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white border border-orange/85 bg-[rgba(8,5,20,0.75)] shadow-[0_0_10px_rgba(255,138,61,0.4)] hover:shadow-[0_0_20px_rgba(255,138,61,0.6)] transition-all">
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <ExternalLink size={14} /> View Live Site
               </a>
             )}
             {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white border border-purple/80 bg-[rgba(8,5,20,0.75)] shadow-[0_0_10px_rgba(200,92,255,0.35)] hover:shadow-[0_0_20px_rgba(200,92,255,0.55)] transition-all">
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 <Code2 size={14} /> GitHub
               </a>
             )}
-            <Link href="/projects" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-text-secondary border border-white/10 hover:border-purple/30 transition-all">
-              All Projects
-            </Link>
+            <Link href="/projects" className="btn-ghost">All Projects</Link>
           </div>
         </div>
       </header>
