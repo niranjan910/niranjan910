@@ -101,11 +101,12 @@ export default function Hero() {
           <div style={{position:"absolute",width:"300px",height:"200px",background:"rgba(40,80,220,0.32)",bottom:"-20px",right:"6%",borderRadius:"50%",filter:"blur(55px)",pointerEvents:"none"}}/>
           {CARDS.map(c=>(
             <div key={c.num} style={{
-              position:"absolute",bottom:0,...c.pos as React.CSSProperties,width:"140px",
-              borderRadius:"20px",padding:"1rem 0.85rem",display:"flex",flexDirection:"column",gap:0,
-              overflow:"hidden",backdropFilter:"blur(20px)",WebkitBackdropFilter:"blur(20px)",
+              position:"absolute",bottom:0,...c.pos as React.CSSProperties,width:"175px",
+              borderRadius:"22px",padding:"1.1rem 1rem",display:"flex",flexDirection:"column",gap:0,
+              overflow:"hidden",backdropFilter:"blur(32px)",WebkitBackdropFilter:"blur(32px)",
               border:"1.5px solid transparent",
-              backgroundImage:`linear-gradient(#13091f,#1d0b18) padding-box, linear-gradient(145deg,${c.border},rgba(255,100,50,0.75)) border-box`,
+              backgroundImage:`linear-gradient(135deg, rgba(20,10,38,0.72) 0%, rgba(10,5,22,0.55) 100%) padding-box, linear-gradient(145deg,${c.border},rgba(255,100,50,0.6)) border-box`,
+              boxShadow:`0 8px 40px rgba(0,0,0,0.45), 0 0 24px ${c.border.replace("0.6","0.15")}, inset 0 1px 0 rgba(255,255,255,0.07)`,
             }}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"0.6rem"}}>
                 <div>
