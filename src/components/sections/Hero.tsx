@@ -1,14 +1,16 @@
 ﻿"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Sparkles, BarChart3, Layers, Code2, ArrowRight, Github } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const up = (d=0) => ({initial:{opacity:0,y:24},animate:{opacity:1,y:0},transition:{duration:0.7,delay:d,ease:[0.22,1,0.36,1] as [number,number,number,number]}});
 
-const CARDS = [
-  { pos:{left:0,height:"82%"}, border:"rgba(255,138,61,0.6)", tag:"CREATIVE", num:"01", icon:"🚀", title:"AI Product Builder", desc:"Building smart, scalable AI products that solve real world problems.", skills:["SaaS Product Development","AI Workflow Architecture","Claude & GPT Integration"] },
-  { pos:{left:"19.2%",height:"92%"}, border:"rgba(168,85,247,0.6)", tag:"STRATEGY", num:"02", icon:"📊", title:"Data Analysis", desc:"Turning raw data into meaningful insights that drive decisions.", skills:["Data Visualization","Business Intelligence","User Research"] },
-  { pos:{right:"19.2%",height:"92%"}, border:"rgba(255,95,210,0.6)", tag:"DESIGN", num:"03", icon:"✏️", title:"UI/UX Design", desc:"Designing intuitive, modern and user-centric digital experiences.", skills:["Wireframing","Design Systems","Figma Prototyping"] },
-  { pos:{right:0,height:"82%"}, border:"rgba(77,124,255,0.6)", tag:"DEVELOPMENT", num:"04", icon:"💻", title:"Full Stack Skills", desc:"Proficient in modern tools and frameworks to build powerful solutions.", skills:["React & Next.js","Node.js Development","API Architecture"] },
+const CARDS: { pos: React.CSSProperties; border: string; tag: string; num: string; Icon: LucideIcon; title: string; desc: string; skills: string[] }[] = [
+  { pos:{left:0,height:"82%"}, border:"rgba(255,138,61,0.6)", tag:"CREATIVE", num:"01", Icon:Sparkles, title:"AI Product Builder", desc:"Building smart, scalable AI products that solve real world problems.", skills:["SaaS Product Development","AI Workflow Architecture","Claude & GPT Integration"] },
+  { pos:{left:"19.2%",height:"92%"}, border:"rgba(168,85,247,0.6)", tag:"STRATEGY", num:"02", Icon:BarChart3, title:"Data Analysis", desc:"Turning raw data into meaningful insights that drive decisions.", skills:["Data Visualization","Business Intelligence","User Research"] },
+  { pos:{right:"19.2%",height:"92%"}, border:"rgba(255,95,210,0.6)", tag:"DESIGN", num:"03", Icon:Layers, title:"UI/UX Design", desc:"Designing intuitive, modern and user-centric digital experiences.", skills:["Wireframing","Design Systems","Figma Prototyping"] },
+  { pos:{right:0,height:"82%"}, border:"rgba(77,124,255,0.6)", tag:"DEVELOPMENT", num:"04", Icon:Code2, title:"Full Stack Skills", desc:"Proficient in modern tools and frameworks to build powerful solutions.", skills:["React & Next.js","Node.js Development","API Architecture"] },
 ];
 
 const btnPrimary: React.CSSProperties = {
