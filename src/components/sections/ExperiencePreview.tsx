@@ -23,7 +23,7 @@ export default function ExperiencePreview({currentRole}:{currentRole:ExperienceI
               <p style={{color:"#C85CFF",fontSize:"0.88rem",fontWeight:600,marginBottom:"6px"}}>{currentRole.company}</p>
               <p style={{color:"rgba(255,255,255,0.35)",fontSize:"0.78rem",marginBottom:"12px"}}>Oct 2025 – Present</p>
               {currentRole.promotion && (
-                <p style={{color:"rgba(255,179,102,0.85)",fontSize:"0.78rem",background:"rgba(255,138,61,0.06)",border:"1px solid rgba(255,138,61,0.2)",borderRadius:"10px",padding:"8px 12px",marginBottom:"12px"}}>⚡ {currentRole.promotion}</p>
+                <p style={{color:"rgba(255,179,102,0.85)",fontSize:"0.78rem",background:"rgba(255,138,61,0.06)",border:"1px solid rgba(255,138,61,0.2)",borderRadius:"10px",padding:"8px 12px",marginBottom:"12px",display:"flex",alignItems:"center",gap:"6px"}}><Zap size={12} strokeWidth={2} style={{flexShrink:0,color:"rgba(255,179,102,0.85)"}} />{currentRole.promotion}</p>
               )}
               <p style={{color:"rgba(255,255,255,0.5)",fontSize:"0.88rem",lineHeight:1.65,marginBottom:"16px"}}>{currentRole.description}</p>
               <div style={{display:"flex",flexWrap:"wrap",gap:"8px"}}>
@@ -36,7 +36,7 @@ export default function ExperiencePreview({currentRole}:{currentRole:ExperienceI
         </div>
         <div style={{display:"flex",justifyContent:"center",marginTop:"40px"}}>
           <Link href="/experience" style={{display:"inline-flex",alignItems:"center",gap:"8px",padding:"14px 28px",borderRadius:"99px",fontSize:"0.9rem",fontWeight:700,color:"#FF8A3D",border:"1px solid rgba(255,138,61,0.4)",background:"rgba(255,138,61,0.08)",textDecoration:"none"}}>
-            View Full Experience →
+            View Full Experience <ArrowRight size={16} strokeWidth={2} />
           </Link>
         </div>
       </div>

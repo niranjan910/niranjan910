@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Briefcase, GraduationCap, BookOpen } from "lucide-react";
+import { Briefcase, GraduationCap, BookOpen, Zap } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { EXPERIENCE_SORTED } from "@/data/experience";
 
