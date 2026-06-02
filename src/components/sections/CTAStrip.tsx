@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 export default function CTAStrip() {
   return (
     <section style={{background:"linear-gradient(135deg,rgba(200,92,255,0.06) 0%,rgba(77,124,255,0.04) 100%)",borderTop:"1px solid rgba(255,255,255,0.07)",borderBottom:"1px solid rgba(255,255,255,0.07)",padding:"48px 40px"}}>
@@ -7,8 +8,8 @@ export default function CTAStrip() {
           Currently open to exciting opportunities, collaborations, and innovative product ideas.
         </p>
         <div style={{display:"flex",gap:"12px",flexShrink:0,flexWrap:"wrap"}}>
-          <a href="/resume.pdf" download className="btn-primary">View Resume</a>
-          <Link href="/projects" className="btn-ghost">View Projects</Link>
+          <a href="/resume.pdf" download className="btn-primary">View Resume <ArrowRight size={15}/></a>
+          <Link href="/projects" className="btn-ghost">View Projects <ArrowRight size={15}/></Link>
         </div>
       </div>
     </section>

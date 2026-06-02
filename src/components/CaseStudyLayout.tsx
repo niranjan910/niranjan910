@@ -72,15 +72,15 @@ export default function CaseStudyLayout({
           <div className="flex gap-3 flex-wrap">
             {project.liveUrl && (
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                <ExternalLink size={14} /> View Live Site
+                View Live Site <ExternalLink size={14}/>
               </a>
             )}
             {project.githubUrl && (
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                <Code2 size={14} /> GitHub
+                GitHub Repo <Code2 size={14}/>
               </a>
             )}
-            <Link href="/projects" className="btn-ghost">All Projects</Link>
+            <Link href="/projects" className="btn-ghost">All Projects <ArrowRight size={14}/></Link>
           </div>
         </div>
       </header>
