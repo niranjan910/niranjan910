@@ -11,13 +11,6 @@ const CAROUSEL_IMAGES = [
   { src:"/images/Home_page_01.png",           alt:"Niranjan Kumar" },
 ];
 
-/* ── Achievement cards ── */
-const ACHIEVEMENTS = [
-  { value:"2+",  label:"Live Websites",      sub:"Developed"    },
-  { value:"AI",  label:"Product Builder",    sub:"& Innovator"  },
-  { value:"FE",  label:"Frontend Dev",       sub:"React & Next" },
-  { value:"UX",  label:"UI/UX Designer",     sub:"Figma Expert" },
-];
 
 /* ── Tech SVG icons (inline, no external deps) ── */
 const Ico = {
@@ -154,9 +147,9 @@ function ProfileCarousel() {
 export default function AboutSection() {
   return (
     <section id="about" style={{background:"#04040a",padding:"100px 0",position:"relative",zIndex:10}}>
-      <div style={{maxWidth:"1500px",margin:"0 auto",padding:"0 24px"}}>
+      <div style={{maxWidth:"1400px",margin:"0 auto",padding:"0 60px"}}>
 
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"5rem",alignItems:"start"}}>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"4rem",alignItems:"start"}}>
 
           {/* ── LEFT: content ── */}
           <div>
@@ -188,23 +181,6 @@ export default function AboutSection() {
               <a href="/resume.pdf" download className="btn-ghost">Download CV <ArrowRight size={15}/></a>
             </motion.div>
 
-            {/* Achievements */}
-            <motion.div {...fadeUp(0.32)}>
-              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.62rem",fontWeight:700,letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.22)",marginBottom:"14px"}}>Highlights</p>
-              <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"10px",marginBottom:"52px"}}>
-                {ACHIEVEMENTS.map((a,i)=>(
-                  <motion.div key={a.label}
-                    initial={{opacity:0,y:14}} whileInView={{opacity:1,y:0}}
-                    viewport={{once:true}} transition={{duration:0.5,delay:0.38+i*0.07}}
-                    whileHover={{y:-3,transition:{duration:0.18}}}
-                    style={{padding:"14px 10px",textAlign:"center",background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.07)",borderRadius:"12px",backdropFilter:"blur(10px)",cursor:"default"}}>
-                    <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:900,fontSize:"1.2rem",background:"linear-gradient(135deg,#FF8A3D,#C85CFF)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text",marginBottom:"3px"}}>{a.value}</p>
-                    <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.62rem",fontWeight:700,color:"rgba(255,255,255,0.65)",marginBottom:"1px"}}>{a.label}</p>
-                    <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",color:"rgba(255,255,255,0.28)"}}>{a.sub}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
 
             {/* ── Tools & Technologies ── */}
             <motion.div {...fadeUp(0.4)}>
