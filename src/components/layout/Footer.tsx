@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { GitBranch, Link2, Mail, ArrowUpRight } from "lucide-react";
 
 const LINKS = [
   { label:"Home",           href:"/" },
@@ -11,8 +11,8 @@ const LINKS = [
 ];
 
 const SOCIAL = [
-  { label:"GitHub",   href:"https://github.com/niranjan910",                    Icon:Github   },
-  { label:"LinkedIn", href:"https://www.linkedin.com/in/niranjan-k-a83517229/", Icon:Linkedin },
+  { label:"GitHub",   href:"https://github.com/niranjan910",                    Icon:GitBranch },
+  { label:"LinkedIn", href:"https://www.linkedin.com/in/niranjan-k-a83517229/", Icon:Link2    },
   { label:"Email",    href:"mailto:niranjan991100@gmail.com",                   Icon:Mail     },
 ];
 
