@@ -72,10 +72,7 @@ export default function Navbar() {
                   padding:"6px 16px", borderRadius:"99px", fontSize:"0.88rem",
                   fontWeight: active ? 700 : 500,
                   color: active ? "#FF8A3D" : "rgba(255,255,255,0.72)",
-                  background: active ? "rgba(255,138,61,0.1)" : "transparent",
-                  border: active ? "1px solid rgba(255,138,61,0.22)" : "1px solid transparent",
-                  boxShadow: active ? "0 0 10px rgba(255,138,61,0.15)" : "none",
-                  transition:"all 0.25s ease", textDecoration:"none",
+                  transition:"color 0.25s ease", textDecoration:"none",
                 }}>{label}</Link>
               );
             })}

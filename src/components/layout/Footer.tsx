@@ -1,46 +1,127 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
+import Image from "next/image";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+
+const LINKS = [
+  { label:"Home",           href:"/" },
+  { label:"Projects",       href:"/projects" },
+  { label:"Experience",     href:"/experience" },
+  { label:"Certifications", href:"/certifications" },
+];
 
 const SOCIAL = [
-  { href:"https://github.com/niranjan910",                    label:"GitHub" },
-  { href:"https://www.linkedin.com/in/niranjan-k-a83517229/", label:"LinkedIn" },
-  { href:"https://dribbble.com/niranjan2000",                  label:"Dribbble" },
-  { href:"https://www.behance.net/niranjandesign",             label:"Behance" },
+  { label:"GitHub",   href:"https://github.com/niranjan910",                    Icon:Github   },
+  { label:"LinkedIn", href:"https://www.linkedin.com/in/niranjan-k-a83517229/", Icon:Linkedin },
+  { label:"Email",    href:"mailto:niranjan991100@gmail.com",                   Icon:Mail     },
 ];
-const NAV = [
-  { href:"/", label:"Home"}, { href:"/projects", label:"Projects"},
-  { href:"/experience", label:"Experience"}, { href:"/certifications", label:"Certifications"},
+
+const SERVICES = [
+  "AI Product Development",
+  "UI/UX Design",
+  "Front-End Development",
+  "Data Analysis",
+  "Automation Workflows",
 ];
 
 export default function Footer() {
   return (
-    <footer style={{background:"#000000",borderTop:"1px solid rgba(255,255,255,0.06)",padding:"40px 24px",position:"relative",zIndex:10}}>
-      <div style={{maxWidth:"1100px",margin:"0 auto",display:"flex",flexDirection:"column",alignItems:"center",gap:"20px",textAlign:"center"}}>
-        <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:900,color:"#fff",fontSize:"1.4rem",margin:0}}>Niranjan Kumar</p>
-        <p style={{color:"rgba(255,255,255,0.3)",fontSize:"0.7rem",letterSpacing:"3px",textTransform:"uppercase",margin:0}}>
-          AI Product Builder · UI/UX Designer · Front-End Developer
-        </p>
-        <div style={{display:"flex",gap:"20px",flexWrap:"wrap",justifyContent:"center"}}>
-          {SOCIAL.map(({href,label})=>(
-            <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-              style={{color:"rgba(255,255,255,0.35)",fontSize:"0.82rem",fontWeight:500,textDecoration:"none",transition:"color 0.25s"}}
-              onMouseEnter={e=>(e.currentTarget.style.color="#C85CFF")}
-              onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.35)")}>
-              {label}
-            </a>
-          ))}
+    <footer style={{background:"#04040a",borderTop:"1px solid rgba(255,255,255,0.06)",position:"relative",zIndex:10,overflow:"hidden"}}>
+
+      {/* Ambient glow */}
+      <div style={{position:"absolute",top:0,left:"50%",transform:"translateX(-50%)",width:"600px",height:"1px",background:"linear-gradient(90deg,transparent,rgba(200,92,255,0.5),rgba(255,138,61,0.5),transparent)",pointerEvents:"none"}}/>
+      <div style={{position:"absolute",top:"-80px",left:"50%",transform:"translateX(-50%)",width:"500px",height:"200px",background:"radial-gradient(ellipse,rgba(200,92,255,0.06) 0%,transparent 70%)",pointerEvents:"none"}}/>
+
+      {/* Main grid */}
+      <div style={{maxWidth:"1400px",margin:"0 auto",padding:"72px 40px 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:"48px"}}>
+
+        {/* Brand column */}
+        <div>
+          <Link href="/" style={{display:"inline-flex",marginBottom:"20px",textDecoration:"none"}}>
+            <Image src="/images/Logo/Niranjan.png" alt="Niranjan Kumar" width={120} height={36} style={{objectFit:"contain",height:"34px",width:"auto"}}/>
+          </Link>
+          <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.88rem",color:"rgba(255,255,255,0.4)",lineHeight:1.75,maxWidth:"28ch",marginBottom:"28px"}}>
+            AI Product Builder, UI/UX Designer & Front-End Developer building intelligent digital experiences.
+          </p>
+          <div style={{display:"flex",gap:"10px"}}>
+            {SOCIAL.map(({label,href,Icon})=>(
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                style={{
+                  width:"38px",height:"38px",borderRadius:"10px",
+                  display:"flex",alignItems:"center",justifyContent:"center",
+                  background:"rgba(255,255,255,0.04)",
+                  border:"1px solid rgba(255,255,255,0.08)",
+                  transition:"all 0.25s",
+                }}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor="rgba(200,92,255,0.4)";e.currentTarget.style.background="rgba(200,92,255,0.08)";}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor="rgba(255,255,255,0.08)";e.currentTarget.style.background="rgba(255,255,255,0.04)";}}>
+                <Icon size={16} color="rgba(255,255,255,0.5)"/>
+              </a>
+            ))}
+          </div>
         </div>
-        <nav style={{display:"flex",gap:"16px",flexWrap:"wrap",justifyContent:"center"}}>
-          {NAV.map(({href,label})=>(
-            <Link key={href} href={href} style={{color:"rgba(255,255,255,0.3)",fontSize:"0.75rem",textDecoration:"none",transition:"color 0.25s"}}
-              onMouseEnter={e=>(e.currentTarget.style.color="#fff")}
-              onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.3)")}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-        <p style={{color:"rgba(255,255,255,0.15)",fontSize:"0.68rem",letterSpacing:"1px",margin:0}}>
-          &copy; 2025 Niranjan Kumar. All rights reserved.
+
+        {/* Navigation */}
+        <div>
+          <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.65rem",fontWeight:700,letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.25)",marginBottom:"20px"}}>Navigation</p>
+          <div style={{display:"flex",flexDirection:"column",gap:"12px"}}>
+            {LINKS.map(({label,href})=>(
+              <Link key={href} href={href}
+                style={{fontFamily:"Inter,sans-serif",fontSize:"0.88rem",color:"rgba(255,255,255,0.45)",textDecoration:"none",transition:"color 0.2s",display:"inline-flex",alignItems:"center",gap:"6px"}}
+                onMouseEnter={e=>(e.currentTarget.style.color="#fff")}
+                onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.45)")}>
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Services */}
+        <div>
+          <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.65rem",fontWeight:700,letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.25)",marginBottom:"20px"}}>Services</p>
+          <div style={{display:"flex",flexDirection:"column",gap:"12px"}}>
+            {SERVICES.map(s=>(
+              <span key={s} style={{fontFamily:"Inter,sans-serif",fontSize:"0.88rem",color:"rgba(255,255,255,0.45)"}}>{s}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.65rem",fontWeight:700,letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.25)",marginBottom:"20px"}}>Get In Touch</p>
+          <div style={{display:"flex",flexDirection:"column",gap:"14px",marginBottom:"28px"}}>
+            <a href="mailto:niranjan991100@gmail.com"
+              style={{fontFamily:"Inter,sans-serif",fontSize:"0.82rem",color:"rgba(255,255,255,0.45)",textDecoration:"none",transition:"color 0.2s"}}
+              onMouseEnter={e=>(e.currentTarget.style.color="#FF8A3D")}
+              onMouseLeave={e=>(e.currentTarget.style.color="rgba(255,255,255,0.45)")}>
+              niranjan991100@gmail.com
+            </a>
+            <span style={{fontFamily:"Inter,sans-serif",fontSize:"0.82rem",color:"rgba(255,255,255,0.3)"}}>Hyderabad, India</span>
+          </div>
+          <a href="mailto:niranjan991100@gmail.com"
+            style={{
+              display:"inline-flex",alignItems:"center",gap:"6px",
+              padding:"9px 18px",borderRadius:"99px",
+              fontFamily:"Inter,sans-serif",fontSize:"0.78rem",fontWeight:600,
+              color:"#C85CFF",textDecoration:"none",
+              border:"1px solid rgba(200,92,255,0.35)",
+              background:"rgba(200,92,255,0.06)",
+              transition:"all 0.25s",
+            }}
+            onMouseEnter={e=>{e.currentTarget.style.background="rgba(200,92,255,0.12)";e.currentTarget.style.borderColor="rgba(200,92,255,0.6)";}}
+            onMouseLeave={e=>{e.currentTarget.style.background="rgba(200,92,255,0.06)";e.currentTarget.style.borderColor="rgba(200,92,255,0.35)";}}>
+            Hire Me <ArrowUpRight size={13}/>
+          </a>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div style={{borderTop:"1px solid rgba(255,255,255,0.05)",padding:"20px 40px",maxWidth:"1400px",margin:"0 auto",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"12px"}}>
+        <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.72rem",color:"rgba(255,255,255,0.18)",margin:0}}>
+          &copy; {new Date().getFullYear()} Niranjan Kumar. All rights reserved.
+        </p>
+        <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.72rem",color:"rgba(255,255,255,0.18)",margin:0}}>
+          Built with <span style={{color:"#C85CFF"}}>Next.js</span> &amp; <span style={{color:"#FF8A3D"}}>Claude</span>
         </p>
       </div>
     </footer>
