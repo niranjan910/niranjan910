@@ -254,7 +254,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="hero-root" style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block",margin:"-64px -40px 0"}}>
+      <section ref={sectionRef} className="hero-root" style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block",margin:"0 -40px"}}>
 
         {/* Gradient bg */}
         <div style={{position:"absolute",inset:0,zIndex:0,background:"radial-gradient(ellipse 70% 80% at 50% 72%,#D96652 0%,#4A142E 30%,#10051D 62%,#090414 100%)"}}/>

@@ -29,95 +29,85 @@ export default function Navbar() {
     <>
       <style>{`
         .nav-links  { display: flex; }
-        .nav-cta    { display: inline-flex; }
         .nav-burger { display: none; }
-
         @media (max-width: 768px) {
           .nav-links  { display: none; }
-          .nav-cta    { display: none; }
           .nav-burger { display: flex; }
+          .nav-pill   { width: calc(100% - 32px) !important; border-radius: 16px !important; }
         }
       `}</style>
 
-      {/* ── Bar ── */}
-      <header style={{
-        position:"fixed", top:0, left:0, right:0, zIndex:100,
-        background: scrolled
-          ? "rgba(6,3,18,0.88)"
-          : "rgba(6,3,18,0.45)",
-        backdropFilter:"blur(28px)", WebkitBackdropFilter:"blur(28px)",
-        borderBottom:"1px solid rgba(255,255,255,0.07)",
-        boxShadow: scrolled
-          ? "0 4px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05)"
-          : "none",
-        transition:"all 0.35s ease",
-      }}>
-        <nav style={{
-          maxWidth:"1500px", margin:"0 auto",
-          display:"flex", alignItems:"center", justifyContent:"space-between",
-          height:"64px", padding:"0 28px",
+      {/* ── Centred pill ── */}
+      <header style={{position:"fixed",top:"16px",left:"50%",transform:"translateX(-50%)",zIndex:100,width:"auto"}}>
+        <nav className="nav-pill" style={{
+          display:"flex", alignItems:"center", gap:"4px",
+          height:"52px", padding:"0 8px",
+          borderRadius:"99px",
+          background: scrolled ? "rgba(6,3,18,0.92)" : "rgba(255,255,255,0.04)",
+          backdropFilter:"blur(28px)", WebkitBackdropFilter:"blur(28px)",
+          border:"1px solid rgba(255,255,255,0.09)",
+          boxShadow: scrolled
+            ? "0 8px 40px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06)"
+            : "0 4px 24px rgba(0,0,0,0.3)",
+          transition:"all 0.3s ease",
         }}>
 
           {/* Logo */}
-          <Link href="/" style={{display:"flex",alignItems:"center",textDecoration:"none",flexShrink:0}}>
+          <Link href="/" style={{display:"flex",alignItems:"center",textDecoration:"none",padding:"0 10px 0 6px",borderRight:"1px solid rgba(255,255,255,0.08)",marginRight:"4px",flexShrink:0}}>
             <Image
               src="/images/Logo/Niranjan.png"
               alt="Niranjan Kumar"
-              width={130} height={38}
-              style={{objectFit:"contain",height:"38px",width:"auto"}}
+              width={100} height={30}
+              style={{objectFit:"contain",height:"28px",width:"auto"}}
               priority
             />
           </Link>
 
-          {/* Desktop links */}
+          {/* Desktop nav links */}
           <div className="nav-links" style={{alignItems:"center",gap:"2px"}}>
             {NAV.map(({href,label}) => {
               const active = pathname === href;
               return (
                 <Link key={href} href={href} style={{
-                  padding:"7px 18px", borderRadius:"99px", fontSize:"0.88rem",
+                  padding:"6px 16px", borderRadius:"99px", fontSize:"0.88rem",
                   fontWeight: active ? 700 : 500,
                   color: active ? "#FF8A3D" : "rgba(255,255,255,0.72)",
                   background: active ? "rgba(255,138,61,0.1)" : "transparent",
-                  border: active ? "1px solid rgba(255,138,61,0.25)" : "1px solid transparent",
+                  border: active ? "1px solid rgba(255,138,61,0.22)" : "1px solid transparent",
+                  boxShadow: active ? "0 0 10px rgba(255,138,61,0.15)" : "none",
                   transition:"all 0.25s ease", textDecoration:"none",
-                  boxShadow: active ? "0 0 12px rgba(255,138,61,0.15)" : "none",
                 }}>{label}</Link>
               );
             })}
           </div>
 
-          {/* Right side */}
-          <div style={{display:"flex",alignItems:"center",gap:"12px"}}>
-            <Link href="/projects" className="nav-cta btn-primary" style={{padding:"0.5rem 1.4rem",fontSize:"0.82rem"}}>
-              View Work
-            </Link>
-            <button
-              className="nav-burger"
-              onClick={()=>setOpen(o=>!o)}
-              aria-label="Toggle menu"
-              style={{
-                background:"rgba(255,255,255,0.05)",
-                border:"1px solid rgba(255,255,255,0.12)",
-                borderRadius:"10px", padding:"7px",
-                cursor:"pointer", alignItems:"center", justifyContent:"center",
-                backdropFilter:"blur(10px)",
-                transition:"all 0.2s",
-              }}>
-              {open ? <X size={20} color="#fff"/> : <Menu size={20} color="#fff"/>}
-            </button>
-          </div>
+          {/* Hamburger (mobile only) */}
+          <button
+            className="nav-burger"
+            onClick={()=>setOpen(o=>!o)}
+            aria-label="Toggle menu"
+            style={{
+              background:"transparent", border:"none",
+              padding:"6px 8px", cursor:"pointer",
+              alignItems:"center", justifyContent:"center",
+              marginLeft:"4px",
+            }}>
+            {open ? <X size={20} color="#fff"/> : <Menu size={20} color="#fff"/>}
+          </button>
         </nav>
       </header>
 
-      {/* ── Mobile menu ── */}
+      {/* ── Mobile dropdown ── */}
       <div style={{
-        position:"fixed", top:"64px", left:0, right:0, zIndex:99,
+        position:"fixed", top:"76px", left:"50%", transform:"translateX(-50%)",
+        width:"calc(100% - 32px)", maxWidth:"420px",
+        zIndex:99,
         background:"rgba(5,2,16,0.97)",
         backdropFilter:"blur(28px)", WebkitBackdropFilter:"blur(28px)",
-        borderBottom:"1px solid rgba(255,255,255,0.07)",
-        padding: open ? "16px 24px 28px" : "0 24px",
-        maxHeight: open ? "400px" : "0",
+        border:"1px solid rgba(255,255,255,0.09)",
+        borderRadius:"16px",
+        padding: open ? "12px" : "0 12px",
+        maxHeight: open ? "320px" : "0",
         overflow:"hidden",
         transition:"all 0.35s cubic-bezier(0.22,1,0.36,1)",
         display:"flex", flexDirection:"column", gap:"4px",
@@ -126,20 +116,14 @@ export default function Navbar() {
           const active = pathname === href;
           return (
             <Link key={href} href={href} style={{
-              padding:"13px 16px", borderRadius:"12px", fontSize:"1rem",
+              padding:"12px 16px", borderRadius:"10px", fontSize:"0.95rem",
               fontWeight: active ? 700 : 500,
               color: active ? "#FF8A3D" : "rgba(255,255,255,0.75)",
               background: active ? "rgba(255,138,61,0.08)" : "transparent",
-              border: active ? "1px solid rgba(255,138,61,0.15)" : "1px solid transparent",
               textDecoration:"none", transition:"all 0.2s",
             }}>{label}</Link>
           );
         })}
-        <div style={{marginTop:"12px",paddingTop:"16px",borderTop:"1px solid rgba(255,255,255,0.07)"}}>
-          <Link href="/projects" className="btn-primary" style={{width:"100%",justifyContent:"center"}}>
-            View Work
-          </Link>
-        </div>
       </div>
     </>
   );
