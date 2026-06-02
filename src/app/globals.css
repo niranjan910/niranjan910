@@ -100,3 +100,61 @@ body {
 .reveal-1 { animation-delay: 0.1s; }
 .reveal-2 { animation-delay: 0.2s; }
 .reveal-3 { animation-delay: 0.3s; }
+
+/* ── Responsive ── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  main { padding: 0 24px !important; }
+
+  #about > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  #about > div > div:last-child { position: static !important; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main { padding: 0 16px !important; }
+
+  /* Hero */
+  .hero-root  { min-height: 100vh !important; }
+  .hero-cards-scene,
+  .hero-subject { display: none !important; }
+  .hero-text-block {
+    height: 100vh !important;
+    padding-top: 0 !important;
+    justify-content: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Sections general padding */
+  section { padding-left: 0 !important; padding-right: 0 !important; }
+
+  /* About */
+  #about > div {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    padding: 0 16px !important;
+  }
+  #about > div > div:last-child {
+    position: static !important;
+    align-items: center !important;
+  }
+  #about > div > div:last-child > div {
+    width: 80% !important;
+  }
+
+  /* CTA Strip */
+  .cta-strip-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* Buttons full-width on mobile */
+  .btn-primary,
+  .btn-ghost {
+    justify-content: center;
+  }
+
+  /* Grids → single column */
+  .grid { grid-template-columns: 1fr !important; }
+}
