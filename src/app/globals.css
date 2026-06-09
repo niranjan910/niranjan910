@@ -118,37 +118,38 @@ body {
   main { padding: 0 16px !important; }
   .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
-  /* Hero: extend height to fit cards below */
-  .hero-root { min-height: calc(100vh + 280px) !important; }
+  /* Hero: everything fits within 100vh */
+  .hero-root { min-height: 100vh !important; }
   .hero-text-block {
-    height: 52vh !important;
-    padding: 90px 24px 20px !important;
+    height: 44vh !important;
+    padding: 88px 24px 12px !important;
     justify-content: center !important;
   }
+  /* Subject floats above card strip */
   .hero-subject {
     display: block !important;
-    width: 180px !important;
-    bottom: 264px !important;
+    width: 160px !important;
+    bottom: 42vh !important;
     left: 50% !important;
+    z-index: 6 !important;
   }
-  /* Cards: fixed-height strip at bottom of hero */
+  /* Cards: bottom strip, swipeable */
   .hero-cards-scene {
-    top: auto !important;
+    top: 50vh !important;
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
     transform: none !important;
     width: 100% !important;
-    height: 264px !important;
     display: flex !important;
     overflow-x: auto !important;
     align-items: flex-end !important;
     gap: 10px !important;
-    padding: 0 16px 24px !important;
+    padding: 0 16px 20px !important;
     scrollbar-width: none !important;
   }
   .hero-cards-scene::-webkit-scrollbar { display: none; }
-  /* Cards: pull out of absolute flow into flex */
+  /* Cards: static so they join the flex row */
   .neon-card-wrapper {
     position: static !important;
     width: 185px !important;
