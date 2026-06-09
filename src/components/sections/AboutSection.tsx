@@ -107,7 +107,7 @@ function ProfileCarousel() {
 
   return (
     <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:"14px"}}>
-      <div style={{
+      <div className="about-carousel-img" style={{
         position:"relative",width:"58%",aspectRatio:"3/4",
         borderRadius:"22px",overflow:"hidden",
         border:"1px solid rgba(200,92,255,0.22)",

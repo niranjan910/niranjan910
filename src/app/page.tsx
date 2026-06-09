@@ -21,7 +21,7 @@ export default function HomePage() {
   const latestCerts = getLatestCertifications(3);
   const currentRole = getCurrentRole();
   return (
-    <div style={{marginLeft:"-40px",marginRight:"-40px"}}>
+    <div className="page-wrapper" style={{marginLeft:"-40px",marginRight:"-40px"}}>
       <Hero />
       <CompaniesStrip />
       <AboutSection />

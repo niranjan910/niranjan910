@@ -254,7 +254,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="hero-root" style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block",margin:"0 -40px"}}>
+      <section ref={sectionRef} className="hero-root" style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block"}}>
 
         {/* Gradient bg */}
         <div style={{position:"absolute",inset:0,zIndex:0,background:"radial-gradient(ellipse 70% 80% at 50% 72%,#D96652 0%,#4A142E 30%,#10051D 62%,#090414 100%)"}}/>
@@ -311,7 +311,7 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Scroll indicator ── */}
-        <div style={{position:"absolute",bottom:"4.5rem",left:"50%",transform:"translateX(-50%)",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",zIndex:6}}>
+        <div className="hero-scroll-indicator" style={{position:"absolute",bottom:"4.5rem",left:"50%",transform:"translateX(-50%)",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",zIndex:6}}>
           <span style={{fontFamily:"Inter,sans-serif",fontSize:"0.62rem",letterSpacing:"3px",textTransform:"uppercase",color:"rgba(255,255,255,0.28)"}}>Scroll</span>
           <div style={{width:"1px",height:"48px",background:"rgba(255,255,255,0.15)",position:"relative",overflow:"hidden"}}>
             <div style={{position:"absolute",top:"-100%",left:0,width:"100%",height:"100%",background:"linear-gradient(to bottom,transparent,#a855f7,transparent)",animation:"scrollRun 2s ease-in-out infinite"}}/>

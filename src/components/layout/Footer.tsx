@@ -64,7 +64,7 @@ export default function Footer() {
       <div style={{position:"absolute",top:"-60px",left:"50%",transform:"translateX(-50%)",width:"500px",height:"160px",background:"radial-gradient(ellipse,rgba(200,92,255,0.055) 0%,transparent 70%)",pointerEvents:"none"}}/>
 
       {/* Main 4-column grid */}
-      <div style={{maxWidth:"1400px",margin:"0 auto",padding:"72px 40px 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:"48px"}}>
+      <div className="footer-grid" style={{maxWidth:"1400px",margin:"0 auto",padding:"72px 40px 48px",display:"grid",gridTemplateColumns:"2fr 1fr 1fr 1fr",gap:"48px"}}>
 
         {/* Brand */}
         <div>
@@ -158,7 +158,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{borderTop:"1px solid rgba(255,255,255,0.05)",maxWidth:"1400px",margin:"0 auto",padding:"20px 40px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"12px"}}>
+      <div className="footer-bottom" style={{borderTop:"1px solid rgba(255,255,255,0.05)",maxWidth:"1400px",margin:"0 auto",padding:"20px 40px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"12px"}}>
         <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.7rem",color:"rgba(255,255,255,0.18)",margin:0}}>
           &copy; {new Date().getFullYear()} Niranjan Kumar. All rights reserved.
         </p>

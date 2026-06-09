@@ -106,6 +106,7 @@ body {
 /* Tablet */
 @media (max-width: 1024px) {
   main { padding: 0 24px !important; }
+  .page-wrapper { margin-left: -24px !important; margin-right: -24px !important; }
 
   #about > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
   #about > div > div:last-child { position: static !important; }
@@ -114,22 +115,24 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   main { padding: 0 16px !important; }
+  .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
   /* Hero */
-  .hero-root  { min-height: 100vh !important; }
+  .hero-root { min-height: 100vh !important; }
   .hero-cards-scene,
   .hero-subject { display: none !important; }
   .hero-text-block {
     height: 100vh !important;
-    padding-top: 0 !important;
+    padding: 0 24px !important;
     justify-content: center !important;
-    padding-bottom: 0 !important;
   }
+  .hero-scroll-indicator { display: none !important; }
 
   /* Sections general padding */
   section { padding-left: 0 !important; padding-right: 0 !important; }
 
   /* About */
+  #about { padding: 60px 0 !important; }
   #about > div {
     grid-template-columns: 1fr !important;
     gap: 2.5rem !important;
@@ -139,8 +142,20 @@ body {
     position: static !important;
     align-items: center !important;
   }
-  #about > div > div:last-child > div {
-    width: 80% !important;
+  .about-carousel-img { width: 72% !important; }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 48px 20px 32px !important;
+    gap: 28px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 16px 20px !important;
+    gap: 8px !important;
   }
 
   /* CTA Strip */
@@ -149,7 +164,7 @@ body {
     text-align: center !important;
   }
 
-  /* Buttons full-width on mobile */
+  /* Buttons */
   .btn-primary,
   .btn-ghost {
     justify-content: center;
@@ -157,4 +172,11 @@ body {
 
   /* Grids → single column */
   .grid { grid-template-columns: 1fr !important; }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+  .hero-text-block { padding: 0 16px !important; }
+  .btn-primary, .btn-ghost { padding: 0.75rem 1.5rem; font-size: 0.82rem; }
 }
