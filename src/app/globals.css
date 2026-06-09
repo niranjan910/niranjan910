@@ -118,48 +118,39 @@ body {
   main { padding: 0 16px !important; }
   .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
-  /* Hero: column flow on mobile */
-  .hero-root {
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
+  /* Hero: extend height to fit cards below */
+  .hero-root { min-height: calc(100vh + 280px) !important; }
   .hero-text-block {
-    position: relative !important;
-    top: auto !important; left: auto !important; right: auto !important;
-    height: auto !important;
-    min-height: 55vh !important;
-    padding: 110px 24px 20px !important;
+    height: 52vh !important;
+    padding: 90px 24px 20px !important;
     justify-content: center !important;
-    flex-shrink: 0 !important;
   }
   .hero-subject {
     display: block !important;
-    position: relative !important;
-    bottom: auto !important;
+    width: 180px !important;
+    bottom: 264px !important;
     left: 50% !important;
-    width: 190px !important;
-    flex-shrink: 0 !important;
   }
-  /* Cards: horizontal swipe strip */
+  /* Cards: fixed-height strip at bottom of hero */
   .hero-cards-scene {
-    position: relative !important;
-    top: auto !important; left: auto !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     transform: none !important;
     width: 100% !important;
-    height: auto !important;
+    height: 264px !important;
     display: flex !important;
     overflow-x: auto !important;
     align-items: flex-end !important;
     gap: 10px !important;
-    padding: 16px 16px 40px !important;
+    padding: 0 16px 24px !important;
     scrollbar-width: none !important;
-    flex-shrink: 0 !important;
   }
   .hero-cards-scene::-webkit-scrollbar { display: none; }
+  /* Cards: pull out of absolute flow into flex */
   .neon-card-wrapper {
-    position: relative !important;
-    bottom: auto !important; left: auto !important; right: auto !important;
+    position: static !important;
     width: 185px !important;
     flex-shrink: 0 !important;
   }
