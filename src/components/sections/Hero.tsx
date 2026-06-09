@@ -41,6 +41,7 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
 
   return (
     <motion.div
+      className="neon-card-wrapper"
       style={{position:"absolute",bottom:0,...c.pos as React.CSSProperties,width:"210px",perspective:"900px",x:scrollX}}
       initial={{opacity:0, x:c.side==="left"?-90:90, y:40}}
       animate={{opacity:1, x:0, y:0}}

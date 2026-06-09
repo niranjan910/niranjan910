@@ -118,18 +118,50 @@ body {
   main { padding: 0 16px !important; }
   .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
-  /* Hero */
-  .hero-root { min-height: 100vh !important; }
-  .hero-cards-scene { display: none !important; }
-  .hero-subject {
-    display: block !important;
-    width: 220px !important;
+  /* Hero: column flow on mobile */
+  .hero-root {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   .hero-text-block {
-    height: 62vh !important;
-    padding: 0 24px !important;
-    justify-content: flex-end !important;
-    padding-bottom: 20px !important;
+    position: relative !important;
+    top: auto !important; left: auto !important; right: auto !important;
+    height: auto !important;
+    min-height: 55vh !important;
+    padding: 110px 24px 20px !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  .hero-subject {
+    display: block !important;
+    position: relative !important;
+    bottom: auto !important;
+    left: 50% !important;
+    width: 190px !important;
+    flex-shrink: 0 !important;
+  }
+  /* Cards: horizontal swipe strip */
+  .hero-cards-scene {
+    position: relative !important;
+    top: auto !important; left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
+    padding: 16px 16px 40px !important;
+    scrollbar-width: none !important;
+    flex-shrink: 0 !important;
+  }
+  .hero-cards-scene::-webkit-scrollbar { display: none; }
+  .neon-card-wrapper {
+    position: relative !important;
+    bottom: auto !important; left: auto !important; right: auto !important;
+    width: 185px !important;
+    flex-shrink: 0 !important;
   }
   .hero-scroll-indicator { display: none !important; }
 
