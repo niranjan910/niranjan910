@@ -187,7 +187,7 @@ export default function AboutSection() {
               <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:800,fontSize:"1.4rem",color:"#fff",marginBottom:"6px"}}>Tools I Work With</p>
               <div style={{width:"40px",height:"3px",background:"linear-gradient(90deg,#FF8A3D,#C85CFF)",borderRadius:"2px",marginBottom:"28px"}}/>
 
-              <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
+              <div className="about-tools-grid" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"24px"}}>
                 {TOOLS.map((group,gi)=>(
                   <motion.div key={group.category}
                     initial={{opacity:0,y:16}} whileInView={{opacity:1,y:0}}

@@ -108,8 +108,9 @@ body {
   main { padding: 0 24px !important; }
   .page-wrapper { margin-left: -24px !important; margin-right: -24px !important; }
 
-  #about > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
-  #about > div > div:last-child { position: static !important; }
+  /* About: grid is one level deeper than the max-width container */
+  #about > div > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  #about > div > div > div:last-child { position: static !important; }
 }
 
 /* Mobile */
@@ -119,12 +120,16 @@ body {
 
   /* Hero */
   .hero-root { min-height: 100vh !important; }
-  .hero-cards-scene,
-  .hero-subject { display: none !important; }
+  .hero-cards-scene { display: none !important; }
+  .hero-subject {
+    display: block !important;
+    width: 220px !important;
+  }
   .hero-text-block {
-    height: 100vh !important;
+    height: 62vh !important;
     padding: 0 24px !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
+    padding-bottom: 20px !important;
   }
   .hero-scroll-indicator { display: none !important; }
 
@@ -133,16 +138,16 @@ body {
 
   /* About */
   #about { padding: 60px 0 !important; }
-  #about > div {
-    grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
-    padding: 0 16px !important;
-  }
-  #about > div > div:last-child {
+  #about > div { padding: 0 16px !important; }
+  #about > div > div { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+  #about > div > div > div:last-child {
     position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
   }
   .about-carousel-img { width: 72% !important; }
+  .about-tools-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
 
   /* Footer */
   .footer-grid {
