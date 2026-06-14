@@ -8,6 +8,10 @@
 <a href="https://www.behance.net/niranjandesign"><img src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" /></a>
 <a href="https://dribbble.com/niranjan2000"><img src="https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white" /></a>
 
+<br/><br/>
+
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/output/github-contribution-grid-snake-dark.svg" width="100%"/>
+
 </div>
 
 <br/>
@@ -22,7 +26,7 @@ I've designed and shipped **live production websites**, taking projects from res
 - 🤖 Building with AI-assisted workflows — Claude, Claude Code, ChatGPT & Google AI Studio
 - 🎨 Design → Code: Figma prototypes to production-ready, responsive front-ends
 - 📊 Background in Data Analysis — SQL, Power BI, Tableau, Python
-- 📍 Hyderabad, India · Open to remote work
+- 📍 Noida, UP, India · Open to remote work
 
 <br/>
 
@@ -94,6 +98,20 @@ I've designed and shipped **live production websites**, taking projects from res
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true" height="165"/>
 
+<br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
+
+</div>
+
+<br/>
+
+## 🌐 3D Contribution Graph
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/profile-3d-contrib/profile-night-rainbow.svg" width="100%"/>
+
 </div>
 
 <br/>
@@ -108,7 +126,7 @@ I've designed and shipped **live production websites**, taking projects from res
 [![Dribbble](https://img.shields.io/badge/Dribbble-EA4C89?style=for-the-badge&logo=dribbble&logoColor=white)](https://dribbble.com/niranjan2000)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:niranjan991100@gmail.com)
 
-📍 Hyderabad, India &nbsp;·&nbsp; ☎️ +91 96411 43646
+📍 Noida, UP, India &nbsp;·&nbsp; ☎️ +91 96411 43646
 
 </div>
 
