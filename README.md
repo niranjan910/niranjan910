@@ -210,12 +210,30 @@ Beyond the marketing role, active contributor to product and technology initiati
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9&icon_color=00FF88&ring_color=00FF88"/>
+<img src="https://github-profile-trophy.vercel.app/?username=niranjan910&theme=matrix&no-frame=true&column=7&margin-w=8&margin-h=8" width="100%"/>
+
+<br/><br/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9&icon_color=00FF88&ring_color=00FF88&count_private=true&include_all_commits=true"/>
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan910&layout=compact&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9"/>
 
 <br/>
 
 <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&hide_border=true&background=0D1117&ring=00FF88&fire=00CC66&currStreakNum=00FF88&sideNums=C9D1D9&currStreakLabel=00FF88&sideLabels=888888&dates=555555"/>
+
+<br/><br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=niranjan910&theme=2077" width="100%"/>
+
+<br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=niranjan910&theme=2077" height="170"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=niranjan910&theme=2077" height="170"/>
+
+<br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=niranjan910&theme=2077" height="170"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=niranjan910&theme=2077&utcOffset=5.5" height="170"/>
 
 </div>
 
