@@ -219,8 +219,21 @@ Beyond the marketing role, active contributor to product and technology initiati
 
 <br/>
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true" width="100%"/>
 
+<br/><br/>
+
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/0-profile-details.svg" width="100%"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/1-repos-per-language.svg" height="180"/>
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/2-most-commit-language.svg" height="180"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/3-stats.svg" height="180"/>
+<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/4-productive-time.svg" height="180"/>
 
 </div>
 
