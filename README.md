@@ -67,52 +67,26 @@ Currently contributing at **SmartSchool Education Ltd**, where alongside marketi
 
 ---
 
-## 🛠 Technical Skill Matrix
+## 🛠 Tech Stack
 
-### Frontend Engineering
+<div align="center">
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=00FF88)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+**Frontend**
 
-### AI Product Building
+[![Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,framer&perline=8)](https://skillicons.dev)
 
-![ChatGPT](https://img.shields.io/badge/ChatGPT-00FF88?style=flat-square&logo=openai&logoColor=000000)
-![Claude](https://img.shields.io/badge/Claude-00FF88?style=flat-square&logoColor=000000)
-![Claude Code](https://img.shields.io/badge/Claude_Code-00FF88?style=flat-square&logoColor=000000)
-![Google AI Studio](https://img.shields.io/badge/Google_AI_Studio-00C853?style=flat-square&logo=google&logoColor=white)
+**AI · Design · Data · Tools**
 
-### UI/UX Design
+[![Skills](https://skillicons.dev/icons?i=python,mysql,figma,git,github,vscode,postgres&perline=8)](https://skillicons.dev)
 
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+**AI Product Building**
 
-`Design Systems` · `Wireframing` · `User Flows` · `Responsive Design` · `Product Prototyping`
+![ChatGPT](https://img.shields.io/badge/ChatGPT-00FF88?style=for-the-badge&logo=openai&logoColor=000000)
+![Claude](https://img.shields.io/badge/Claude-00FF88?style=for-the-badge&logoColor=000000)
+![Claude Code](https://img.shields.io/badge/Claude_Code-00FF88?style=for-the-badge&logoColor=000000)
+![Google AI Studio](https://img.shields.io/badge/Google_AI_Studio-00C853?style=for-the-badge&logo=google&logoColor=white)
 
-### SaaS Development
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=00FF88)
-![REST API](https://img.shields.io/badge/REST_API-00FF88?style=flat-square&logoColor=000000)
-
-`Auth Systems` · `Dashboard Architecture` · `Database Design` · `Course Platforms` · `Admin Systems`
-
-### Tools & Collaboration
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-00FF88?style=flat-square&logo=github&logoColor=000000)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-
-### Data Analytics
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
+</div>
 
 ---
 
@@ -210,40 +184,21 @@ Beyond the marketing role, active contributor to product and technology initiati
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=niranjan910&theme=matrix&no-frame=true&column=7&margin-w=8&margin-h=8" width="100%"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan910&layout=donut&theme=tokyonight&hide_border=true&langs_count=6"/>
 
 <br/><br/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan910&layout=compact&theme=tokyonight&hide_border=true"/>
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true" width="100%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly" width="49%"/>
+<img src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&theme=radical&hide_border=true&count_private=true&hide=stars&show=reviews,discussions_started,prs_merged,prs_merged_percentage" width="49%"/>
 
 <br/><br/>
 
-<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/0-profile-details.svg" width="100%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&bg_color=0D1117&color=00FF88&line=00FF88&point=00CC66&area=true&area_color=00FF8815&hide_border=true&custom_title=Contribution%20Graph" width="100%"/>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/1-repos-per-language.svg" height="180"/>
-<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/2-most-commit-language.svg" height="180"/>
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/3-stats.svg" height="180"/>
-<img src="https://raw.githubusercontent.com/niranjan910/niranjan910/github-profile-summary-cards-output/profile-summary-card-output/github_dark/4-productive-time.svg" height="180"/>
-
-</div>
-
----
-
-## 🌐 Activity & Contributions
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&bg_color=0D1117&color=00FF88&line=00FF88&point=00CC66&area=true&area_color=00FF8815&hide_border=true" width="100%"/>
+<img src="https://ghchart.rshah.org/00FF88/niranjan910" width="100%" alt="Niranjan's Contribution Calendar"/>
 
 </div>
 
