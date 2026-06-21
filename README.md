@@ -214,12 +214,12 @@ Beyond the marketing role, active contributor to product and technology initiati
 
 <br/><br/>
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9&icon_color=00FF88&ring_color=00FF88&count_private=true&include_all_commits=true"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan910&layout=compact&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan910&layout=compact&theme=tokyonight&hide_border=true"/>
 
 <br/>
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&hide_border=true&background=0D1117&ring=00FF88&fire=00CC66&currStreakNum=00FF88&sideNums=C9D1D9&currStreakLabel=00FF88&sideLabels=888888&dates=555555"/>
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&theme=tokyonight&hide_border=true"/>
 
 
 </div>
