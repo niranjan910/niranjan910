@@ -19,67 +19,11 @@
 
 ---
 
-## 👨‍💻 About Me
-
-I'm a **Frontend Developer, AI Product Builder, and UI/UX Designer** focused on building modern digital products that combine exceptional user experiences with AI-assisted development workflows.
-
-My work spans product architecture, frontend engineering, responsive design systems, and AI-powered product development. I enjoy taking products from concept and wireframes to fully functional production-ready applications.
-
-Currently contributing at **SmartSchool Education Ltd**, where alongside marketing responsibilities I actively participate in product development, website design, frontend implementation, UI/UX design, and AI-assisted product initiatives.
-
-### What I Focus On
-
-- 🟢 Building modern SaaS products
-- 🟢 Frontend engineering with React & Next.js
-- 🟢 AI-assisted development workflows
-- 🟢 Product architecture and planning
-- 🟢 UI/UX systems and design thinking
-- 🟢 Responsive and performance-focused web experiences
-
----
-
-## ⚡ Engineering Workflow
-
-```text
-        Idea
-         │
-         ▼
-      Research
-         │
-         ▼
-     UI/UX Design
-         │
-         ▼
- AI-Assisted Planning
-         │
-         ▼
- Frontend Development
-         │
-         ▼
- Integration & Testing
-         │
-         ▼
-      Deployment
-         │
-         ▼
-     Optimization
-```
-
----
-
-## 🛠 Tech Stack
-
 <div align="center">
-
-**Frontend**
 
 [![Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,framer&perline=8)](https://skillicons.dev)
 
-**AI · Design · Data · Tools**
-
 [![Skills](https://skillicons.dev/icons?i=python,mysql,figma,git,github,vscode,postgres&perline=8)](https://skillicons.dev)
-
-**AI Product Building**
 
 ![ChatGPT](https://img.shields.io/badge/ChatGPT-00FF88?style=for-the-badge&logo=openai&logoColor=000000)
 ![Claude](https://img.shields.io/badge/Claude-00FF88?style=for-the-badge&logoColor=000000)
@@ -89,98 +33,6 @@ Currently contributing at **SmartSchool Education Ltd**, where alongside marketi
 </div>
 
 ---
-
-## 🚀 Featured Projects
-
-### Edu FusionX — Full-Stack EdTech SaaS Platform
-
-A premium career-focused learning platform for students and professionals.
-
-`Next.js` · `TypeScript` · `Tailwind CSS` · `PostgreSQL` · `Prisma` · `Auth.js`
-
-**Features:** Student Dashboard · Admin Dashboard · Auth System · Course Marketplace · Certification System · Placement Support · Analytics
-
----
-
-### EGN Connect X — EdTech Event Platform
-
-Live event and networking platform connecting students, professionals, and educational organizations.
-
-`Figma` · `HTML` · `CSS` · `JavaScript`
-
-**Status:** 🟢 Live Production — [egnconnectx.com](https://egnconnectx.com/)
-
----
-
-### StudyNLearn — EdTech Learning Platform
-
-Educational platform improving accessibility and engagement for online learners.
-
-`Figma` · `HTML` · `CSS` · `JavaScript`
-
-**Status:** 🟢 Live Production — [studynlearn.com](https://studynlearn.com/)
-
----
-
-### Landing Bazar — Financial Services Platform
-
-Conversion-focused platform for loan discovery, EMI services, and lead generation.
-
-`Figma` · `HTML` · `CSS` · `JavaScript`
-
----
-
-### GSC Intel — AI + SEO Intelligence Tool
-
-AI-assisted platform analysing Google Search Console data for actionable SEO insights.
-
-`AI Workflows` · `Automation` · `Search Analytics`
-
----
-
-### Personal Portfolio
-
-Modern developer portfolio showcasing projects, AI-assisted workflows, and frontend skills.
-
-`Next.js` · `React` · `TypeScript` · [niranjan910-ks6x.vercel.app](https://niranjan910-ks6x.vercel.app/)
-
----
-
-## 💼 Professional Experience
-
-### SmartSchool Education Ltd — Marketing Executive *(Current)*
-
-Beyond the marketing role, active contributor to product and technology initiatives:
-
-`Product Development` · `Frontend Development` · `Website Design` · `UI/UX Design` · `AI-assisted Product Building` · `Digital Experience Optimization`
-
----
-
-## 🏆 Accomplishments
-
-- 🟢 Built production-ready websites deployed to live clients
-- 🟢 Designed and shipped responsive interfaces from concept to production
-- 🟢 Built AI-assisted products using Claude, Claude Code & ChatGPT
-- 🟢 Delivered real-world EdTech and FinTech platforms
-- 🟢 Built products from concept → wireframe → deployment
-
----
-
-## 📜 Certifications
-
-| Certification | Organization |
-|---|---|
-| Claude Code 101 | Anthropic |
-| Claude Code in Action | Anthropic |
-| SEO Mastery | SEO Mastery |
-| Career Essentials in Data Analysis | Microsoft & LinkedIn |
-| Career Essentials in Business Analysis | Microsoft & LinkedIn |
-| Statistics Foundations Professional Certificate | Wolfram Research |
-| Public Speaking Skills Professional Certificate | Toastmasters International |
-
----
-
-## 📊 GitHub Analytics
 
 <div align="center">
 
@@ -204,21 +56,7 @@ Beyond the marketing role, active contributor to product and technology initiati
 
 ---
 
-## 📫 Connect
-
-| | |
-|---|---|
-| 🌍 Location | Noida, UP, India |
-| 💼 LinkedIn | [niranjan-k-a83517229](https://www.linkedin.com/in/niranjan-k-a83517229/) |
-| 🌐 Portfolio | [niranjan910-ks6x.vercel.app](https://niranjan910-ks6x.vercel.app/) |
-| 📧 Email | [niranjan991100@gmail.com](mailto:niranjan991100@gmail.com) |
-| 🐱 GitHub | [niranjan910](https://github.com/niranjan910) |
-
----
-
 <div align="center">
-
-*Building products where design, engineering, and AI meet.*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FF88,50:061A0C,100:000000&height=120&section=footer" width="100%"/>
 
