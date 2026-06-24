@@ -46,6 +46,30 @@
 
 <br/><br/>
 
+md
+<a href="https://niranjan910-ks6x.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-00D9FF?style=for-the-badge&logo=vercel&logoColor=000000"/></a>
+<a href="https://www.linkedin.com/in/niranjan-k-a83517229/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:niranjan991100@gmail.com"><img src="https://img.shields.io/badge/Email-1F6FEB?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://github.com/niranjan910"><img src="https://img.shields.io/badge/GitHub-00D9FF?style=for-the-badge&logo=github&logoColor=000000"/></a>
+
+<br/><br/>
+
+<a href="https://egnconnectx.com/">
+  <img src="https://img.shields.io/badge/EGN_ConnectX-00D9FF?style=for-the-badge&logoColor=000000"/>
+</a>
+
+<a href="https://studynlearn.com/">
+  <img src="https://img.shields.io/badge/StudynLearn-00D9FF?style=for-the-badge&logoColor=000000"/>
+</a>
+
+<a href="https://smartschoolonline.in/">
+  <img src="https://img.shields.io/badge/SmartSchool-00D9FF?style=for-the-badge&logoColor=000000"/>
+</a>
+
+<br/><br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=niranjan910&color=00D9FF&style=flat-square&label=Profile+Views)
+
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&bg_color=0D1117&color=00D9FF&line=00D9FF&point=00C2FF&area=true&area_color=00D9FF15&hide_border=true&custom_title=Contribution%20Graph" width="100%"/>
 
 <br/>
