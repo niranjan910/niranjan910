@@ -10,7 +10,7 @@ export default function ExperiencePreview({currentRole}:{currentRole:ExperienceI
     <section style={{padding:"96px 40px",background:"#090414"}}>
       <div style={{maxWidth:"900px",margin:"0 auto"}}>
         <SectionHeading eyebrow="EXPERIENCE" title="My Journey of Growth" subtitle="From learning to leading impact." />
-        <div style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",borderRadius:"20px",padding:"28px",backdropFilter:"blur(14px)"}}>
+        <div style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",borderRadius:"20px",padding:"28px"}}>
           <div style={{display:"flex",gap:"20px",alignItems:"flex-start"}}>
             <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"rgba(200,92,255,0.15)",border:"2px solid rgba(200,92,255,0.4)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
               <Briefcase size={20} strokeWidth={1.5} color="rgba(200,92,255,0.85)" />

@@ -67,8 +67,7 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
         <div style={{
           position:"relative",zIndex:3,borderRadius:"22px",
           padding:"1.25rem 1.1rem",display:"flex",flexDirection:"column",overflow:"hidden",
-          backdropFilter:"blur(48px)",WebkitBackdropFilter:"blur(48px)",
-          background:"linear-gradient(145deg,rgba(24,11,52,0.9) 0%,rgba(8,4,20,0.85) 55%,rgba(20,8,44,0.92) 100%)",
+          background:"linear-gradient(145deg,rgba(24,11,52,0.96) 0%,rgba(8,4,20,0.94) 55%,rgba(20,8,44,0.97) 100%)",
           border:"1px solid rgba(255,255,255,0.055)",
           boxShadow:`0 28px 72px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.02), inset 0 1.5px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.5)`,
         }}>
@@ -111,7 +110,8 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
           {/* Header */}
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"0.7rem",position:"relative",zIndex:5}}>
             <div>
-              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.38)",fontWeight:700,textTransform:"uppercase",margin:0}}>{c.tag}</p>
+              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.38)",fontWeight:700,textTransform:"uppercase",marginBottom:"4px"}}>{c.tag}</p>
+              <p className="card-num" style={{fontFamily:"Satoshi,sans-serif",fontWeight:800,fontSize:"1.6rem",lineHeight:1,background:`linear-gradient(135deg,${c.n1},${c.n2})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>{c.num}</p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(2,4px)",gap:"3px",marginTop:"4px"}}>
               {[...Array(6)].map((_,j)=><span key={j} style={{width:"4px",height:"4px",borderRadius:"50%",background:`${c.n1}55`,display:"block"}}/>)}
@@ -132,7 +132,14 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
           </div>
 
           <h3 style={{fontFamily:"Satoshi,sans-serif",fontSize:"0.95rem",fontWeight:800,color:"#fff",marginBottom:"0.3rem",textShadow:`0 0 20px ${c.n1}55`,position:"relative",zIndex:5}}>{c.title}</h3>
-          <div style={{height:"1.5px",width:"40px",background:`linear-gradient(90deg,${c.n1},${c.n2})`,borderRadius:"2px",flexShrink:0,boxShadow:`0 0 10px ${c.n1}80`,position:"relative",zIndex:5}}/>
+          <div style={{height:"1.5px",width:"40px",background:`linear-gradient(90deg,${c.n1},${c.n2})`,borderRadius:"2px",marginBottom:"0.5rem",flexShrink:0,boxShadow:`0 0 10px ${c.n1}80`,position:"relative",zIndex:5}}/>
+          <p className="card-desc" style={{fontFamily:"Inter,sans-serif",fontSize:"0.72rem",color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:"0.6rem",position:"relative",zIndex:5}}>{c.desc}</p>
+
+          <div className="card-skills" style={{background:"rgba(0,0,0,0.45)",borderRadius:"8px",overflow:"hidden",flexShrink:0,border:"1px solid rgba(255,255,255,0.05)",position:"relative",zIndex:5}}>
+            {c.skills.map(s=>(
+              <p key={s} style={{fontFamily:"Inter,sans-serif",fontSize:"0.68rem",color:"rgba(255,255,255,0.6)",padding:"4px 10px",borderBottom:"1px solid rgba(255,255,255,0.04)",margin:0,lineHeight:1.5}}>{s}</p>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -269,6 +276,8 @@ export default function Hero() {
             width: 100% !important;
             flex-shrink: 1 !important;
           }
+          /* Heavier card content shows on desktop, hidden on mobile */
+          .card-num, .card-desc, .card-skills { display: none !important; }
 
           /* Profile image — on the RIGHT, vertically centred */
           .hero-subject {
@@ -276,12 +285,12 @@ export default function Hero() {
             position: sticky !important;
             transform: none !important;
             top: 80px !important; bottom: auto !important; left: auto !important;
-            flex: 0 0 40% !important;
-            width: 40% !important;
-            max-width: 40% !important;
+            flex: 0 0 50% !important;
+            width: 50% !important;
+            max-width: 50% !important;
             align-self: flex-start !important;   /* sit near the top of the row */
             margin-top: -8px !important;          /* nudge the person up a little */
-            padding-right: 14px !important;
+            padding-right: 12px !important;
           }
 
           .hero-scroll-indicator { display: none !important; }
