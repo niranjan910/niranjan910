@@ -12,7 +12,7 @@ export default function LatestCertifications({certifications}:{certifications:Ce
           subtitle="A snapshot of my most recent learning achievements and professional development." />
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,300px),1fr))",gap:"20px"}}>
           {certifications.map(c=>(
-            <article key={c.id} style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",borderRadius:"20px",overflow:"hidden",display:"flex",flexDirection:"column",backdropFilter:"blur(14px)",transition:"border-color 0.3s,transform 0.3s"}}
+            <article key={c.id} style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",borderRadius:"20px",overflow:"hidden",display:"flex",flexDirection:"column",transition:"border-color 0.3s,transform 0.3s"}}
               onMouseEnter={e=>{e.currentTarget.style.borderColor="rgba(200,92,255,0.3)";e.currentTarget.style.transform="translateY(-4px)";}}
               onMouseLeave={e=>{e.currentTarget.style.borderColor="rgba(255,255,255,0.09)";e.currentTarget.style.transform="translateY(0)";}}>
               {c.imageUrl && (

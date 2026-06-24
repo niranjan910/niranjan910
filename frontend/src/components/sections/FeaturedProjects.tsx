@@ -8,7 +8,6 @@ import type { Project } from "@/types";
 const card: React.CSSProperties = {
   background:"rgba(255,255,255,0.03)",border:"1px solid rgba(255,255,255,0.09)",
   borderRadius:"20px",overflow:"hidden",display:"flex",flexDirection:"column",
-  backdropFilter:"blur(14px)",WebkitBackdropFilter:"blur(14px)",
   transition:"border-color 0.3s ease,box-shadow 0.3s ease,transform 0.3s ease",
 };
 

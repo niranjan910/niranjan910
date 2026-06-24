@@ -66,7 +66,7 @@ export default function ContactSection() {
                 background:"rgba(255,255,255,0.03)",
                 border:"1px solid rgba(255,255,255,0.08)",
                 borderRadius:"20px",textDecoration:"none",textAlign:"left",
-                backdropFilter:"blur(16px)",transition:"border-color 0.3s, box-shadow 0.3s",
+                transition:"border-color 0.3s, box-shadow 0.3s",
                 position:"relative",overflow:"hidden",
               }}
               onMouseEnter={e=>{
