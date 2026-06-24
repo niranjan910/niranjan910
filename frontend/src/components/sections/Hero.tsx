@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, BarChart3, Layers, Code2, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -27,18 +27,6 @@ const PARTICLES = [
 
 
 function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const rotX = useSpring(useTransform(my,[-0.5,0.5],[12,-12]),{stiffness:400,damping:30});
-  const rotY = useSpring(useTransform(mx,[-0.5,0.5],[-12,12]),{stiffness:400,damping:30});
-
-  function onMove(e:React.MouseEvent<HTMLDivElement>) {
-    const r = ref.current!.getBoundingClientRect();
-    mx.set((e.clientX-r.left)/r.width-0.5);
-    my.set((e.clientY-r.top)/r.height-0.5);
-  }
-
   return (
     <motion.div
       className="neon-card-wrapper"
@@ -47,14 +35,7 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
       animate={{opacity:1, x:0, y:0}}
       transition={{duration:1, delay:i*0.15, ease:[0.22,1,0.36,1]}}
     >
-      <motion.div
-        ref={ref}
-        onMouseMove={onMove}
-        onMouseLeave={()=>{mx.set(0);my.set(0);}}
-        style={{rotateX:rotX,rotateY:rotY,transformStyle:"preserve-3d"}}
-        whileHover={{scale:1.06,z:40}}
-        transition={{type:"spring",stiffness:280,damping:24}}
-      >
+      <div>
         {/* Outer ambient halo */}
         <div className={`halo-c${c.num}`} style={{
           position:"absolute",inset:"-16px",borderRadius:"36px",
@@ -130,8 +111,7 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
           {/* Header */}
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:"0.7rem",position:"relative",zIndex:5}}>
             <div>
-              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.38)",fontWeight:700,textTransform:"uppercase",marginBottom:"4px"}}>{c.tag}</p>
-              <p style={{fontFamily:"Satoshi,sans-serif",fontWeight:800,fontSize:"1.6rem",lineHeight:1,background:`linear-gradient(135deg,${c.n1},${c.n2})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>{c.num}</p>
+              <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.55rem",letterSpacing:"2.5px",color:"rgba(255,255,255,0.38)",fontWeight:700,textTransform:"uppercase",margin:0}}>{c.tag}</p>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(2,4px)",gap:"3px",marginTop:"4px"}}>
               {[...Array(6)].map((_,j)=><span key={j} style={{width:"4px",height:"4px",borderRadius:"50%",background:`${c.n1}55`,display:"block"}}/>)}
@@ -152,16 +132,9 @@ function NeonCard({ c, i, scrollX }: { c:CardDef; i:number; scrollX:any }) {
           </div>
 
           <h3 style={{fontFamily:"Satoshi,sans-serif",fontSize:"0.95rem",fontWeight:800,color:"#fff",marginBottom:"0.3rem",textShadow:`0 0 20px ${c.n1}55`,position:"relative",zIndex:5}}>{c.title}</h3>
-          <div style={{height:"1.5px",width:"40px",background:`linear-gradient(90deg,${c.n1},${c.n2})`,borderRadius:"2px",marginBottom:"0.5rem",flexShrink:0,boxShadow:`0 0 10px ${c.n1}80`,position:"relative",zIndex:5}}/>
-          <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.72rem",color:"rgba(255,255,255,0.4)",lineHeight:1.6,marginBottom:"0.6rem",position:"relative",zIndex:5}}>{c.desc}</p>
-
-          <div style={{background:"rgba(0,0,0,0.45)",borderRadius:"8px",overflow:"hidden",flexShrink:0,border:"1px solid rgba(255,255,255,0.05)",position:"relative",zIndex:5}}>
-            {c.skills.map(s=>(
-              <p key={s} style={{fontFamily:"Inter,sans-serif",fontSize:"0.68rem",color:"rgba(255,255,255,0.6)",padding:"4px 10px",borderBottom:"1px solid rgba(255,255,255,0.04)",margin:0,lineHeight:1.5}}>{s}</p>
-            ))}
-          </div>
+          <div style={{height:"1.5px",width:"40px",background:`linear-gradient(90deg,${c.n1},${c.n2})`,borderRadius:"2px",flexShrink:0,boxShadow:`0 0 10px ${c.n1}80`,position:"relative",zIndex:5}}/>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
@@ -247,11 +220,71 @@ export default function Hero() {
         @keyframes sccw  { to { transform: rotate(-360deg); } }
         @keyframes scrollRun { 0%{top:-100%} 100%{top:200%} }
 
+        /* ─────────── Mobile hero (single source of truth) ─────────── */
         @media (max-width:768px) {
-          .hero-cards-scene { display:none !important; }
-          .hero-subject     { display:none !important; }
-          .hero-text-block  { height:100vh !important; padding-top:0 !important; justify-content:center !important; }
-          .hero-root        { min-height:100vh !important; }
+          /* Section flows: heading row on top, then [cards | image] below */
+          .hero-root {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            align-items: flex-start !important;
+            column-gap: 12px !important;
+            row-gap: 0 !important;
+            min-height: auto !important;
+            padding: 0 0 40px !important;
+            overflow: visible !important;   /* let the sticky image escape the section */
+          }
+
+          /* Heading + subheading + CTA — full-width row at the top */
+          .hero-text-block {
+            position: static !important;
+            flex: 1 1 100% !important;
+            height: auto !important;
+            transform: none !important;            /* kill parallax drift */
+            padding: 108px 16px 22px !important;
+            justify-content: center !important;
+          }
+
+          /* Skill cards — small, stacked on the LEFT */
+          .hero-cards-scene {
+            position: static !important;
+            transform: none !important;
+            top: auto !important; left: auto !important; right: auto !important;
+            flex: 1 1 0 !important;
+            min-width: 0 !important;
+            width: auto !important;
+            height: auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 8px !important;
+            padding: 0 0 0 16px !important;
+            overflow: visible !important;
+          }
+          /* Drop the floor-glow blobs on mobile (they leak in the column) */
+          .hero-cards-scene > div:not(.neon-card-wrapper) { display: none !important; }
+          .neon-card-wrapper {
+            position: static !important;
+            transform: none !important;            /* kill parallax x */
+            inset: auto !important;
+            width: 100% !important;
+            flex-shrink: 1 !important;
+          }
+
+          /* Profile image — on the RIGHT, vertically centred */
+          .hero-subject {
+            display: block !important;
+            position: sticky !important;
+            transform: none !important;
+            top: 80px !important; bottom: auto !important; left: auto !important;
+            flex: 0 0 40% !important;
+            width: 40% !important;
+            max-width: 40% !important;
+            align-self: flex-start !important;   /* sit near the top of the row */
+            margin-top: -8px !important;          /* nudge the person up a little */
+            padding-right: 14px !important;
+          }
+
+          .hero-scroll-indicator { display: none !important; }
         }
       `}</style>
 

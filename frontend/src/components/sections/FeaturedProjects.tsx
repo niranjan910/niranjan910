@@ -18,7 +18,7 @@ export default function FeaturedProjects({projects}:{projects:Project[]}) {
       <div style={{maxWidth:"1200px",margin:"0 auto"}}>
         <SectionHeading eyebrow="FEATURED PROJECTS" title="Featured Projects"
           subtitle="Real-world products and digital experiences built across AI, web development, UI/UX design, and business solutions." />
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(320px,1fr))",gap:"20px"}}>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,320px),1fr))",gap:"20px"}}>
           {projects.map(p=>(
             <article key={p.id} style={card}
               onMouseEnter={e=>{const el=e.currentTarget;el.style.borderColor="rgba(200,92,255,0.3)";el.style.boxShadow="0 20px 50px rgba(0,0,0,0.3)";el.style.transform="translateY(-4px)";}}
