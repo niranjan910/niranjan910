@@ -118,44 +118,9 @@ body {
   main { padding: 0 16px !important; }
   .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
-  /* Hero: everything fits within 100vh */
-  .hero-root { min-height: 100vh !important; }
-  .hero-text-block {
-    height: 44vh !important;
-    padding: 88px 24px 12px !important;
-    justify-content: center !important;
-  }
-  /* Subject floats above card strip */
-  .hero-subject {
-    display: block !important;
-    width: 160px !important;
-    bottom: 42vh !important;
-    left: 50% !important;
-    z-index: 6 !important;
-  }
-  /* Cards: bottom strip, swipeable */
-  .hero-cards-scene {
-    top: 50vh !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    transform: none !important;
-    width: 100% !important;
-    display: flex !important;
-    overflow-x: auto !important;
-    align-items: flex-end !important;
-    gap: 10px !important;
-    padding: 0 16px 20px !important;
-    scrollbar-width: none !important;
-  }
-  .hero-cards-scene::-webkit-scrollbar { display: none; }
-  /* Cards: static so they join the flex row */
-  .neon-card-wrapper {
-    position: static !important;
-    width: 185px !important;
-    flex-shrink: 0 !important;
-  }
-  .hero-scroll-indicator { display: none !important; }
+  /* NOTE: mobile Hero layout lives in Hero.tsx's <style> block (single source
+     of truth) — keeping it there avoids the two stylesheets fighting over
+     !important rules. */
 
   /* Sections general padding */
   section { padding-left: 0 !important; padding-right: 0 !important; }
@@ -206,6 +171,5 @@ body {
 /* Very small screens */
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr !important; }
-  .hero-text-block { padding: 0 16px !important; }
   .btn-primary, .btn-ghost { padding: 0.75rem 1.5rem; font-size: 0.82rem; }
 }

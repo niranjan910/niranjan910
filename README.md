@@ -41,7 +41,7 @@
 
 <br/><br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan910&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&stroke=00D9FF&ring=00D9FF&fire=00D9FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00D9FF&sideLabels=FFFFFF&dates=8B949E" width="49%"/>
+<img src="https://streak-stats.demolab.com/?user=niranjan910&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&stroke=00D9FF&ring=00D9FF&fire=00D9FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00D9FF&sideLabels=FFFFFF&dates=8B949E" width="49%"/>
 <img src="https://github-readme-stats.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&count_private=true&hide=stars&show=reviews,discussions_started,prs_merged,prs_merged_percentage&title_color=00D9FF&icon_color=00D9FF&text_color=FFFFFF&bg_color=0D1117" width="49%"/>
 
 <br/><br/>

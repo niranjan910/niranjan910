@@ -33,12 +33,15 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .nav-links  { display: none; }
           .nav-burger { display: flex; }
-          .nav-pill   { width: calc(100% - 32px) !important; border-radius: 16px !important; }
+          /* Stretch the bar full-width (logo left, burger right) */
+          .nav-header { left: 16px !important; right: 16px !important; transform: none !important; width: auto !important; }
+          .nav-pill   { width: 100% !important; border-radius: 16px !important; justify-content: space-between !important; }
+          .nav-logo   { border-right: none !important; margin-right: 0 !important; }
         }
       `}</style>
 
       {/* ── Centred pill ── */}
-      <header style={{position:"fixed",top:"16px",left:"50%",transform:"translateX(-50%)",zIndex:100,width:"auto"}}>
+      <header className="nav-header" style={{position:"fixed",top:"16px",left:"50%",transform:"translateX(-50%)",zIndex:100,width:"auto"}}>
         <nav className="nav-pill" style={{
           display:"flex", alignItems:"center", gap:"4px",
           height:"52px", padding:"0 8px",
@@ -53,7 +56,7 @@ export default function Navbar() {
         }}>
 
           {/* Logo */}
-          <Link href="/" style={{display:"flex",alignItems:"center",textDecoration:"none",padding:"0 10px 0 6px",borderRight:"1px solid rgba(255,255,255,0.08)",marginRight:"4px",flexShrink:0}}>
+          <Link href="/" className="nav-logo" style={{display:"flex",alignItems:"center",textDecoration:"none",padding:"0 10px 0 6px",borderRight:"1px solid rgba(255,255,255,0.08)",marginRight:"4px",flexShrink:0}}>
             <Image
               src="/images/Logo/Niranjan.png"
               alt="Niranjan Kumar"
@@ -101,7 +104,7 @@ export default function Navbar() {
         zIndex:99,
         background:"rgba(5,2,16,0.97)",
         backdropFilter:"blur(28px)", WebkitBackdropFilter:"blur(28px)",
-        border:"1px solid rgba(255,255,255,0.09)",
+        border: open ? "1px solid rgba(255,255,255,0.09)" : "1px solid transparent",
         borderRadius:"16px",
         padding: open ? "12px" : "0 12px",
         maxHeight: open ? "320px" : "0",

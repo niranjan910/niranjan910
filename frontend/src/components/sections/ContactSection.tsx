@@ -51,7 +51,7 @@ export default function ContactSection() {
         </motion.p>
 
         {/* Contact Cards */}
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:"16px",marginBottom:"52px"}}>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,200px),1fr))",gap:"16px",marginBottom:"52px"}}>
           {CONTACTS.map(({Icon,label,value,href,color,desc,action},i)=>(
             <motion.a
               key={label} href={href}
