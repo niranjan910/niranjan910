@@ -284,12 +284,11 @@ export default function Hero() {
             display: block !important;
             position: sticky !important;
             transform: none !important;
-            top: 80px !important; bottom: auto !important; left: auto !important;
-            flex: 0 0 50% !important;
-            width: 50% !important;
-            max-width: 50% !important;
-            align-self: flex-start !important;   /* sit near the top of the row */
-            margin-top: -8px !important;          /* nudge the person up a little */
+            top: auto !important; bottom: 0 !important; left: auto !important;
+            flex: 0 0 55% !important;
+            width: 55% !important;
+            max-width: 55% !important;
+            align-self: flex-end !important;      /* anchor to the bottom of the card row */
             padding-right: 12px !important;
           }
 
