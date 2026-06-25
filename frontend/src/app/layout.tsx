@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import LoadingOverlay from "@/components/layout/LoadingOverlay";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({children}:{children:React.ReactNode}) {
         <link rel="icon" type="image/png" href="/Logo/favicon.png"/>
       </head>
       <body className={inter.className} style={{background:"#090414",color:"#fff",overflowX:"hidden"}}>
+        <LoadingOverlay/>
         <Navbar/>
         <main style={{padding:"0 40px"}}>
           {children}
