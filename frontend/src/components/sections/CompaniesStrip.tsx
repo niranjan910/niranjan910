@@ -14,7 +14,7 @@ export default function CompaniesStrip() {
   return (
     <section style={{background:"#000",padding:"16px 0",borderTop:"1px solid rgba(255,255,255,0.06)",borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
       <p style={{fontFamily:"Inter,sans-serif",fontSize:"0.65rem",fontWeight:600,letterSpacing:"4px",textTransform:"uppercase",color:"rgba(255,255,255,0.25)",textAlign:"center",marginBottom:"14px"}}>COMPANIES I HAVE WORKED WITH</p>
-      <div style={{display:"flex",justifyContent:"space-evenly",alignItems:"center",padding:"0 24px",flexWrap:"wrap",gap:"12px"}}>
+      <div className="companies-grid" style={{display:"flex",justifyContent:"space-evenly",alignItems:"center",padding:"0 24px",flexWrap:"wrap",gap:"12px"}}>
         {COMPANIES.map(c=>(
           <a key={c.alt} href={c.href} target="_blank" rel="noopener noreferrer"
             style={{display:"inline-flex",alignItems:"center",justifyContent:"center",padding:"6px 8px",borderRadius:"8px",transition:"all 0.3s",flex:1,maxWidth:"130px"}}>

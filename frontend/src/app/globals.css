@@ -166,6 +166,21 @@ body {
 
   /* Grids → single column */
   .grid { grid-template-columns: 1fr !important; }
+
+  /* Companies strip → 2-column grid right after the hero */
+  .companies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px 16px !important;
+    padding: 4px 16px 0 !important;
+    justify-items: center !important;
+    align-items: center !important;
+  }
+  .companies-grid > a {
+    width: 100% !important;
+    max-width: none !important;
+    justify-content: center !important;
+  }
 }
 
 /* Very small screens */

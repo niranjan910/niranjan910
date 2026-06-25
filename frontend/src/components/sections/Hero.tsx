@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, BarChart3, Layers, Code2, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -154,6 +154,27 @@ export default function Hero() {
   const rightX   = useTransform(scrollYProgress,[0,1],["0px","70px"]);
   const subjectY = useTransform(scrollYProgress,[0,1],["0px","-35px"]);
 
+  // ── Mobile-only fixed-toggle for the subject image ──────────────────────────
+  // On mobile the subject is position:fixed; bottom:0 (pinned to the viewport
+  // from the very first paint). We toggle a class off once the hero scrolls out
+  // so it stops being fixed and never overlaps later sections. The observer does
+  // NO per-frame work — it only fires on the single intersection threshold cross,
+  // so scrolling stays buttery (no scroll listener, no layout reads on scroll).
+  const [heroOut, setHeroOut] = useState(false);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(
+      ([entry]) => setHeroOut(!entry.isIntersecting),
+      // rootMargin bottom -55% means: consider the hero "out" once its bottom
+      // edge has risen past ~45% of the viewport, releasing the pin slightly
+      // before the next section's content reaches the fixed image.
+      { threshold: 0, rootMargin: "0px 0px -55% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <>
       <style>{`
@@ -251,20 +272,24 @@ export default function Hero() {
             justify-content: center !important;
           }
 
-          /* Skill cards — small, stacked on the LEFT */
+          /* Skill cards — full-width column that scrolls UP past the fixed image.
+             The cards own the full row width now (the subject is taken out of
+             flow via position:fixed), but we reserve the right 52% with padding
+             so cards visually sit beside / above the pinned image and the column
+             has natural page height to scroll through. */
           .hero-cards-scene {
             position: static !important;
             transform: none !important;
             top: auto !important; left: auto !important; right: auto !important;
-            flex: 1 1 0 !important;
+            flex: 1 1 100% !important;
             min-width: 0 !important;
             width: auto !important;
             height: auto !important;
             display: flex !important;
             flex-direction: column !important;
             align-items: flex-start !important;
-            gap: 8px !important;
-            padding: 0 0 0 16px !important;
+            gap: 10px !important;
+            padding: 0 50% 50vh 16px !important;   /* right gutter for the image + tail space so cards clear it */
             overflow: visible !important;
           }
           /* Drop the floor-glow blobs on mobile (they leak in the column) */
@@ -274,30 +299,51 @@ export default function Hero() {
             transform: none !important;            /* kill parallax x */
             inset: auto !important;
             width: 100% !important;
+            max-width: 320px !important;
             flex-shrink: 1 !important;
           }
           /* Heavier card content shows on desktop, hidden on mobile */
           .card-num, .card-desc, .card-skills { display: none !important; }
 
-          /* Profile image — on the RIGHT, vertically centred */
+          /* ── Profile image: PINNED to the viewport bottom from initial load ──
+             position:sticky cannot do this — a sticky element only "sticks" once
+             its in-flow position scrolls to the inset, and here its in-flow spot
+             is at the TOP of the hero, so on load it would render up there, not at
+             the bottom of the screen. position:fixed pins it to the viewport's
+             bottom edge from the very first paint, independent of scroll. The
+             cards (above) keep their normal flow and scroll up PAST this fixed
+             image. We then release the pin (see .hero-out) once the hero leaves
+             the viewport so it never overlaps later sections. */
           .hero-subject {
             display: block !important;
-            position: sticky !important;
-            transform: none !important;
-            top: 80px !important; bottom: auto !important; left: auto !important;
-            flex: 0 0 50% !important;
+            position: fixed !important;
+            bottom: 0 !important;
+            right: 0 !important;
+            left: auto !important; top: auto !important;
+            transform: none !important;            /* kill framer-motion parallax translate */
             width: 50% !important;
-            max-width: 50% !important;
-            align-self: flex-start !important;   /* sit near the top of the row */
-            margin-top: -8px !important;          /* nudge the person up a little */
-            padding-right: 12px !important;
+            max-width: 230px !important;
+            z-index: 4 !important;                 /* below navbar (typically 50+), above cards */
+            padding-right: 8px !important;
+            transition: opacity 0.45s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.45s cubic-bezier(0.22,1,0.36,1) !important;
+            will-change: opacity, transform;
+          }
+
+          /* Release: when the hero has scrolled out, drop the image out of view so
+             it can never overlap the next section. opacity + translateY only —
+             both GPU-composited, no layout, no reflow. */
+          .hero-out .hero-subject {
+            opacity: 0 !important;
+            transform: translateY(40px) !important;
+            pointer-events: none !important;
           }
 
           .hero-scroll-indicator { display: none !important; }
         }
       `}</style>
 
-      <section ref={sectionRef} className="hero-root" style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block"}}>
+      <section ref={sectionRef} className={`hero-root${heroOut ? " hero-out" : ""}`} style={{position:"relative",minHeight:"145vh",background:"#090414",overflow:"hidden",display:"block"}}>
 
         {/* Gradient bg */}
         <div style={{position:"absolute",inset:0,zIndex:0,background:"radial-gradient(ellipse 70% 80% at 50% 72%,#D96652 0%,#4A142E 30%,#10051D 62%,#090414 100%)"}}/>
