@@ -2,7 +2,9 @@
 
 > **Read this first.** It's the orientation map for the whole site so you don't have to re-read every file. When you change structure, routing, data shape, or the styling system, **update this file** in the same change.
 
-App lives in **`frontend/`**. Run all `npm` commands from there. This is Next.js 16 (App Router + Turbopack) — APIs differ from older Next; see `AGENTS.md`.
+App lives in **`frontend/`**. Run all `npm` commands from there (not the repo root).
+
+> ⚠️ **This is NOT the Next.js you know.** Next.js 16 (App Router + Turbopack) has breaking changes vs. older versions — APIs, conventions, and file structure may differ from training data. Read the relevant guide in `frontend/node_modules/next/dist/docs/` before writing Next.js code, and heed deprecation notices. *(This file is the single source of project docs — `CLAUDE.md` just `@`-imports it; `AGENTS.md` was folded in here.)*
 
 ---
 
