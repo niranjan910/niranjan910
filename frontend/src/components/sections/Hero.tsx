@@ -259,7 +259,11 @@ export default function Hero() {
             row-gap: 0 !important;
             min-height: auto !important;
             padding: 0 0 40px !important;
-            overflow: visible !important;   /* let the sticky image escape the section */
+            overflow: hidden !important;   /* clip wide decorations (spiral, halos) so the
+                                              page can't scroll sideways. The fixed subject is
+                                              positioned against the viewport, not this box, so
+                                              hidden does NOT clip it (hero-root is not its
+                                              containing block — no transform/filter here). */
           }
 
           /* Heading + subheading + CTA — full-width row at the top */
