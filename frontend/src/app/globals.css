@@ -115,6 +115,9 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Hard guard against any horizontal overflow (the "shaking left/right"). */
+  html, body { overflow-x: hidden !important; max-width: 100%; }
+
   main { padding: 0 16px !important; }
   .page-wrapper { margin-left: -16px !important; margin-right: -16px !important; }
 
