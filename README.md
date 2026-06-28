@@ -40,6 +40,14 @@
 
 <br/><br/>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="stats/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="stats/light.svg">
+  <img src="stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
+</picture>
+
+<br/><br/>
+
 <a href="https://egnconnectx.com/">
   <img src="https://img.shields.io/badge/EGN_ConnectX-A3E635?style=for-the-badge&logoColor=000000"/>
 </a>
