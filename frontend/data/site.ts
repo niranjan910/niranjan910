@@ -6,24 +6,24 @@
  */
 
 export const site = {
-  name: "[YOUR NAME]",
+  name: "Niranjan Kumar",
   // Used as the small logo/monogram in the navbar + footer.
-  monogram: "[YN]",
-  title: "Full-Stack Web Developer",
+  monogram: "NK",
+  title: "Frontend Developer",
   tagline:
-    "[ONE-LINE TAGLINE — e.g. I build fast, accessible web products from database to pixel.]",
-  email: "hello@example.com",
+    "I build fast, accessible web products — from PHP-driven event platforms to modern Next.js apps — with an eye for AI-powered workflows and premium UI/UX.",
+  email: "niranjan991100@gmail.com",
+  phone: "+91 96411 43646",
+  phoneHref: "tel:+919641143646",
   resumeUrl: "/resume.pdf", // drop your resume PDF into /public
 
   // Open Graph / SEO
-  url: "https://your-domain.com",
+  url: "https://niranjan910-ks6x.vercel.app",
   ogImage: "/og.png", // 1200×630 image in /public
 
   socials: {
-    github: "https://github.com/your-handle",
-    linkedin: "https://linkedin.com/in/your-handle",
-    // Add more as needed — they’re rendered from this object.
-    x: "https://x.com/your-handle",
+    github: "https://github.com/niranjan910",
+    linkedin: "https://www.linkedin.com/in/niranjan-k-a83517229/",
   },
 } as const;
 

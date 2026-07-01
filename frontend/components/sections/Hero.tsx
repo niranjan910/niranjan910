@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { site } from "@/data/site";
 import { staggerContainer, fadeUp } from "@/lib/motion";
 import { socialIcons } from "@/components/ui/icons";
-import { ArrowUpRightIcon } from "@/components/ui/icons";
+import { ArrowUpRightIcon, CallIcon } from "@/components/ui/icons";
 
 export function Hero() {
   return (
@@ -67,9 +67,11 @@ export function Hero() {
               <ArrowUpRightIcon className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="#contact"
+              href={site.phoneHref}
+              aria-label={`Call ${site.name} at ${site.phone}`}
               className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-5 py-3 text-sm font-medium text-foreground transition-all hover:border-accent/40 hover:text-accent"
             >
+              <CallIcon width={16} height={16} />
               Contact Me
             </a>
           </motion.div>

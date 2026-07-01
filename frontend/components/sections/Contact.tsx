@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { site } from "@/data/site";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
-import { socialIcons, ArrowUpRightIcon } from "@/components/ui/icons";
+import { socialIcons, ArrowUpRightIcon, CallIcon } from "@/components/ui/icons";
 
 export function Contact() {
   return (
@@ -39,13 +39,24 @@ export function Contact() {
             interesting collaborations. Drop me a line.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="mt-9">
+          <motion.div
+            variants={fadeUp}
+            className="mt-9 flex flex-wrap items-center justify-center gap-3"
+          >
             <a
               href={`mailto:${site.email}`}
               className="group inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-base transition-all hover:bg-accent-hover hover:shadow-glow-soft"
             >
               {site.email}
               <ArrowUpRightIcon className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <a
+              href={site.phoneHref}
+              aria-label={`Call ${site.name} at ${site.phone}`}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-accent/40 hover:text-accent"
+            >
+              <CallIcon width={16} height={16} />
+              {site.phone}
             </a>
           </motion.div>
 
