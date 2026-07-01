@@ -9,9 +9,9 @@ export const site = {
   name: "Niranjan Kumar",
   // Used as the small logo/monogram in the navbar + footer.
   monogram: "NK",
-  title: "Frontend Developer",
+  title: "AI Product Engineer",
   tagline:
-    "I build fast, accessible web products — from PHP-driven event platforms to modern Next.js apps — with an eye for AI-powered workflows and premium UI/UX.",
+    "I build complete products end-to-end — frontend, backend, and AI integration — from a national summit platform to a full-stack EdTech app with my own AI-assisted workflows baked in.",
   email: "niranjan991100@gmail.com",
   phone: "+91 96411 43646",
   phoneHref: "tel:+919641143646",

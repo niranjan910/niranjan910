@@ -28,8 +28,9 @@ export const metadata: Metadata = {
   title: `${site.name} — ${site.title}`,
   description: site.tagline,
   keywords: [
+    "AI Product Engineer",
     "Full-Stack Developer",
-    "Web Developer",
+    "AI Integration",
     "React",
     "Next.js",
     "TypeScript",
