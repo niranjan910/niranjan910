@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { projects, type Project } from "@/data/projects";
@@ -8,6 +9,8 @@ import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
 import { GithubIcon, ExternalIcon, ArrowUpRightIcon } from "@/components/ui/icons";
 
 function ProjectCard({ project }: { project: Project }) {
+  const caseStudyHref = `/projects/${project.slug}`;
+
   return (
     <motion.article
       variants={fadeUp}
@@ -16,7 +19,11 @@ function ProjectCard({ project }: { project: Project }) {
       }`}
     >
       {/* Thumbnail */}
-      <div className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.08] bg-base">
+      <Link
+        href={caseStudyHref}
+        aria-label={`View ${project.title} case study`}
+        className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.08] bg-base"
+      >
         {project.image ? (
           <Image
             src={project.image}
@@ -34,14 +41,16 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      </div>
+      </Link>
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-display text-xl font-medium text-foreground">
-            {project.title}
-          </h3>
+          <Link href={caseStudyHref} className="group/title">
+            <h3 className="font-display text-xl font-medium text-foreground transition-colors group-hover/title:text-accent">
+              {project.title}
+            </h3>
+          </Link>
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -73,6 +82,13 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Links */}
         <div className="mt-6 flex items-center gap-4 border-t border-white/[0.06] pt-4">
+          <Link
+            href={caseStudyHref}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+          >
+            Case Study
+            <ArrowUpRightIcon width={15} height={15} />
+          </Link>
           {project.liveUrl && (
             <a
               href={project.liveUrl}
