@@ -13,21 +13,8 @@ export interface Certification {
 
 export const certifications: Certification[] = [
   {
-    name: "AWS Certified Solutions Architect – Associate",
-    issuer: "Amazon Web Services",
-    date: "Mar 2024",
-    credentialUrl: "https://example.com/credential",
-  },
-  {
-    name: "Professional Full-Stack Engineer",
-    issuer: "Meta",
-    date: "Sep 2023",
-    credentialUrl: "https://example.com/credential",
-  },
-  {
-    name: "PostgreSQL for Developers",
-    issuer: "Coursera",
-    date: "Feb 2023",
-    credentialUrl: "https://example.com/credential",
+    name: "[CERTIFICATION NAME — e.g. your Data Analytics / Business Analytics / Statistics cert]",
+    issuer: "[ISSUER]",
+    date: "[DATE]",
   },
 ];

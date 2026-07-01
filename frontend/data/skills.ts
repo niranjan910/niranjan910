@@ -13,14 +13,18 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
   },
   {
     label: "Backend",
-    items: ["Node.js", "Express", "PostgreSQL", "Prisma", "REST", "GraphQL"],
+    items: ["Node.js", "FastAPI", "PHP", "PostgreSQL", "MySQL"],
   },
   {
-    label: "Tooling & Infra",
-    items: ["Git", "Docker", "Vercel", "AWS", "CI/CD", "Vitest"],
+    label: "AI",
+    items: ["OpenAI APIs", "Claude", "Google AI Studio", "Prompt Engineering", "LLM Integration"],
+  },
+  {
+    label: "Tooling & Deployment",
+    items: ["Git", "GitHub", "Vercel", "Figma", "CI/CD"],
   },
 ];

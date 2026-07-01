@@ -16,17 +16,23 @@ export function About() {
         {/* Bio */}
         <Reveal className="space-y-5 text-lg leading-relaxed text-muted">
           <p>
-            I&apos;m a full-stack developer who cares about the whole stack —
-            from schema design and API performance down to the last pixel of a
-            hover state. I like building products that feel fast, look
-            considered, and hold up under real use.
+            I&apos;m an AI Product Engineer — I care about the whole product,
+            not just one layer of the stack. From schema design and AI
+            workflow integration down to the last pixel of a hover state, I
+            like building things that solve real problems and hold up under
+            real use.
           </p>
           <p>
-            Over the past few years I&apos;ve shipped dashboards, payment flows,
-            and developer tooling, mostly with{" "}
-            <span className="text-foreground">React, Next.js, and Node.js</span>.
-            Outside of work you&apos;ll find me contributing to open source and
-            tinkering with side projects.
+            I&apos;ve shipped a national summit platform used by thousands of
+            attendees, an AI-powered smart-classroom product, and a full-stack
+            EdTech platform with my own{" "}
+            <span className="text-foreground">FastAPI backend</span>, mostly
+            with{" "}
+            <span className="text-foreground">
+              React, Next.js, and AI-assisted workflows
+            </span>
+            . My long-term goal is building and shipping my own AI SaaS
+            products.
           </p>
         </Reveal>
 
@@ -46,7 +52,7 @@ export function About() {
       {/* Skills */}
       <div className="mt-16">
         <p className="mono-label mb-6 text-muted">Tech Stack</p>
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((group, gi) => (
             <motion.div
               key={group.label}
