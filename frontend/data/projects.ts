@@ -66,4 +66,63 @@ export const projects: Project[] = [
       { label: "Automated Tests", value: "150+" },
     ],
   },
+  {
+    slug: "studynlearn",
+    title: "StudynLearn",
+    description:
+      "An AI-powered smart classroom platform — interactive flat panels, teaching software, and a national Olympiad program, backed by pan-India installation and support for 700+ schools and institutes.",
+    tech: ["PHP", "Vanilla JS", "Bootstrap 5", "Vercel Serverless", "Git LFS"],
+    liveUrl: "https://studynlearn.com",
+    githubUrl: "https://github.com/niranjan910/StudynLearn_live",
+    org: "SmartSchool Education Pvt. Ltd.",
+    role: "Frontend Developer",
+    period: "2026",
+    overview:
+      "StudynLearn equips schools, colleges, and coaching institutes across India with AI-powered smart classrooms — interactive flat panels (55\"–98\"), AI teaching software, and the SNOT national Olympiad program — backed by pan-India installation, training, and support. Built as a PHP + vanilla JS site deployed serverlessly on Vercel, with a custom design system and a full GEO/AEO/SEO program to make the brand legible to both search engines and AI answer engines.",
+    highlights: [
+      "Built and maintain 15+ production pages — homepage, Smart Classroom (IFP) product page, SNOT Olympiad program, careers, blogs, certifications, and legal pages — all sharing one custom design system (`css/global.css`).",
+      "Engineered the Vercel serverless deployment: thin `api/*.php` wrappers plus `vercel.json` routing so a traditional PHP codebase runs entirely on Vercel's serverless PHP runtime, with Git LFS for 190MB+ product videos.",
+      "Built a vanilla-JS animation system from scratch — a single shared `requestAnimationFrame` loop driving neural-network canvas backgrounds, scroll-reveal, and stat counters site-wide, with automatic pause on tab-hidden and skip on reduced-motion/mobile.",
+      "Led a full GEO/AEO/SEO sprint: fixed a broken animated H1, unified brand-entity naming, added FAQPage/Organization/Product/SpeakableSpecification/VideoObject JSON-LD, an audience-segmented section, and a 10-row spec comparison table.",
+      "Directed a competitive SEO/CRO/GEO audit against BenQ, ViewSonic, Teachmint, and Extramarks, and authored the prioritized content roadmap still driving the backlog.",
+    ],
+    stats: [
+      { label: "Schools Served", value: "700+" },
+      { label: "Pages Shipped", value: "15+" },
+      { label: "Certifications Held", value: "19+" },
+    ],
+  },
+  {
+    slug: "altus",
+    title: "Altus",
+    description:
+      "A career-focused EdTech marketing and learning platform — 50+ rendered pages, a full admin panel, and a from-scratch FastAPI + PostgreSQL backend replacing the original static data layer.",
+    tech: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Framer Motion",
+      "FastAPI",
+      "PostgreSQL",
+    ],
+    liveUrl: "https://altuseducation.in",
+    githubUrl: "https://github.com/niranjan910/Altus",
+    role: "Full-Stack Developer",
+    period: "2026",
+    overview:
+      "Altus is a career-focused EdTech marketing and learning platform for the Indian market — 27+ Next.js App Router page templates rendering 50+ pages once dynamic course, mentor, bootcamp, and article routes are counted, a full internal admin panel, and a from-scratch FastAPI + PostgreSQL backend replacing the site's original static data layer. Course delivery itself runs through a third-party LMS; this platform owns marketing, catalog, and admin operations end-to-end.",
+    highlights: [
+      "Shipped 27+ page templates (50+ rendered pages via static generation) — a filterable course explorer plus individual course/bootcamp/mentor/article detail pages, all statically generated for fast, fully-crawlable HTML.",
+      "Built a complete internal admin panel from scratch: course and module CRUD, inline price editing, a user manager with per-course access blocking and password resets, and a live-editable GST rate that flows straight into checkout.",
+      "Designed and built the FastAPI + SQLAlchemy + PostgreSQL backend — 11 database tables, JWT admin auth, Alembic migrations, and 18+ REST endpoints — replacing the static data layer, with the frontend hitting the API first and gracefully falling back to static data.",
+      "Implemented full technical SEO: per-page JSON-LD (Course/Person/Article schema), a dynamic sitemap covering every course/mentor/bootcamp/article, and static generation on every detail page.",
+      "Tracked down and fixed a table-cell rendering bug affecting every publish/active toggle in the admin panel, establishing the toggle-switch and overlay-link patterns now used site-wide.",
+    ],
+    stats: [
+      { label: "Pages Rendered", value: "50+" },
+      { label: "REST Endpoints", value: "18+" },
+      { label: "Database Tables", value: "11" },
+    ],
+  },
 ];

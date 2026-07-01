@@ -93,6 +93,11 @@ Known placeholders still unfilled:
 
 ## 📜 Change History (newest first)
 
+**2026-07-01 — StudynLearn + Altus added**
+- Added StudynLearn (`SmartSchool Education Pvt. Ltd.` — PHP/vanilla-JS smart classroom platform, `studynlearn.com`) and Altus (Next.js 15 + FastAPI EdTech platform, `altuseducation.in`) as the 2nd and 3rd real projects in `data/projects.ts`, each with full case-study content. No component changes needed — the existing `ProjectHero` / `app/projects/[slug]` route and the Projects grid card already generalize to any number of projects.
+- Diagnosed a "nav bar / projects page broken" report: reproduced no issue on the then-current dev server (localhost:3002) — root cause was the earlier `.next` cache corruption + orphaned stale process on port 3001 from the prior session, both already fixed. Confirmed via Playwright: desktop nav clicks, mobile hamburger drawer, and the Projects-card → case-study navigation all work.
+- A third project brief ("NEXUS") was also shared but still has unfilled template placeholders (`your-app.vercel.app`, `your-username`, `@your_bot_username`) — intentionally **not** added until real URLs are provided, to avoid shipping fake links to the live portfolio.
+
 **2026-07-01 — EGN ConnectX project + multi-page conversion**
 - Filled `data/site.ts` placeholders with real identity (name, monogram, title, tagline, email, phone, github/linkedin).
 - Added EGN ConnectX as the first real project in `data/projects.ts` (replacing the four scaffold/demo placeholder projects), with full case-study content (overview, highlights, stats, event date/location).
