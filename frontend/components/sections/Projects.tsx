@@ -42,7 +42,7 @@ export function Projects() {
       >
         <Link
           href="/projects"
-          className="group inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-5 py-3 text-sm font-medium text-foreground transition-all hover:border-accent/40 hover:text-accent"
+          className="group inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-5 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/40 hover:text-accent"
         >
           View All Projects
           <ArrowUpRightIcon className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

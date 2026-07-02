@@ -38,7 +38,7 @@ export function Certifications() {
                       rel: "noopener noreferrer",
                     }
                   : {})}
-                className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-surface transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-glow-soft"
+                className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-surface transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-glow-soft"
               >
                 <div className="relative aspect-[4/3] overflow-hidden border-b border-white/[0.08] bg-base">
                   <Image

@@ -45,7 +45,7 @@ export function Contact() {
           >
             <a
               href={`mailto:${site.email}`}
-              className="group inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-base transition-all hover:bg-accent-hover hover:shadow-glow-soft"
+              className="group inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-base transition-all duration-300 hover:bg-accent-hover hover:shadow-glow-soft"
             >
               {site.email}
               <ArrowUpRightIcon className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -53,7 +53,7 @@ export function Contact() {
             <a
               href={site.phoneHref}
               aria-label={`Call ${site.name} at ${site.phone}`}
-              className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-accent/40 hover:text-accent"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/60 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/40 hover:text-accent"
             >
               <CallIcon width={16} height={16} />
               {site.phone}
