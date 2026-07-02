@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { site } from "@/data/site";
+import { PageTransition } from "@/components/ui/PageTransition";
 import "./globals.css";
 
 /* ── Fonts via next/font (self-hosted, zero layout shift) ── */
@@ -76,7 +77,9 @@ export default function RootLayout({
           className="bg-grid pointer-events-none fixed inset-0 z-0"
           aria-hidden
         />
-        <div className="relative z-10">{children}</div>
+        <div className="relative z-10">
+          <PageTransition>{children}</PageTransition>
+        </div>
       </body>
     </html>
   );
