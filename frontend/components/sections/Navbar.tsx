@@ -66,16 +66,6 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          {/* Resume CTA */}
-          <a
-            href={site.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-md border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-all hover:border-accent/60 hover:bg-accent/15 hover:shadow-glow-soft sm:inline-block"
-          >
-            Resume
-          </a>
-
           {/* Mobile menu toggle */}
           <button
             type="button"
@@ -111,16 +101,6 @@ export function Navbar() {
                   </Link>
                 </li>
               ))}
-              <li className="mt-2 px-3">
-                <a
-                  href={site.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent"
-                >
-                  Resume
-                </a>
-              </li>
             </ul>
           </motion.div>
         )}
