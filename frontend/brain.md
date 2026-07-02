@@ -93,6 +93,16 @@ Known placeholders still unfilled:
 
 ## 📜 Change History (newest first)
 
+**2026-07-02 — Added Behance, Dribbble, Kaggle socials**
+- `data/site.ts`: added `behance`, `dribbble`, `kaggle` to `socials` (real URLs — behance.net/niranjandesign, dribbble.com/niranjan2000, kaggle.com/deadsoul66).
+- `components/ui/icons.tsx`: added `BehanceIcon`, `DribbbleIcon`, `KaggleIcon` (hand-drawn minimalist glyphs — a stroked "B" with visible counters, a circle-with-swoosh-lines ball, and a straight-line "K" — not exact trademark reproductions, but clean and recognizable at icon size) and registered them in `socialIcons`. Hero, Contact, and Footer all iterate `Object.entries(site.socials)` already, so no changes were needed there — the new icons just appeared.
+
+**2026-07-02 — Home shows only live projects, Resume button removed, real experience data, Companies strip**
+- `components/sections/Projects.tsx` (home preview): now filters to only projects that are actually live (`!status || status === "Live in Production"`), capped at 3 — currently EGN ConnectX, StudynLearn, Altus. NEXUS ("In Development") only shows on the full `/projects` page. Heading changed from "Selected work" to **"Live in production"** to match — an inaccurate claim otherwise, since not everything in `data/projects.ts` is actually live. The bottom link was upgraded from a small text link to a real bordered CTA button, "View All Projects" → `/projects`.
+- Removed the Resume button (desktop + mobile nav) and the now-unused `resumeUrl` field from `data/site.ts` — it pointed at a `/resume.pdf` that was never added to `/public`.
+- `data/experience.ts`: filled in the real start date for Smartschool Limited (Oct 2025, was a `[START DATE]` placeholder) and added a second real entry — Data Analytics Intern at Naresh i Technologies, before Smartschool. Its exact start/end months are still bracketed placeholders (only known to be "before Oct 2025") — needs his input.
+- New `components/sections/Companies.tsx`: a slim "Companies I've worked with" trust-strip between Hero and About, showing pill badges for each unique `company` in `data/experience.ts` (deliberately reads from there rather than a separate list, so there's one source of truth). No logos yet — text badges only, since no logo assets exist locally for these companies.
+
 **2026-07-02 — Dedicated /projects page with category filters, NEXUS added, real nav bug fixed**
 - New `app/projects/page.tsx`: a full projects index (separate from the home page's "Selected work" preview), with client-side category filter chips driven by `components/projects/ProjectsExplorer.tsx`. Categories aren't hardcoded — they're derived from whatever `category` values actually appear in `data/projects.ts`.
 - `data/projects.ts`: added `category: ProjectCategory[]` to every project (`"Full-Stack" | "Frontend" | "AI & Automation" | "UI/UX"` — extend this union as new kinds of work show up) and an optional `status` field for projects that aren't deployed yet.
