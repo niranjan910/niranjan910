@@ -39,7 +39,7 @@
 @layer components {
   /* Consistent horizontal rhythm / max width for every section */
   .container-page {
-    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6;
   }
 
   /* Faint grid backdrop for the whole page */
