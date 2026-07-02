@@ -15,7 +15,6 @@ export const site = {
   email: "niranjan991100@gmail.com",
   phone: "+91 96411 43646",
   phoneHref: "tel:+919641143646",
-  resumeUrl: "/resume.pdf", // drop your resume PDF into /public
 
   // Open Graph / SEO
   url: "https://niranjan910-ks6x.vercel.app",
