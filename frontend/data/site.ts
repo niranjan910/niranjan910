@@ -23,6 +23,9 @@ export const site = {
   socials: {
     github: "https://github.com/niranjan910",
     linkedin: "https://www.linkedin.com/in/niranjan-k-a83517229/",
+    behance: "https://www.behance.net/niranjandesign",
+    dribbble: "https://dribbble.com/niranjan2000",
+    kaggle: "https://www.kaggle.com/deadsoul66",
   },
 } as const;
 

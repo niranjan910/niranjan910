@@ -41,6 +41,37 @@ export function XIcon(props: IconProps) {
   );
 }
 
+export function BehanceIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M5 4v16" />
+      <path d="M5 4h5.5a3.5 3.5 0 0 1 0 7H5" />
+      <path d="M5 11h6.5a4.5 4.5 0 0 1 0 9H5" />
+      <path d="M16 6h5.5" />
+    </svg>
+  );
+}
+
+export function DribbbleIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M4 9Q12 11 20 8" />
+      <path d="M3 15Q12 12 21 16" />
+      <path d="M10 3Q15 12 13 21" />
+    </svg>
+  );
+}
+
+export function KaggleIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M5 4v16" />
+      <path d="M5 12 16 4M5 12l11 8" />
+    </svg>
+  );
+}
+
 export function CallIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
@@ -96,4 +127,7 @@ export const socialIcons = {
   linkedin: LinkedinIcon,
   x: XIcon,
   email: MailIcon,
+  behance: BehanceIcon,
+  dribbble: DribbbleIcon,
+  kaggle: KaggleIcon,
 } as const;
