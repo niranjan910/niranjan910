@@ -21,7 +21,14 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "AI",
-    items: ["OpenAI APIs", "Claude", "Google AI Studio", "Prompt Engineering", "LLM Integration"],
+    items: [
+      "OpenAI APIs",
+      "Claude",
+      "Claude Code",
+      "Google AI Studio",
+      "Prompt Engineering",
+      "LLM Integration",
+    ],
   },
   {
     label: "Tooling & Deployment",
