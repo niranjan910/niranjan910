@@ -36,13 +36,7 @@
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats-xi-three-12.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&title_color=A3E635&icon_color=A3E635&text_color=EDEDED&bg_color=0A0A0A"/>
-<img height="180" src="https://github-readme-stats-xi-three-12.vercel.app/api/top-langs/?username=niranjan910&layout=donut&hide_border=true&langs_count=6&title_color=A3E635&text_color=EDEDED&bg_color=0A0A0A"/>
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com/?user=niranjan910&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0A0A0A&stroke=A3E635&ring=A3E635&fire=A3E635&currStreakNum=EDEDED&sideNums=EDEDED&currStreakLabel=A3E635&sideLabels=EDEDED&dates=8A8A8A" width="49%"/>
-<img src="https://github-readme-stats-xi-three-12.vercel.app/api?username=niranjan910&show_icons=true&hide_border=true&count_private=true&hide=stars&show=reviews,discussions_started,prs_merged,prs_merged_percentage&title_color=A3E635&icon_color=A3E635&text_color=EDEDED&bg_color=0A0A0A" width="49%"/>
+<img src="https://streak-stats.demolab.com/?user=niranjan910&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0A0A0A&stroke=A3E635&ring=A3E635&fire=A3E635&currStreakNum=EDEDED&sideNums=EDEDED&currStreakLabel=A3E635&sideLabels=EDEDED&dates=8A8A8A" width="100%"/>
 
 <br/><br/>
 
@@ -61,10 +55,6 @@
 <br/><br/>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&bg_color=0A0A0A&color=A3E635&line=A3E635&point=EDEDED&area=true&area_color=A3E63515&hide_border=true&custom_title=Contribution%20Graph" width="100%"/>
-
-<br/>
-
-<img src="https://ghchart.rshah.org/A3E635/niranjan910" width="100%" alt="Niranjan's Contribution Calendar"/>
 
 </div>
 
