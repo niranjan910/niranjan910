@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { site } from "@/data/site";
 import { MenuIcon, CloseIcon } from "@/components/ui/icons";
@@ -45,8 +46,14 @@ export function Navbar() {
           href="/"
           className="group flex items-center gap-2 font-display text-sm font-semibold tracking-tight text-foreground"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-md border border-white/[0.08] bg-surface font-mono text-xs text-accent transition-colors group-hover:border-accent/40">
-            {site.monogram}
+          <span className="relative grid h-8 w-8 place-items-center overflow-hidden rounded-md border border-white/[0.08] bg-surface transition-colors group-hover:border-accent/40">
+            <Image
+              src="/Logo/Niranjan-mark.png"
+              alt={`${site.name} logo`}
+              fill
+              sizes="32px"
+              className="object-contain p-1"
+            />
           </span>
           <span className="hidden sm:inline">{site.name}</span>
         </Link>
