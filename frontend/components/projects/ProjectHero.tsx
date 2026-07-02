@@ -52,6 +52,8 @@ export function ProjectHero({ project }: { project: Project }) {
     .join("")
     .slice(0, 3);
 
+  const isLive = !project.status || project.status === "Live in Production";
+
   return (
     <section className="hero-glow relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
       <div className="container-page grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
@@ -62,7 +64,7 @@ export function ProjectHero({ project }: { project: Project }) {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link
-            href="/#projects"
+            href="/projects"
             className="mono-label inline-flex items-center gap-2 text-muted transition-colors hover:text-accent"
           >
             ← Back to projects
@@ -122,6 +124,11 @@ export function ProjectHero({ project }: { project: Project }) {
                 <GithubIcon width={16} height={16} />
                 View Code
               </a>
+            )}
+            {!project.liveUrl && !project.githubUrl && (
+              <span className="inline-flex items-center gap-2 rounded-lg border border-white/[0.12] bg-surface/40 px-5 py-3 font-mono text-xs text-muted">
+                {project.status ?? "Not yet public"}
+              </span>
             )}
           </div>
         </motion.div>
@@ -210,16 +217,20 @@ export function ProjectHero({ project }: { project: Project }) {
               )}
             </motion.div>
 
-            {/* floating "live" badge */}
+            {/* floating status badge */}
             <motion.div
               animate={reduceMotion ? undefined : { y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               style={
                 reduceMotion ? undefined : { transform: "translateZ(90px)" }
               }
-              className="absolute -left-4 -top-5 hidden rounded-xl border border-accent/30 bg-base/90 px-4 py-2 font-mono text-xs text-accent shadow-glow-soft backdrop-blur sm:block"
+              className={`absolute -left-4 -top-5 hidden rounded-xl border px-4 py-2 font-mono text-xs shadow-glow-soft backdrop-blur sm:block ${
+                isLive
+                  ? "border-accent/30 bg-base/90 text-accent"
+                  : "border-white/[0.12] bg-base/90 text-muted"
+              }`}
             >
-              ● Live in Production
+              ● {project.status ?? "Live in Production"}
             </motion.div>
           </div>
         </motion.div>

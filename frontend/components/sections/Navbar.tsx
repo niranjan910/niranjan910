@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "motion/react";
 import { site } from "@/data/site";
 import { MenuIcon, CloseIcon } from "@/components/ui/icons";
 
+// Prefixed with "/" so these resolve correctly from any page, not just
+// the home one-pager — a bare "#about" does nothing on e.g. /projects/[slug].
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Certifications", href: "/#certifications" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -38,26 +41,26 @@ export function Navbar() {
         aria-label="Primary"
       >
         {/* Logo / name */}
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="group flex items-center gap-2 font-display text-sm font-semibold tracking-tight text-foreground"
         >
           <span className="grid h-8 w-8 place-items-center rounded-md border border-white/[0.08] bg-surface font-mono text-xs text-accent transition-colors group-hover:border-accent/40">
             {site.monogram}
           </span>
           <span className="hidden sm:inline">{site.name}</span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="rounded-md px-3 py-2 text-sm text-muted transition-colors hover:text-foreground"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -99,13 +102,13 @@ export function Navbar() {
             <ul className="container-page flex flex-col py-4">
               {links.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-3 py-3 text-base text-muted transition-colors hover:bg-white/[0.03] hover:text-foreground"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="mt-2 px-3">

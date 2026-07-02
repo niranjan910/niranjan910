@@ -13,17 +13,33 @@
  *  Every project gets its own case-study page at /projects/[slug].
  *  The extra fields below (org, role, overview, highlights, stats,
  *  eventDate, location) are optional and only render on that page.
+ *
+ *  `category` drives the filter chips on /projects — a project can
+ *  belong to more than one. Add new category strings freely; the
+ *  filter UI picks up whatever's actually used across `projects`.
+ *
+ *  `liveUrl`/`githubUrl` — only set these to real, working links.
+ *  Leave undefined (not a fake/placeholder URL) for projects that
+ *  aren't deployed/public yet; the UI hides those buttons cleanly.
  */
+
+export type ProjectCategory =
+  | "Full-Stack"
+  | "Frontend"
+  | "AI & Automation"
+  | "UI/UX";
 
 export interface Project {
   slug: string;
   title: string;
   description: string;
   tech: string[];
+  category: ProjectCategory[];
   liveUrl?: string;
   githubUrl?: string;
   image?: string;
   featured?: boolean;
+  status?: string; // defaults to "Live in Production" on the case-study page
 
   // Case-study page fields
   org?: string;
@@ -43,6 +59,7 @@ export const projects: Project[] = [
     description:
       "The official platform for India's premier education leadership & innovation summit — delegate registration, exhibitor booking, and a full awards-nomination system serving 20,000+ expected attendees.",
     tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "jQuery"],
+    category: ["Full-Stack"],
     liveUrl: "https://egnconnectx.com",
     githubUrl: "https://github.com/niranjan910/EGN_X_live",
     featured: true,
@@ -72,6 +89,7 @@ export const projects: Project[] = [
     description:
       "An AI-powered smart classroom platform — interactive flat panels, teaching software, and a national Olympiad program, backed by pan-India installation and support for 700+ schools and institutes.",
     tech: ["PHP", "Vanilla JS", "Bootstrap 5", "Vercel Serverless", "Git LFS"],
+    category: ["Full-Stack"],
     liveUrl: "https://studynlearn.com",
     githubUrl: "https://github.com/niranjan910/StudynLearn_live",
     org: "SmartSchool Education Pvt. Ltd.",
@@ -106,6 +124,7 @@ export const projects: Project[] = [
       "FastAPI",
       "PostgreSQL",
     ],
+    category: ["Full-Stack"],
     liveUrl: "https://altuseducation.in",
     githubUrl: "https://github.com/niranjan910/Altus",
     role: "Full-Stack Developer",
@@ -123,6 +142,40 @@ export const projects: Project[] = [
       { label: "Pages Rendered", value: "50+" },
       { label: "REST Endpoints", value: "18+" },
       { label: "Database Tables", value: "11" },
+    ],
+  },
+  {
+    slug: "nexus",
+    title: "NEXUS",
+    description:
+      "A personal life operating system that replaces five separate apps — tasks, calories, gym, finance, sleep — with one dashboard you can update by typing or speaking into Telegram.",
+    tech: [
+      "Next.js 14",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Telegram Bot API",
+      "Groq Whisper",
+    ],
+    category: ["Full-Stack", "AI & Automation"],
+    // No liveUrl/githubUrl — not deployed publicly yet, so no link is shown
+    // rather than a placeholder one.
+    status: "In Development",
+    role: "Full-Stack Developer",
+    period: "2026",
+    overview:
+      'NEXUS unifies five different life-tracking apps — a todo list, calorie counter, gym log, finance tracker, and sleep tracker — into a single dashboard accessible from a browser or Telegram. The core idea is zero-friction logging: open Telegram, type or say "I went to gym," and it\'s logged — no menus, no forms. A Groq Whisper pipeline transcribes voice notes, a lightweight NLP layer detects intent (task, meal, workout, spend, sleep), and Vercel cron jobs deliver personalized morning, meal, gym, and night summaries via Telegram.',
+    highlights: [
+      "Built a Telegram-first logging pipeline: voice notes are transcribed via Groq's free Whisper API, parsed by a priority-ordered NLP layer, and written straight into Supabase — no app-switching required.",
+      "Designed an 8-table PostgreSQL schema on Supabase (tasks, meals, gym, weight, sleep, expenses, people, profiles) with Row Level Security so every user's data stays isolated.",
+      "Implemented 4 scheduled Vercel cron jobs (morning summary, meal reminder, gym reminder, night recap) with per-user, per-reminder enable/disable toggles stored on the profile.",
+      "Wired up both email/password and Google OAuth via Supabase Auth, including a dedicated server route to exchange the OAuth code for a session, with middleware guarding every dashboard route.",
+      "Split the dashboard into a server component for data fetching and an isolated client-only live clock — the greeting reads real IST time via `Intl.DateTimeFormat` rather than the server's UTC clock.",
+    ],
+    stats: [
+      { label: "Apps Replaced", value: "5" },
+      { label: "Database Tables", value: "8" },
+      { label: "Cron Jobs", value: "4" },
     ],
   },
 ];

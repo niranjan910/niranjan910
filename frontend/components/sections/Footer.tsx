@@ -1,11 +1,14 @@
+import Link from "next/link";
 import { site } from "@/data/site";
 import { socialIcons } from "@/components/ui/icons";
 
+// Prefixed with "/" so these resolve correctly from any page, not just
+// the home one-pager — a bare "#about" does nothing on e.g. /projects/[slug].
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Footer() {
@@ -30,13 +33,13 @@ export function Footer() {
         {/* Quick links */}
         <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
           {quickLinks.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm text-muted transition-colors hover:text-accent"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
