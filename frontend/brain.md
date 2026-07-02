@@ -14,7 +14,7 @@
 
 ## 🚦 STATUS — how far the code is live
 
-**Last updated: 2026-07-01**
+**Last updated: 2026-07-02**
 
 | Layer | State |
 |-------|-------|
@@ -88,6 +88,18 @@ Known placeholders still unfilled:
 - `resumeUrl: "/resume.pdf"` — file doesn't exist in `/public` yet; the Navbar/mobile-menu "Resume" button will 404 until it's added.
 - `ogImage: "/og.png"` — same, doesn't exist yet; social share previews will show a broken image until added.
 - `site.url` — set to `https://niranjan910-ks6x.vercel.app`, carried over from the old design's deploy. Reconfirm this is still the correct production URL for the redesigned multi-page site before relying on it for canonical/OG tags.
+
+---
+
+**2026-07-02 — Wired up real profile photo, logo mark, company logos, and certifications**
+- New asset folders added to `/public`: `Profile_Image/`, `Logo/`, `companies/`, `certifications/`.
+- `data/certifications.ts`: replaced the single bracketed placeholder with all 7 real certifications, transcribed directly from the certificate screenshots in `/public/certifications` (name/issuer/date read off each image, not invented). `credentialUrl` is only set for **Claude Code in Action** (Anthropic), since that's the only one with a verify link actually printed on the certificate — the LinkedIn Learning ones show a Certificate ID but no shareable URL on the image itself, so those are left unlinked rather than guessing a URL pattern.
+- `components/sections/Certifications.tsx`: cards now show the certificate image as a thumbnail (was text-only before); grid widened to 3 columns on large screens.
+- New `data/companies.ts` + rewritten `components/sections/Companies.tsx`: the trust-strip now renders real logo images instead of text pills, and intentionally pulls from a **separate list from `data/experience.ts`** — per his direction, it's a broader "companies & clients" strip (7 logos: Smartschool, StudynLearn, EGN India, EGN ConnectX, Naresh i Technologies, SNL, TechieNest) rather than strictly formal employers. **SNL and TechieNest are logo-only** — he confirmed they're clients/projects, not jobs, so they were deliberately *not* added to `data/experience.ts`.
+- `components/sections/About.tsx`: avatar placeholder (monogram-in-a-box) replaced with the real photo at `/Profile_Image/About_1.png`, object-positioned to keep him in frame since the source photo is a wide whiteboard shot, not a tight headshot.
+- `components/sections/Navbar.tsx` / `Footer.tsx`: the "NK" text monogram badge replaced with his real logo mark. The source file (`Logo/Niranjan.png`, 1536×1024) was a very soft/blurry glow-style "n" with a lot of empty transparent margin — auto-cropped to its content bounding box and re-centered on a padded square canvas (`Logo/Niranjan-mark.png`, 512×512) so it reads clearly at small navbar/footer sizes. `site.monogram` ("NK") is no longer referenced anywhere but was left in `data/site.ts` since it's harmless data.
+- New `app/icon.png` (same cropped square mark) — Next.js App Router auto-picks this up as the favicon, no code change needed; confirmed via `next build` that `/icon.png` is generated as a route.
+- Verified with `next build` (clean) and a Playwright screenshot pass across Navbar, Companies, About, Certifications, and Footer — no broken images, logo mark renders crisp (not blurry) at navbar size.
 
 ---
 

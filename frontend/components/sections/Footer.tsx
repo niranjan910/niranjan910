@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/data/site";
 import { socialIcons } from "@/components/ui/icons";
 
@@ -19,8 +20,14 @@ export function Footer() {
       <div className="container-page flex flex-col gap-8 py-12 sm:flex-row sm:items-center sm:justify-between">
         {/* Identity */}
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-md border border-white/[0.08] bg-surface font-mono text-xs text-accent">
-            {site.monogram}
+          <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-md border border-white/[0.08] bg-surface">
+            <Image
+              src="/Logo/Niranjan-mark.png"
+              alt={`${site.name} logo`}
+              fill
+              sizes="36px"
+              className="object-contain p-1"
+            />
           </span>
           <div>
             <p className="font-display text-sm font-medium text-foreground">

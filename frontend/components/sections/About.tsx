@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { site } from "@/data/site";
+import Image from "next/image";
 import { skillGroups } from "@/data/skills";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -36,14 +36,17 @@ export function About() {
           </p>
         </Reveal>
 
-        {/* Avatar placeholder — replace with next/image when you add a photo */}
+        {/* Avatar */}
         <Reveal delay={0.1} className="order-first md:order-last">
           <div className="relative mx-auto aspect-square w-40 overflow-hidden rounded-2xl border border-white/[0.08] bg-surface sm:w-48 md:mx-0 md:w-full md:max-w-[240px]">
-            <div className="absolute inset-0 grid place-items-center">
-              <span className="font-display text-5xl font-medium text-muted/40">
-                {site.monogram}
-              </span>
-            </div>
+            <Image
+              src="/Profile_Image/About_1.png"
+              alt="Niranjan Kumar"
+              fill
+              sizes="(max-width: 768px) 192px, 240px"
+              className="object-cover object-[25%_20%]"
+              priority
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent" />
           </div>
         </Reveal>
