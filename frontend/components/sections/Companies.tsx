@@ -27,20 +27,20 @@ export function Companies() {
         </motion.p>
         <motion.ul
           variants={staggerContainer}
-          className="flex flex-wrap items-center justify-center gap-3 sm:justify-end"
+          className="grid w-full grid-cols-2 gap-x-6 gap-y-4 sm:flex sm:w-auto sm:flex-wrap sm:items-center sm:justify-end sm:gap-x-6 sm:gap-y-3"
         >
           {companyLogos.map((c) => (
             <motion.li
               key={c.name}
               variants={fadeUp}
-              className="flex h-11 items-center rounded-lg bg-white/95 px-4 py-2"
+              className="flex items-center justify-center sm:shrink-0 sm:justify-start"
             >
               <Image
                 src={c.logo}
                 alt={c.name}
                 width={120}
                 height={28}
-                className="h-6 w-auto object-contain"
+                className="h-7 w-auto rounded-md object-contain"
               />
             </motion.li>
           ))}

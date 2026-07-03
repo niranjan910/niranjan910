@@ -124,3 +124,110 @@ export const socialIcons = {
   dribbble: DribbbleIcon,
   kaggle: KaggleIcon,
 } as const;
+
+/**
+ * Fixed-color brand badge icons for the Certifications section — unlike
+ * the icons above these don't use currentColor, since a certificate issuer
+ * badge should always show that issuer's real brand color regardless of
+ * theme/hover state.
+ */
+
+export function MicrosoftBadgeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 23 23" aria-hidden {...props}>
+      <rect x="1" y="1" width="10" height="10" fill="#F25022" />
+      <rect x="12" y="1" width="10" height="10" fill="#7FBA00" />
+      <rect x="1" y="12" width="10" height="10" fill="#00A4EF" />
+      <rect x="12" y="12" width="10" height="10" fill="#FFB900" />
+    </svg>
+  );
+}
+
+export function GoogleBadgeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 48 48" aria-hidden {...props}>
+      <path
+        fill="#FFC107"
+        d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20c11.045 0 20-8.955 20-20 0-1.341-.138-2.65-.389-3.917Z"
+      />
+      <path
+        fill="#FF3D00"
+        d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691Z"
+      />
+      <path
+        fill="#4CAF50"
+        d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44Z"
+      />
+      <path
+        fill="#1976D2"
+        d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C40.401 35.891 44 30.686 44 24c0-1.341-.138-2.65-.389-3.917Z"
+      />
+    </svg>
+  );
+}
+
+export function AnthropicBadgeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#EDEDED"
+        d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"
+      />
+    </svg>
+  );
+}
+
+export function WolframBadgeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#DD1100"
+        d="M20.105 12.001l3.307-3.708-4.854-1.059.495-4.944-4.55 1.996L12 0 9.495 4.287 4.947 2.291l.494 4.944L.587 8.289l3.305 3.707-3.305 3.713 4.854 1.053-.5 4.945 4.553-1.994L12 24l2.504-4.287 4.55 1.994-.495-4.938 4.854-1.06-3.308-3.708zm1.605 2.792l-2.861-.982-1.899-2.471 2.526.942 2.234 2.511zm.459-6.096l-2.602 2.918-3.066-1.141 1.844-2.612 3.824.835zm-4.288-1.324l-1.533 2.179.088-3.162 1.788-2.415-.343 3.398zm-3.304-2.399l3.091-1.354L15.9 5.998l-2.943 1.049 1.62-2.073zm1.187 1.772l-.096 3.652-3.341 1.12V7.969l3.437-1.223zM12 1.308l1.969 3.371L12 7.199l-1.971-2.521L12 1.308zM9.423 4.974l1.619 2.072-2.948-1.048L6.332 3.62l3.091 1.354zm2.245 2.995v3.549l-3.335-1.12-.102-3.652 3.437 1.223zM7.564 6.39l.086 3.162-1.532-2.179-.341-3.397L7.564 6.39zM1.83 8.692l3.824-.83 1.839 2.612-3.065 1.136L1.83 8.692zm2.694 3.585l2.526-.937-1.9 2.471-2.861.977 2.235-2.511zm-2.093 3.159l2.929-1 3.045.896-2.622.837-3.352-.733zm3.28 5.212l.392-3.896 3.111-.982.082 3.31-3.585 1.568zm3.691-5.708l-3.498-1.03 2.226-2.892 3.335 1.126-2.063 2.796zm2.266 7.191l-1.711-2.934-.066-2.771 1.777 2.597v3.108zm-1.73-6.8L12 12.532l2.063 2.799L12 18.336l-2.062-3.005zm4.104 3.866l-1.715 2.934v-3.107l1.782-2.597-.067 2.77zm-1.514-7.052l3.341-1.126 2.221 2.892-3.499 1.03-2.063-2.796zm2.175 6.935l.077-3.31 3.116.982.386 3.901-3.579-1.573zm3.514-2.912l-2.625-.837 3.049-.896 2.928 1.003-3.352.73z"
+      />
+    </svg>
+  );
+}
+
+export function LinkedinBadgeIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#0A66C2"
+        d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.73v20.53C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.73C24 .78 23.2 0 22.22 0Z"
+      />
+    </svg>
+  );
+}
+
+/** Fallback for issuers without a reproducible official brand mark. */
+export function GenericBadgeIcon({
+  letter,
+  ...props
+}: IconProps & { letter: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <circle cx="12" cy="12" r="12" fill="#2A2A2A" />
+      <text
+        x="12"
+        y="16.5"
+        textAnchor="middle"
+        fontSize="12"
+        fontFamily="var(--font-space-grotesk), sans-serif"
+        fontWeight="600"
+        fill="#A3E635"
+      >
+        {letter}
+      </text>
+    </svg>
+  );
+}
+
+export const issuerBadgeIcons = {
+  microsoft: MicrosoftBadgeIcon,
+  google: GoogleBadgeIcon,
+  anthropic: AnthropicBadgeIcon,
+  wolfram: WolframBadgeIcon,
+  linkedin: LinkedinBadgeIcon,
+} as const;
+
+export type IssuerBadge = keyof typeof issuerBadgeIcons;

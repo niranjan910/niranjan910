@@ -14,7 +14,7 @@ export interface CompanyLogo {
 }
 
 export const companyLogos: CompanyLogo[] = [
-  { name: "Smartschool Limited", logo: "/companies/SmartSchool.jpg" },
+  { name: "SmartSchool Education Ltd", logo: "/companies/SmartSchool.jpg" },
   { name: "StudynLearn", logo: "/companies/StudynLearn.jpg" },
   { name: "EGN India", logo: "/companies/EGN_India.jpg" },
   { name: "EGN ConnectX", logo: "/companies/EGN_ConnectX.jpg" },

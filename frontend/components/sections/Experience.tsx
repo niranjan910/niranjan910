@@ -58,7 +58,10 @@ export function Experience() {
               <h3 className="mt-2 font-display text-lg font-medium text-foreground">
                 {item.role}
               </h3>
-              <p className="text-sm text-muted">{item.company}</p>
+              <p className="text-sm text-muted">
+                {item.company}
+                {item.type && ` · ${item.type}`}
+              </p>
 
               {/* Bullets */}
               <ul className="mt-4 space-y-2">

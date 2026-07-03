@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import { site } from "@/data/site";
 import { staggerContainer, fadeUp } from "@/lib/motion";
-import { socialIcons } from "@/components/ui/icons";
 import { ArrowUpRightIcon, CallIcon } from "@/components/ui/icons";
 
 export function Hero() {
@@ -76,46 +75,7 @@ export function Hero() {
             </a>
           </motion.div>
 
-          {/* Socials */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-10 flex items-center gap-4"
-          >
-            {Object.entries(site.socials).map(([key, url]) => {
-              const Icon = socialIcons[key as keyof typeof socialIcons];
-              if (!Icon) return null;
-              return (
-                <a
-                  key={key}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={key}
-                  className="text-muted transition-colors hover:text-accent"
-                >
-                  <Icon width={20} height={20} />
-                </a>
-              );
-            })}
-            <span className="h-4 w-px bg-white/[0.12]" aria-hidden />
-            <a
-              href={`mailto:${site.email}`}
-              className="font-mono text-xs text-muted transition-colors hover:text-accent"
-            >
-              {site.email}
-            </a>
-          </motion.div>
         </motion.div>
-      </div>
-
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 sm:block">
-        <div className="flex flex-col items-center gap-2 text-muted">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
-            Scroll
-          </span>
-          <span className="h-8 w-px bg-gradient-to-b from-accent/60 to-transparent" />
-        </div>
       </div>
     </section>
   );
