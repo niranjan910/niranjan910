@@ -158,9 +158,8 @@ export const projects: Project[] = [
       "Groq Whisper",
     ],
     category: ["Full-Stack", "AI & Automation"],
-    // No liveUrl/githubUrl — not deployed publicly yet, so no link is shown
-    // rather than a placeholder one.
-    status: "In Development",
+    liveUrl: "https://personal-life-assistant.vercel.app",
+    githubUrl: "https://github.com/niranjan910/Personal_life_assistant",
     role: "Full-Stack Developer",
     period: "2026",
     overview:

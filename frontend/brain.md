@@ -14,15 +14,15 @@
 
 ## 🚦 STATUS — how far the code is live
 
-**Last updated: 2026-07-02**
+**Last updated: 2026-07-03**
 
 | Layer | State |
 |-------|-------|
 | Local (`npm run dev`) | ✅ All changes present & tested |
-| GitHub (`niranjan910/niranjan910`, `frontend/`) | ⏳ Synced via manual copy + push per session — no CI/CD yet |
-| Live (Vercel) | ⚠️ Not reconfirmed since the one-pager → multi-page redesign — check the Vercel project's connected branch/root directory before assuming `site.url` is current |
+| GitHub (`niranjan910/niranjan910`, `frontend/`) | ⏳ Synced via manual copy + push per session — no CI/CD from this local folder, but see below |
+| Live (Vercel) | ✅ Confirmed — the `niranjan910` Vercel project (aliased at **niranjan910.vercel.app**, not the `-ks6x` URL in `data/site.ts`) is Git-connected to this repo and auto-deploys on every push to `main`. `data/site.ts`'s `site.url` is still the stale `-ks6x` value — hasn't been asked to fix it yet, but the correct one is confirmed. |
 
-**How changes ship:** this is a plain local folder, not a git repo. Each session's changes are copied into a clone of `niranjan910/niranjan910` (excluding `node_modules`, `.next`, build artifacts), committed under `frontend/`, and pushed — either directly to `main` or via a feature branch + PR depending on what was asked that session. There is no automated deploy hook from this local folder.
+**How changes ship:** this local folder is a plain working copy, not a git repo. Each session's changes are copied into a fresh clone of `niranjan910/niranjan910` (excluding `node_modules`, `.next`, build artifacts), committed under `frontend/`, and pushed — either directly to `main` or via a feature branch + PR depending on what was asked. Since the connected Vercel project auto-deploys on push to `main`, **any push actually ships to production** — this is no longer just a GitHub-only sync step.
 
 ---
 
@@ -88,6 +88,17 @@ Known placeholders still unfilled:
 - `resumeUrl: "/resume.pdf"` — file doesn't exist in `/public` yet; the Navbar/mobile-menu "Resume" button will 404 until it's added.
 - `ogImage: "/og.png"` — same, doesn't exist yet; social share previews will show a broken image until added.
 - `site.url` — set to `https://niranjan910-ks6x.vercel.app`, carried over from the old design's deploy. Reconfirm this is still the correct production URL for the redesigned multi-page site before relying on it for canonical/OG tags.
+
+---
+
+**2026-07-03 — NEXUS goes live, real LinkedIn experience data, certification badges/links, UI polish**
+- `data/projects.ts`: NEXUS now has real `liveUrl` (https://personal-life-assistant.vercel.app) and `githubUrl` (https://github.com/niranjan910/Personal_life_assistant) — confirmed both are real/public/responding before wiring them in. `status: "In Development"` removed, so it now falls back to "Live in Production" everywhere (case-study hero badge, card pill) and shows "Visit Live Site"/"View Code" buttons that previously didn't exist. Deliberately **not** added to the home page's 3-slot "Live in production" preview (still EGN ConnectX, StudynLearn, Altus) — only appears on the full `/projects` page unless asked to bump one of the existing three.
+- `data/experience.ts`: replaced with exact data transcribed from his LinkedIn experience section (a screenshot he shared directly) — corrected SmartSchool's title (was an embellished "Marketing Executive — Product & AI Initiatives", real LinkedIn title is just "Marketing Executive") and company name ("SmartSchool Education Ltd"), filled in Naresh i Technologies' real dates (Feb–Jul 2025, previously bracketed placeholders), added precise locations, and added a new `type` field (Full-time/Internship/Apprenticeship). **Added a third entry, TechieNest** (Data Science with ML apprenticeship, Aug 2024–Jan 2025, Jaipur) — this directly supersedes the 2026-07-02 entry below, which had classified TechieNest as "client, not a job" per his answer at the time; the LinkedIn screenshot showed it actually was a formal apprenticeship.
+- `data/certifications.ts` + `components/ui/icons.tsx`: added 3 real LinkedIn Learning `credentialUrl` links he provided (Business Analysis, Public Speaking, Data Analysis — confirmed they match the Certificate IDs already visible on each cert image) and a new 8th certification, **"Introduction to Image Generation"** (Google Cloud Skills Boost) — fetched the live badge page via WebFetch + a Playwright screenshot to read the real title/date (Jun 30, 2026) since no date was available from a static fetch, then cropped the screenshot into a proper certificate thumbnail. Added colored issuer badge icons rendered as a circular chip on each cert thumbnail: hand-built Microsoft's official four-square mark and Google's four-color "G" (both well past what `simple-icons` offers — neither Microsoft nor LinkedIn exist in that package, confirmed by inspecting `Object.keys()`, likely the same trademark-policy removal noted below), plus `simple-icons`-sourced Anthropic/Wolfram paths in their real brand colors (temp-installed and uninstalled again, same pattern as the 2026-07-02 social icons work). `Certifications.tsx` also dropped the whole-card-as-link pattern in favor of an explicit **"Show Credentials"** button, only rendered when a `credentialUrl` exists.
+- `components/sections/Companies.tsx`: two real layout bugs fixed after live/mobile testing — (1) on mobile the 7 logos were in a `flex-nowrap overflow-x-auto` row, so only 1–2 were visible without a non-obvious horizontal scroll; now a `grid-cols-2` grid below the heading on mobile. (2) On desktop, `flex-nowrap` with no shrink meant the heading text and logos literally overlapped once the row's natural width exceeded the ~1104px content area — a Playwright verification pass caught this after the mobile fix looked fine in isolation. Now `flex-wrap` on desktop so it wraps to a second line instead of overlapping. Also dropped the white `bg-white/95` pill wrapper per his request — logos render directly (each image already has its own baked-in background, black or white).
+- `components/sections/Hero.tsx`: removed the socials-row + email line and the "Scroll" cue per his request — home page nav/footer already carry the social links, so this wasn't the only place to find them.
+- Also fixed: a `.next` cache corruption after running `next build` while the dev server was still running against the same folder caused a `Cannot find module './vendor-chunks/@swc.js'` 500 on `/projects/nexus` — same root cause pattern as a prior session's "nav bar broken" report. Fix is always `rm -rf .next` + restart, not a code bug.
+- Deploy note: confirmed via `vercel inspect` that `niranjan910.vercel.app` (not the `-ks6x` URL in `data/site.ts`) is the real production alias, auto-deploying on every push to `main` — this had been flagged as "unconfirmed" since the redesign; it's now confirmed working.
 
 ---
 

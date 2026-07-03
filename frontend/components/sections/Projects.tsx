@@ -9,7 +9,8 @@ import { staggerContainer, viewportOnce, fadeUp } from "@/lib/motion";
 import { ArrowUpRightIcon } from "@/components/ui/icons";
 
 // Home page only ever shows live, shipped work — anything still
-// "In Development" (e.g. NEXUS) only appears on the full /projects page.
+// "In Development" only appears on the full /projects page. Capped at 3,
+// so only the first 3 live entries in data/projects.ts show up here.
 const isLive = (status?: string) => !status || status === "Live in Production";
 const liveProjects = projects.filter((p) => isLive(p.status)).slice(0, 3);
 
