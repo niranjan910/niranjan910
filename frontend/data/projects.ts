@@ -38,6 +38,11 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   image?: string;
+  // When set, the card thumbnail renders a live, always-current iframe
+  // embed of the actual website instead of a static `image`/placeholder.
+  // Only use for sites that permit framing (no X-Frame-Options / CSP
+  // frame-ancestors) — otherwise the frame renders blank.
+  livePreviewUrl?: string;
   featured?: boolean;
   status?: string; // defaults to "Live in Production" on the case-study page
 
@@ -62,6 +67,7 @@ export const projects: Project[] = [
     category: ["Full-Stack"],
     liveUrl: "https://egnconnectx.com",
     githubUrl: "https://github.com/niranjan910/EGN_X_live",
+    livePreviewUrl: "https://egnconnectx.com",
     featured: true,
     org: "EGN EDU INDIA PRIVATE LIMITED",
     role: "Frontend Developer",
@@ -92,6 +98,7 @@ export const projects: Project[] = [
     category: ["Full-Stack"],
     liveUrl: "https://studynlearn.com",
     githubUrl: "https://github.com/niranjan910/StudynLearn_live",
+    livePreviewUrl: "https://studynlearn.com",
     org: "SmartSchool Education Pvt. Ltd.",
     role: "Frontend Developer",
     period: "2026",
@@ -127,6 +134,7 @@ export const projects: Project[] = [
     category: ["Full-Stack"],
     liveUrl: "https://altuseducation.in",
     githubUrl: "https://github.com/niranjan910/Altus",
+    livePreviewUrl: "https://altuseducation.in",
     role: "Full-Stack Developer",
     period: "2026",
     overview:
@@ -143,6 +151,21 @@ export const projects: Project[] = [
       { label: "REST Endpoints", value: "18+" },
       { label: "Database Tables", value: "11" },
     ],
+  },
+  {
+    slug: "lending-bazaar",
+    title: "Lending Bazaar",
+    description:
+      "India's financial distribution infrastructure platform — connecting banks, NBFCs, insurance, and mutual funds through a nationwide agent network spanning 700+ districts.",
+    // TODO: confirm the real stack — this is a best guess, not detected.
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    category: ["Full-Stack"],
+    liveUrl: "https://lendingbazaar.in",
+    livePreviewUrl: "https://lendingbazaar.in",
+    role: "Frontend Developer",
+    period: "2026",
+    overview:
+      "Lending Bazaar is a financial distribution infrastructure platform connecting banks, NBFCs, insurance providers, and mutual funds through a nationwide agent network across 700+ districts in India.",
   },
   {
     slug: "nexus",

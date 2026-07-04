@@ -8,8 +8,7 @@ import { socialIcons } from "@/components/ui/icons";
 const quickLinks = [
   { label: "About", href: "/#about" },
   { label: "Projects", href: "/projects" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Certifications", href: "/certifications" },
 ];
 
 export function Footer() {

@@ -14,7 +14,7 @@ export function Companies() {
   if (companyLogos.length === 0) return null;
 
   return (
-    <section className="container-page py-10">
+    <section className="w-full px-6 py-10">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

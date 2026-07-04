@@ -31,6 +31,7 @@ const config: Config = {
         display: ["var(--font-space-grotesk)", "sans-serif"],
         sans: ["var(--font-inter)", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "monospace"],
+        serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
       },
       fontSize: {
         // Confident display scale

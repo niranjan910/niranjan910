@@ -9,10 +9,10 @@ import { staggerContainer, viewportOnce, fadeUp } from "@/lib/motion";
 import { ArrowUpRightIcon } from "@/components/ui/icons";
 
 // Home page only ever shows live, shipped work — anything still
-// "In Development" only appears on the full /projects page. Capped at 3,
-// so only the first 3 live entries in data/projects.ts show up here.
+// "In Development" only appears on the full /projects page. Capped at 4,
+// so only the first 4 live entries in data/projects.ts show up here.
 const isLive = (status?: string) => !status || status === "Live in Production";
-const liveProjects = projects.filter((p) => isLive(p.status)).slice(0, 3);
+const liveProjects = projects.filter((p) => isLive(p.status)).slice(0, 4);
 
 export function Projects() {
   return (
@@ -27,10 +27,15 @@ export function Projects() {
         initial="hidden"
         whileInView="visible"
         viewport={viewportOnce}
-        className="grid gap-6 sm:grid-cols-2"
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2"
       >
+        {/* 2×2 grid — four equal cards */}
         {liveProjects.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            spanFeatured={false}
+          />
         ))}
       </motion.div>
 

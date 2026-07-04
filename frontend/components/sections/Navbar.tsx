@@ -1,117 +1,175 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
 import { site } from "@/data/site";
-import { MenuIcon, CloseIcon } from "@/components/ui/icons";
+import { GithubIcon } from "@/components/ui/icons";
 
-// Prefixed with "/" so these resolve correctly from any page, not just
-// the home one-pager — a bare "#about" does nothing on e.g. /projects/[slug].
-const links = [
-  { label: "About", href: "/#about" },
-  { label: "Projects", href: "/projects" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Certifications", href: "/#certifications" },
-  { label: "Contact", href: "/#contact" },
+// Prefixed with "/" so these resolve from any page, not just the home
+// one-pager — a bare "#about" does nothing on e.g. /projects/[slug].
+const NAV_LINKS = [
+  { label: "About", href: "/#about", match: "" },
+  { label: "Projects", href: "/projects", match: "/projects" },
+  { label: "Certifications", href: "/certifications", match: "/certifications" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const linksRef = useRef<HTMLElement>(null);
+  const highlightRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
-  // Add a blurred background once the user scrolls past the hero fold.
+  const isActive = (match: string) => match !== "" && pathname.startsWith(match);
+
+  // Glassy background kicks in once scrolled past the hero fold.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 50);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "border-b border-white/[0.08] bg-base/70 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
-      <nav
-        className="container-page flex h-16 items-center justify-between"
-        aria-label="Primary"
-      >
-        {/* Logo / name */}
-        <Link
-          href="/"
-          className="group flex items-center gap-2 font-display text-sm font-semibold tracking-tight text-foreground"
-        >
-          <span className="relative grid h-8 w-8 place-items-center overflow-hidden rounded-md border border-white/[0.08] bg-surface transition-colors group-hover:border-accent/40">
-            <Image
-              src="/Logo/Niranjan-mark.png"
-              alt={`${site.name} logo`}
-              fill
-              sizes="32px"
-              className="object-contain p-1"
-            />
-          </span>
-          <span className="hidden sm:inline">{site.name}</span>
-        </Link>
+  // Slide the glass highlight to a given link element.
+  const positionHighlight = useCallback((el: HTMLElement | null) => {
+    const highlight = highlightRef.current;
+    const container = linksRef.current;
+    if (!highlight || !container || !el) return;
+    const linkRect = el.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    highlight.style.width = `${linkRect.width}px`;
+    highlight.style.height = `${linkRect.height}px`;
+    highlight.style.transform = `translateX(${linkRect.left - containerRect.left}px)`;
+    highlight.style.opacity = "1";
+  }, []);
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-1 md:flex">
-          {links.map((link) => (
-            <li key={link.href}>
+  const getActiveEl = useCallback(
+    () => linksRef.current?.querySelector<HTMLElement>(".rb-nav-link-active") ?? null,
+    []
+  );
+
+  const handleLinkHover = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => positionHighlight(e.currentTarget),
+    [positionHighlight]
+  );
+
+  const handleLinksLeave = useCallback(() => {
+    const activeEl = getActiveEl();
+    if (activeEl) positionHighlight(activeEl);
+    else if (highlightRef.current) highlightRef.current.style.opacity = "0";
+  }, [getActiveEl, positionHighlight]);
+
+  // Snap the highlight to the active link on mount / route change / resize.
+  useEffect(() => {
+    const settle = () => {
+      const activeEl = getActiveEl();
+      if (activeEl) positionHighlight(activeEl);
+      else if (highlightRef.current) highlightRef.current.style.opacity = "0";
+    };
+    const id = requestAnimationFrame(settle);
+    window.addEventListener("resize", settle);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("resize", settle);
+    };
+  }, [pathname, getActiveEl, positionHighlight]);
+
+  // Lock body scroll while the mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  return (
+    <header className={`rb-nav${scrolled ? " rb-nav-scrolled" : ""}`}>
+      <div className="rb-nav-inner">
+        <div className="rb-nav-left">
+          <Link href="/" aria-label={site.name}>
+            <span className="rb-nav-logo-mark">
+              <Image
+                src="/Logo/Niranjan-mark.png"
+                alt={`${site.name} logo`}
+                fill
+                sizes="26px"
+                className="object-contain"
+              />
+            </span>
+          </Link>
+
+          <span className="rb-nav-divider">/</span>
+
+          <nav
+            className="rb-nav-links"
+            ref={linksRef}
+            onMouseLeave={handleLinksLeave}
+            aria-label="Primary"
+          >
+            <div className="rb-nav-link-highlight" ref={highlightRef} />
+            {NAV_LINKS.map((link) => (
               <Link
+                key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-sm text-muted transition-colors hover:text-foreground"
+                className={`rb-nav-link${isActive(link.match) ? " rb-nav-link-active" : ""}`}
+                onMouseEnter={handleLinkHover}
               >
                 {link.label}
               </Link>
-            </li>
-          ))}
-        </ul>
+            ))}
+          </nav>
+        </div>
 
-        <div className="flex items-center gap-2">
-          {/* Mobile menu toggle */}
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-md border border-white/[0.08] bg-surface text-foreground md:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
+        <div className="rb-nav-right">
+          {/* GitHub CTA */}
+          <a
+            className="rb-nav-cta"
+            href={site.socials.github}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {open ? <CloseIcon /> : <MenuIcon />}
+            <GithubIcon width={16} height={16} />
+            GitHub
+          </a>
+
+          <button
+            className={`rb-nav-hamburger${menuOpen ? " open" : ""}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <span />
+            <span />
+            <span />
           </button>
         </div>
-      </nav>
 
-      {/* Mobile dropdown */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-b border-white/[0.08] bg-base/95 backdrop-blur-xl md:hidden"
-          >
-            <ul className="container-page flex flex-col py-4">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-md px-3 py-3 text-base text-muted transition-colors hover:bg-white/[0.03] hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {menuOpen && (
+          <div className="rb-nav-mobile">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rb-nav-mobile-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href={site.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rb-nav-mobile-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              GitHub
+            </a>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </header>
   );
 }

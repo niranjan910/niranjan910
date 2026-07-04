@@ -5,21 +5,31 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
 import { fadeUp } from "@/lib/motion";
-import { GithubIcon, ExternalIcon, ArrowUpRightIcon } from "@/components/ui/icons";
+import { GithubIcon, ArrowUpRightIcon } from "@/components/ui/icons";
 
 /**
  * Shared project card — used by the home "Selected work" preview
  * and the full /projects listing. Keep both in sync by editing here.
  */
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  className = "",
+  // On listing grids a `featured` project gets extra width automatically.
+  // Bento layouts control spans themselves, so they pass spanFeatured={false}.
+  spanFeatured = true,
+}: {
+  project: Project;
+  className?: string;
+  spanFeatured?: boolean;
+}) {
   const caseStudyHref = `/projects/${project.slug}`;
 
   return (
     <motion.article
       variants={fadeUp}
-      className={`group relative flex flex-col overflow-hidden rounded-xl border border-white/[0.08] bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow ${
-        project.featured ? "lg:col-span-2" : ""
-      }`}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-[4px] border border-white/[0.08] bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow ${
+        spanFeatured && project.featured ? "lg:col-span-2" : ""
+      } ${className}`}
     >
       {/* Thumbnail */}
       <Link
@@ -27,7 +37,32 @@ export function ProjectCard({ project }: { project: Project }) {
         aria-label={`View ${project.title} case study`}
         className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.08] bg-base"
       >
-        {project.image ? (
+        {project.livePreviewUrl ? (
+          // Always-current live embed of the real site. Rendered at 1.5×
+          // the card size then scaled down so it reads like a desktop
+          // thumbnail; pointer-events-none keeps the whole tile a link.
+          <>
+            <div className="bg-grid absolute inset-0" />
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              <iframe
+                src={project.livePreviewUrl}
+                title={`${project.title} live preview`}
+                loading="lazy"
+                tabIndex={-1}
+                scrolling="no"
+                aria-hidden="true"
+                className="absolute left-0 top-0 h-[150%] w-[150%] origin-top-left scale-[.6667] border-0 transition-transform duration-500 group-hover:scale-[.68]"
+              />
+            </div>
+            <span className="absolute left-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-base/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-muted backdrop-blur">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+              </span>
+              Live
+            </span>
+          </>
+        ) : project.image ? (
           <Image
             src={project.image}
             alt={`${project.title} screenshot`}
@@ -102,7 +137,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="mt-6 flex items-center gap-4 border-t border-white/[0.06] pt-4">
           <Link
             href={caseStudyHref}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-base transition-colors hover:bg-accent-hover"
           >
             Case Study
             <ArrowUpRightIcon width={15} height={15} />
@@ -112,9 +147,13 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-foreground transition-colors hover:text-accent"
+              className="inline-flex items-center gap-2 text-sm text-foreground transition-colors hover:text-accent"
             >
-              <ExternalIcon width={15} height={15} />
+              {/* Radiating "live" dot */}
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
               Live Demo
             </a>
           )}
@@ -123,7 +162,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
+              className="inline-flex items-center gap-1.5 text-sm text-foreground transition-colors hover:text-accent"
             >
               <GithubIcon width={15} height={15} />
               GitHub
