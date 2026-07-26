@@ -12,16 +12,57 @@
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/light.svg">
-  <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
-</picture>
+### Live Projects
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://egnconnectx.com/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/egnconnectx-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/egnconnectx-light.svg">
+          <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/egnconnectx-dark.svg" width="100%" alt="EGN Connect X"/>
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://altuseducation.in/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/altuseducation-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/altuseducation-light.svg">
+          <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/altuseducation-dark.svg" width="100%" alt="Altus Education"/>
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://studynlearn.com/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/studynlearn-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/studynlearn-light.svg">
+          <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/studynlearn-dark.svg" width="100%" alt="StudyNLearn"/>
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://smartschoolonline.in/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-light.svg">
+          <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-dark.svg" width="100%" alt="SmartSchool"/>
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A0A0A,50:121212,100:0A0A0A&height=120&section=footer" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/light.svg">
+  <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
+</picture>
 
 </div>
