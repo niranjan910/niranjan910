@@ -14,25 +14,6 @@
 
 <div align="center">
 
-[![Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,framer&perline=8&theme=dark)](https://skillicons.dev)
-
-[![Skills](https://skillicons.dev/icons?i=python,mysql,figma,git,github,vscode,postgres&perline=8&theme=dark)](https://skillicons.dev)
-
-![ChatGPT](https://img.shields.io/badge/ChatGPT-A3E635?style=for-the-badge&logo=openai&logoColor=000000)
-![Claude](https://img.shields.io/badge/Claude-A3E635?style=for-the-badge&logoColor=000000)
-![Claude Code](https://img.shields.io/badge/Claude_Code-A3E635?style=for-the-badge&logoColor=000000)
-![Google AI Studio](https://img.shields.io/badge/Google_AI_Studio-A3E635?style=for-the-badge&logo=google&logoColor=000000)
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com/?user=niranjan910&hide_border=true&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0A0A0A&stroke=A3E635&ring=A3E635&fire=A3E635&currStreakNum=EDEDED&sideNums=EDEDED&currStreakLabel=A3E635&sideLabels=EDEDED&dates=8A8A8A" width="100%"/>
-
-<br/><br/>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="stats/dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="stats/light.svg">
