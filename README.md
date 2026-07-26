@@ -18,27 +18,7 @@
   <img src="stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
 </picture>
 
-<br/><br/>
-
-<a href="https://egnconnectx.com/">
-  <img src="https://img.shields.io/badge/EGN_ConnectX-A3E635?style=for-the-badge&logoColor=000000"/>
-</a>
-
-<a href="https://studynlearn.com/">
-  <img src="https://img.shields.io/badge/StudynLearn-A3E635?style=for-the-badge&logoColor=000000"/>
-</a>
-
-<a href="https://smartschoolonline.in/">
-  <img src="https://img.shields.io/badge/SmartSchool-A3E635?style=for-the-badge&logoColor=000000"/>
-</a>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=niranjan910&bg_color=0A0A0A&color=A3E635&line=A3E635&point=EDEDED&area=true&area_color=A3E63515&hide_border=true&custom_title=Contribution%20Graph" width="100%"/>
-
 </div>
-
----
 
 <div align="center">
 
