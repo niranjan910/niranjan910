@@ -8,23 +8,6 @@
   </picture>
 </a>
 
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A0A0A,50:121212,100:0A0A0A&height=250&section=header&text=Niranjan%20Kumar&fontSize=58&fontColor=EDEDED&animation=fadeIn&fontAlignY=38&desc=Frontend%20Developer%20%E2%80%A2%20AI%20Product%20Builder%20%E2%80%A2%20UI%2FUX%20Designer%20%E2%80%A2%20SaaS%20Developer&descAlignY=60&descColor=A3E635&descSize=16" width="100%"/>
-
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3000&pause=800&color=A3E635&center=true&vCenter=true&width=750&lines=Building+modern+web+products+%26+AI-powered+workflows...;Frontend+Engineering+%7C+React+%26+Next.js;AI+Product+Building+%7C+Claude+%26+ChatGPT;UI%2FUX+Design+%7C+Figma+%26+Design+Systems;SaaS+Development+%7C+Full-Stack+Product+Builder" alt="Typing SVG"/>
-
-<br/><br/>
-
-<a href="https://niranjan910-ks6x.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-A3E635?style=for-the-badge&logo=vercel&logoColor=000000"/></a>
-<a href="https://www.linkedin.com/in/niranjan-k-a83517229/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:niranjan991100@gmail.com"><img src="https://img.shields.io/badge/Email-A3E635?style=for-the-badge&logo=gmail&logoColor=000000"/></a>
-<a href="https://github.com/niranjan910"><img src="https://img.shields.io/badge/GitHub-A3E635?style=for-the-badge&logo=github&logoColor=000000"/></a>
-
-<br/><br/>
-
-![Profile Views](https://komarev.com/ghpvc/?username=niranjan910&color=A3E635&style=flat-square&label=Profile+Views)
-
 </div>
 
 ---
