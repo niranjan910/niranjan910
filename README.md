@@ -2,9 +2,9 @@
 
 <a href="https://github.com/niranjan910">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="hero/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="hero/light.svg">
-    <img src="hero/dark.svg" width="100%" alt="niranjan910 — profile terminal"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/hero/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/hero/light.svg">
+    <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/hero/dark.svg" width="100%" alt="niranjan910 — profile terminal"/>
   </picture>
 </a>
 
@@ -13,9 +13,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="stats/dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="stats/light.svg">
-  <img src="stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/light.svg">
+  <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg" width="100%" alt="GitHub stats for niranjan910"/>
 </picture>
 
 </div>
