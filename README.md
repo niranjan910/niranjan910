@@ -1,15 +1,5 @@
 <div align="center">
 
-<a href="https://github.com/niranjan910">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="hero/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="hero/light.svg">
-    <img src="hero/dark.svg" width="100%" alt="niranjan910 — profile terminal"/>
-  </picture>
-</a>
-
-<br/><br/>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A0A0A,50:121212,100:0A0A0A&height=250&section=header&text=Niranjan%20Kumar&fontSize=58&fontColor=EDEDED&animation=fadeIn&fontAlignY=38&desc=Frontend%20Developer%20%E2%80%A2%20AI%20Product%20Builder%20%E2%80%A2%20UI%2FUX%20Designer%20%E2%80%A2%20SaaS%20Developer&descAlignY=60&descColor=A3E635&descSize=16" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&size=18&duration=3000&pause=800&color=A3E635&center=true&vCenter=true&width=750&lines=Building+modern+web+products+%26+AI-powered+workflows...;Frontend+Engineering+%7C+React+%26+Next.js;AI+Product+Building+%7C+Claude+%26+ChatGPT;UI%2FUX+Design+%7C+Figma+%26+Design+Systems;SaaS+Development+%7C+Full-Stack+Product+Builder" alt="Typing SVG"/>
