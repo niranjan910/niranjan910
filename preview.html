@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>niranjan910 — README preview</title>
+<style>
+  :root { --bg:#0d1117; --fg:#e6edf3; --border:#30363d; }
+  html[data-theme="light"] { --bg:#ffffff; --fg:#1f2328; --border:#d1d9e0; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  .wrap { max-width:900px; margin:0 auto; padding:32px 16px 64px; text-align:center; }
+  h3 { margin:32px 0 12px; }
+  img { max-width:100%; }
+  table { width:100%; border-collapse:collapse; }
+  td { width:25%; padding:4px; vertical-align:top; }
+  .bar { position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--border);
+         padding:10px 16px; display:flex; gap:10px; align-items:center; justify-content:center; }
+  button { background:transparent; color:var(--fg); border:1px solid var(--border);
+           border-radius:6px; padding:6px 12px; cursor:pointer; font:inherit; }
+  button[aria-pressed="true"] { border-color:#2f81f7; }
+  .hint { opacity:.6; font-size:12px; }
+</style>
+</head>
+<body>
+<div class="bar">
+  <button id="dark" aria-pressed="true">Dark</button>
+  <button id="light" aria-pressed="false">Light</button>
+  <button id="reload">Reload assets</button>
+  <span class="hint">local SVGs — reflects your working tree</span>
+</div>
+
+<div class="wrap">
+  <a href="https://github.com/niranjan910">
+    <img data-src="hero/{theme}.svg" width="100%" alt="niranjan910 — profile terminal">
+  </a>
+
+  <h3>Live Projects</h3>
+  <table><tr>
+    <td><a href="https://egnconnectx.com/"><img data-src="projects/egnconnectx-{theme}.svg" width="100%" alt="EGN Connect X"></a></td>
+    <td><a href="https://altuseducation.in/"><img data-src="projects/altuseducation-{theme}.svg" width="100%" alt="Altus Education"></a></td>
+    <td><a href="https://studynlearn.com/"><img data-src="projects/studynlearn-{theme}.svg" width="100%" alt="StudyNLearn"></a></td>
+    <td><a href="https://smartschoolonline.in/"><img data-src="projects/smartschool-{theme}.svg" width="100%" alt="SmartSchool"></a></td>
+    <td><a href="https://snlsolution.com/"><img data-src="projects/snlsolutions-{theme}.svg" width="100%" alt="SNL Solutions"></a></td>
+  </tr></table>
+
+  <h3></h3>
+  <img data-src="stats/{theme}.svg" width="100%" alt="GitHub stats for niranjan910">
+</div>
+
+<script>
+  const imgs = [...document.querySelectorAll('img[data-src]')];
+  function render() {
+    const theme = document.documentElement.dataset.theme;
+    const bust = Date.now();
+    imgs.forEach(i => i.src = i.dataset.src.replace('{theme}', theme) + '?t=' + bust);
+    dark.setAttribute('aria-pressed', theme === 'dark');
+    light.setAttribute('aria-pressed', theme === 'light');
+  }
+  dark.onclick = () => { document.documentElement.dataset.theme = 'dark'; render(); };
+  light.onclick = () => { document.documentElement.dataset.theme = 'light'; render(); };
+  reload.onclick = render;
+  render();
+</script>
+</body>
+</html>

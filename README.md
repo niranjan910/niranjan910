@@ -16,7 +16,7 @@
 
 <table>
   <tr>
-    <td align="center" width="25%">
+    <td align="center" width="20%">
       <a href="https://egnconnectx.com/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/egnconnectx-dark.svg">
@@ -25,7 +25,7 @@
         </picture>
       </a>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="20%">
       <a href="https://altuseducation.in/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/altuseducation-dark.svg">
@@ -34,7 +34,7 @@
         </picture>
       </a>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="20%">
       <a href="https://studynlearn.com/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/studynlearn-dark.svg">
@@ -43,12 +43,21 @@
         </picture>
       </a>
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="20%">
       <a href="https://smartschoolonline.in/">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-dark.svg">
           <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-light.svg">
           <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/smartschool-dark.svg" width="100%" alt="SmartSchool"/>
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://snlsolution.com/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/snlsolutions-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/snlsolutions-light.svg">
+          <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/projects/snlsolutions-dark.svg" width="100%" alt="SNL Solutions"/>
         </picture>
       </a>
     </td>
