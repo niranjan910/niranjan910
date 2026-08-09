@@ -48,9 +48,9 @@ async function getYearCalendar(year, now) {
     `query($from: DateTime!, $to: DateTime!) {
       viewer {
         contributionsCollection(from: $from, to: $to) {
-          totalContributions
           totalCommitContributions
           contributionCalendar {
+            totalContributions
             weeks { contributionDays { date contributionCount } }
           }
         }
@@ -214,7 +214,7 @@ function renderLanguageRow({ x, pctX, rowIndex, lang, text, subtext, barTrack })
         <rect x="${x}" y="${y + 8}" width="0" height="8" rx="4" fill="${lang.color}">
           <animate attributeName="width" from="0" to="${lang.barWidth}" begin="${barBegin.toFixed(3)}s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="${pctX}" y="${y}" font-size="12" text-anchor="end" fill="${subtext}" opacity="0">${lang.percentLabel}
+        <text x="${pctX}" y="${y}" font-size="12" text-anchor="end" fill="${subtext}" opacity="0">${esc(lang.percentLabel)}
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="${pctBegin.toFixed(3)}s" dur="0.3s" fill="freeze"/>
         </text>
 `;
@@ -314,7 +314,7 @@ async function main() {
   const dayMap = new Map();
   for (const year of years) {
     const collection = await getYearCalendar(year, now);
-    totalContributions += collection.totalContributions;
+    totalContributions += collection.contributionCalendar.totalContributions;
     totalCommits += collection.totalCommitContributions;
     for (const week of collection.contributionCalendar.weeks) {
       for (const day of week.contributionDays) {
