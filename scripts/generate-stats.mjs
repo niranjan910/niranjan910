@@ -358,11 +358,40 @@ async function main() {
     `longest streak: ${data.longestStreak.len}, total commits: ${totalCommits}, languages: ${languages.length}`
   );
 
+  const darkSvg = renderCard('dark', data);
+  const lightSvg = renderCard('light', data);
+
   const fs = await import('node:fs/promises');
   await fs.mkdir('stats', { recursive: true });
-  await fs.writeFile('stats/dark.svg', renderCard('dark', data));
-  await fs.writeFile('stats/light.svg', renderCard('light', data));
+  await fs.writeFile('stats/dark.svg', darkSvg);
+  await fs.writeFile('stats/light.svg', lightSvg);
   console.error('Wrote stats/dark.svg and stats/light.svg');
+
+  await bustReadmeCache(darkSvg, lightSvg);
+}
+
+// raw.githubusercontent.com and browsers cache the stats image by URL, so a
+// same-URL update can render stale for viewers even though the file content
+// changed. Append a hash of the new content as a query string so the README
+// URL itself changes whenever — and only whenever — the card actually does.
+async function bustReadmeCache(darkSvg, lightSvg) {
+  const { createHash } = await import('node:crypto');
+  const fs = await import('node:fs/promises');
+  const hash = createHash('sha1').update(darkSvg).update(lightSvg).digest('hex').slice(0, 10);
+
+  let readme;
+  try {
+    readme = await fs.readFile('README.md', 'utf8');
+  } catch {
+    return;
+  }
+  const updated = readme
+    .replace(/stats\/dark\.svg(\?[^"')\s]*)?/g, `stats/dark.svg?v=${hash}`)
+    .replace(/stats\/light\.svg(\?[^"')\s]*)?/g, `stats/light.svg?v=${hash}`);
+  if (updated !== readme) {
+    await fs.writeFile('README.md', updated);
+    console.error(`Updated README.md cache-busting query to ?v=${hash}`);
+  }
 }
 
 main().catch((err) => {
