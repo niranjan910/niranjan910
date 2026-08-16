@@ -41,9 +41,9 @@
       </g>
     </g>
 <text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.400s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">1184<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.667s" dur="0.267s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">1185<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.667s" dur="0.267s" fill="freeze"/></text>
 <text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">2369<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.933s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">3553<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">3554<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
 <text x="40" y="296" font-size="12" letter-spacing="0.4" fill="#6B7280" opacity="0">Total Contributions<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.250s" dur="0.25s" fill="freeze"/></text>
 
     <g transform="translate(268,232)">
@@ -85,9 +85,9 @@
       </g>
     </g>
 <text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.700s" dur="0.267s" fill="freeze"/></text>
-<text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">223<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.967s" dur="0.267s" fill="freeze"/></text>
+<text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">224<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.967s" dur="0.267s" fill="freeze"/></text>
 <text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">447<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="2.233s" dur="0.267s" fill="freeze"/></text>
-<text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">670<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.500s" dur="0.15s" fill="freeze"/></text>
+<text x="670" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">671<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.500s" dur="0.15s" fill="freeze"/></text>
 <text x="670" y="296" font-size="12" letter-spacing="0.4" fill="#6B7280" opacity="0">Total Commits<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.550s" dur="0.25s" fill="freeze"/></text>
 
     </g>
@@ -103,49 +103,49 @@
         </text>
         <rect x="32" y="364" width="388" height="8" rx="4" fill="#EFEFEF"/>
         <rect x="32" y="364" width="0" height="8" rx="4" fill="#DA5B0B">
-          <animate attributeName="width" from="0" to="308" begin="3.000s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+          <animate attributeName="width" from="0" to="364" begin="3.000s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="356" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">79.4%
+        <text x="420" y="356" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">93.8%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.750s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="32" y="390" font-size="12" fill="#14171A" opacity="0">HTML
+        <text x="32" y="390" font-size="12" fill="#14171A" opacity="0">JavaScript
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.050s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="32" y="398" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="32" y="398" width="0" height="8" rx="4" fill="#e34c26">
-          <animate attributeName="width" from="0" to="29" begin="3.150s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+        <rect x="32" y="398" width="0" height="8" rx="4" fill="#f1e05a">
+          <animate attributeName="width" from="0" to="11" begin="3.150s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="390" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">7.5%
+        <text x="420" y="390" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">2.9%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.900s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="32" y="424" font-size="12" fill="#14171A" opacity="0">PHP
+        <text x="32" y="424" font-size="12" fill="#14171A" opacity="0">HTML
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.200s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="32" y="432" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="32" y="432" width="0" height="8" rx="4" fill="#4F5D95">
-          <animate attributeName="width" from="0" to="16" begin="3.300s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+        <rect x="32" y="432" width="0" height="8" rx="4" fill="#e34c26">
+          <animate attributeName="width" from="0" to="6" begin="3.300s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="424" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">4.2%
+        <text x="420" y="424" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">1.6%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.050s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="32" y="458" font-size="12" fill="#14171A" opacity="0">JavaScript
+        <text x="32" y="458" font-size="12" fill="#14171A" opacity="0">TypeScript
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.350s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="32" y="466" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="32" y="466" width="0" height="8" rx="4" fill="#f1e05a">
-          <animate attributeName="width" from="0" to="15" begin="3.450s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+        <rect x="32" y="466" width="0" height="8" rx="4" fill="#3178c6">
+          <animate attributeName="width" from="0" to="5" begin="3.450s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="458" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">3.8%
+        <text x="420" y="458" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">1.4%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.200s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="32" y="492" font-size="12" fill="#14171A" opacity="0">TypeScript
+        <text x="32" y="492" font-size="12" fill="#14171A" opacity="0">Python
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.500s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="32" y="500" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="32" y="500" width="0" height="8" rx="4" fill="#3178c6">
-          <animate attributeName="width" from="0" to="11" begin="3.600s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+        <rect x="32" y="500" width="0" height="8" rx="4" fill="#3572A5">
+          <animate attributeName="width" from="0" to="1" begin="3.600s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="492" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">2.8%
+        <text x="420" y="492" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">0.3%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.350s" dur="0.3s" fill="freeze"/>
         </text>
         <text x="32" y="526" font-size="12" fill="#14171A" opacity="0">CSS
@@ -153,70 +153,40 @@
         </text>
         <rect x="32" y="534" width="388" height="8" rx="4" fill="#EFEFEF"/>
         <rect x="32" y="534" width="0" height="8" rx="4" fill="#663399">
-          <animate attributeName="width" from="0" to="7" begin="3.750s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+          <animate attributeName="width" from="0" to="0" begin="3.750s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="420" y="526" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">1.8%
+        <text x="420" y="526" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">0.1%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.500s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="460" y="356" font-size="12" fill="#14171A" opacity="0">Python
+        <text x="460" y="356" font-size="12" fill="#14171A" opacity="0">Mako
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.900s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="460" y="364" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="364" width="0" height="8" rx="4" fill="#3572A5">
-          <animate attributeName="width" from="0" to="2" begin="3.000s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
+        <rect x="460" y="364" width="0" height="8" rx="4" fill="#7e858d">
+          <animate attributeName="width" from="0" to="0" begin="3.000s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
-        <text x="848" y="356" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">0.5%
+        <text x="848" y="356" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.750s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="460" y="390" font-size="12" fill="#14171A" opacity="0">Hack
+        <text x="460" y="390" font-size="12" fill="#14171A" opacity="0">Dockerfile
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.050s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="460" y="398" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="398" width="0" height="8" rx="4" fill="#878787">
+        <rect x="460" y="398" width="0" height="8" rx="4" fill="#384d54">
           <animate attributeName="width" from="0" to="0" begin="3.150s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
         <text x="848" y="390" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.900s" dur="0.3s" fill="freeze"/>
         </text>
-        <text x="460" y="424" font-size="12" fill="#14171A" opacity="0">PLpgSQL
+        <text x="460" y="424" font-size="12" fill="#14171A" opacity="0">Shell
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.200s" dur="0.3s" fill="freeze"/>
         </text>
         <rect x="460" y="432" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="432" width="0" height="8" rx="4" fill="#336790">
+        <rect x="460" y="432" width="0" height="8" rx="4" fill="#89e051">
           <animate attributeName="width" from="0" to="0" begin="3.300s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
         </rect>
         <text x="848" y="424" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
           <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.050s" dur="0.3s" fill="freeze"/>
-        </text>
-        <text x="460" y="458" font-size="12" fill="#14171A" opacity="0">Shell
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.350s" dur="0.3s" fill="freeze"/>
-        </text>
-        <rect x="460" y="466" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="466" width="0" height="8" rx="4" fill="#89e051">
-          <animate attributeName="width" from="0" to="0" begin="3.450s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
-        </rect>
-        <text x="848" y="458" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.200s" dur="0.3s" fill="freeze"/>
-        </text>
-        <text x="460" y="492" font-size="12" fill="#14171A" opacity="0">PowerShell
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.500s" dur="0.3s" fill="freeze"/>
-        </text>
-        <rect x="460" y="500" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="500" width="0" height="8" rx="4" fill="#012456">
-          <animate attributeName="width" from="0" to="0" begin="3.600s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
-        </rect>
-        <text x="848" y="492" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.350s" dur="0.3s" fill="freeze"/>
-        </text>
-        <text x="460" y="526" font-size="12" fill="#14171A" opacity="0">Mako
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.650s" dur="0.3s" fill="freeze"/>
-        </text>
-        <rect x="460" y="534" width="388" height="8" rx="4" fill="#EFEFEF"/>
-        <rect x="460" y="534" width="0" height="8" rx="4" fill="#7e858d">
-          <animate attributeName="width" from="0" to="0" begin="3.750s" dur="0.9s" calcMode="spline" keySplines="0.25 0.1 0.25 1" fill="freeze"/>
-        </rect>
-        <text x="848" y="526" font-size="12" text-anchor="end" fill="#6B7280" opacity="0">&lt;0.1%
-          <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="4.500s" dur="0.3s" fill="freeze"/>
         </text>
     </g>
   </g>
