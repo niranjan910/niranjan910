@@ -41,9 +41,9 @@
       </g>
     </g>
 <text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.400s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">1186<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.667s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">2372<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.933s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">3558<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">1202<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.667s" dur="0.267s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">2403<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.933s" dur="0.267s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">3605<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
 <text x="40" y="296" font-size="12" letter-spacing="0.4" fill="#6B7280" opacity="0">Total Contributions<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.250s" dur="0.25s" fill="freeze"/></text>
 
     <g transform="translate(268,232)">
@@ -56,10 +56,10 @@
     </g>
 <text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.500s" dur="0.267s" fill="freeze"/></text>
 <text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">26<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.767s" dur="0.267s" fill="freeze"/></text>
-<text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">51<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="2.033s" dur="0.267s" fill="freeze"/></text>
-<text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">77<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.300s" dur="0.15s" fill="freeze"/></text>
+<text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">52<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="2.033s" dur="0.267s" fill="freeze"/></text>
+<text x="250" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">78<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.300s" dur="0.15s" fill="freeze"/></text>
 <text x="250" y="296" font-size="12" letter-spacing="0.4" fill="#6B7280" opacity="0">Current Streak<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.350s" dur="0.25s" fill="freeze"/></text>
-<text x="250" y="312" font-size="10" letter-spacing="0.2" fill="#6B7280" opacity="0">Jun 1 – Aug 16, 2026<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.700s" dur="0.25s" fill="freeze"/></text>
+<text x="250" y="312" font-size="10" letter-spacing="0.2" fill="#6B7280" opacity="0">Jun 1 – Aug 17, 2026<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.700s" dur="0.25s" fill="freeze"/></text>
 
     <g transform="translate(478,232)">
       <circle r="16" fill="#4D7C0F" opacity="0.12"/>
@@ -71,10 +71,10 @@
     </g>
 <text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.600s" dur="0.267s" fill="freeze"/></text>
 <text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">26<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.867s" dur="0.267s" fill="freeze"/></text>
-<text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">51<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="2.133s" dur="0.267s" fill="freeze"/></text>
-<text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">77<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.400s" dur="0.15s" fill="freeze"/></text>
+<text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">52<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="2.133s" dur="0.267s" fill="freeze"/></text>
+<text x="460" y="274" font-size="32" font-weight="700" fill="#4D7C0F" text-anchor="start" opacity="0">78<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.400s" dur="0.15s" fill="freeze"/></text>
 <text x="460" y="296" font-size="12" letter-spacing="0.4" fill="#6B7280" opacity="0">Longest Streak<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.450s" dur="0.25s" fill="freeze"/></text>
-<text x="460" y="312" font-size="10" letter-spacing="0.2" fill="#6B7280" opacity="0">Jun 1 – Aug 16, 2026<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.800s" dur="0.25s" fill="freeze"/></text>
+<text x="460" y="312" font-size="10" letter-spacing="0.2" fill="#6B7280" opacity="0">Jun 1 – Aug 17, 2026<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.800s" dur="0.25s" fill="freeze"/></text>
 
     <g transform="translate(688,232)">
       <circle r="16" fill="#4D7C0F" opacity="0.12"/>
