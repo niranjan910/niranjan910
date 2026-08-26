@@ -69,9 +69,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg?v=82767619c4">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/light.svg?v=82767619c4">
-  <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg?v=82767619c4" width="100%" alt="GitHub stats for niranjan910"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg?v=cb64044db5">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/light.svg?v=cb64044db5">
+  <img src="https://raw.githubusercontent.com/niranjan910/niranjan910/main/stats/dark.svg?v=cb64044db5" width="100%" alt="GitHub stats for niranjan910"/>
 </picture>
 
 </div>
