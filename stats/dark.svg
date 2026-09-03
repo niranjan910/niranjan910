@@ -42,8 +42,8 @@
     </g>
 <text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">0<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.400s" dur="0.267s" fill="freeze"/></text>
 <text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">1430<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.667s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">2859<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.933s" dur="0.267s" fill="freeze"/></text>
-<text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">4289<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">2861<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" begin="1.933s" dur="0.267s" fill="freeze"/></text>
+<text x="40" y="274" font-size="32" font-weight="700" fill="#A3E635" text-anchor="start" opacity="0">4291<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.200s" dur="0.15s" fill="freeze"/></text>
 <text x="40" y="296" font-size="12" letter-spacing="0.4" fill="#8A8A8A" opacity="0">Total Contributions<animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.250s" dur="0.25s" fill="freeze"/></text>
 
     <g transform="translate(268,232)">
